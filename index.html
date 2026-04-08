@@ -612,11 +612,86 @@ footer {
   .result-metrics { grid-template-columns: 1fr 1fr; }
   .project-number { font-size: 80px; }
   .contact { padding: 100px 24px; }
+  .company-banner { padding: 80px 24px; }
+  .role-summary { padding: 24px 20px; margin-left: 0; margin-right: 0; }
 }
+
 @media (max-width: 600px) {
-  .hero-stat .num { font-size: 36px; }
+  /* 전체 기본 */
+  body { overflow-x: hidden; }
+  section { padding: 80px 0; }
+
+  /* 네비 */
+  .nav-logo { font-size: 16px; }
+
+  /* 히어로 */
+  .hero { padding: 80px 20px 48px; }
+  .hero h1 { font-size: 36px; letter-spacing: -1.5px; }
+  .hero-sub { font-size: 15px; }
+  .hero-tag { font-size: 13px; padding: 6px 16px; }
+
+  /* 섹션 공통 */
+  .container { padding: 0 20px; }
+  .section-title { font-size: 28px; letter-spacing: -1px; }
+  .section-desc { font-size: 15px; }
+
+  /* 컴퍼니 배너 */
+  .company-banner { padding: 64px 20px; }
+  .company-banner h2 { font-size: 24px; letter-spacing: -0.5px; word-break: keep-all; }
+  .company-banner p { font-size: 14px; word-break: keep-all; }
+  .company-period { font-size: 12px; padding: 6px 14px; word-break: keep-all; }
+  .company-keywords { gap: 8px; padding: 0 4px; }
+  .kw-tag { font-size: 12px; padding: 5px 12px; }
+
+  /* 역할 요약 */
+  .role-summary { padding: 20px 16px; border-radius: 14px; }
+  .role-summary ul li { font-size: 14px; }
+
+  /* 프로젝트 */
+  .project { padding: 80px 0; }
+  .project-number { font-size: 60px; }
+  .project-title { font-size: 24px; }
+  .project-subtitle { font-size: 14px; }
+
+  /* flow */
+  .flow-content h3 { font-size: 20px; }
+  .flow-content p, .flow-content ul li { font-size: 14px; }
+  .insight-quote p { font-size: 14px; }
+
+  /* AS-IS / TO-BE 인라인 큰 숫자 축소 */
+  .asistobe .asis-card, .asistobe .tobe-card { padding: 20px; }
+
+  /* 결과 메트릭 */
   .result-metrics { grid-template-columns: 1fr; }
+  .metric-card { padding: 24px; }
+  .metric-value { font-size: 28px; }
+
+  /* 비교 카드 */
+  .comparison-card .big-num { font-size: 36px; }
+
+  /* 폰 목업 */
   .phone-mockup-container { flex-direction: column; }
+  .phone-frame { width: 160px; }
+  .gyeol-phone { width: 160px; }
+
+  /* 이미지 쇼케이스 */
+  .image-showcase { flex-direction: column; align-items: center; }
+
+  /* 타임라인 */
+  .timeline { padding-left: 28px; }
+  .timeline-company { font-size: 17px; }
+
+  /* 컨택트 */
+  .contact { padding: 80px 20px; }
+  .contact h2 { font-size: 28px; }
+  .contact-links { flex-direction: column; align-items: stretch; }
+  .contact-link { justify-content: center; }
+
+  /* 인라인 스타일로 지정된 큰 폰트 오버라이드 */
+  [style*="font-size:56px"], [style*="font-size: 56px"] { font-size: 40px !important; }
+  [style*="font-size:48px"], [style*="font-size: 48px"] { font-size: 36px !important; }
+  [style*="font-size:42px"], [style*="font-size: 42px"] { font-size: 32px !important; }
+  [style*="font-size:36px"], [style*="font-size: 36px"] { font-size: 28px !important; }
 }
 </style>
 </head>
