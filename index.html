@@ -921,6 +921,41 @@ footer {
             <span class="skill-tag">MVP 설계</span>
             <span class="skill-tag">이해관계자 협업</span>
           </div>
+
+          <!-- AS-IS / TO-BE 비교 -->
+          <div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:24px; align-items:stretch; margin-top:32px;">
+            <div style="background:#f8f8fa; border-radius:20px; padding:32px; border:1px solid #e8e8ea;">
+              <div style="font-size:12px; font-weight:700; color:#999; letter-spacing:1px; margin-bottom:16px;">AS-IS</div>
+              <div style="font-size:16px; font-weight:700; color:#555; margin-bottom:20px;">이메일 기반 수동 커뮤니케이션</div>
+              <div style="text-align:center; margin-bottom:20px;">
+                <div style="font-size:13px; color:#bbb; margin-bottom:6px;">평균 배송 소요 시간</div>
+                <div style="font-size:52px; font-weight:900; color:#ccc; letter-spacing:-2px;">9.1일</div>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#999;"><span style="width:20px; height:20px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0;">1</span>고객 → Haulla 이메일 전송</div>
+                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#999;"><span style="width:20px; height:20px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0;">2</span>파트너에게 수동 전달</div>
+                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#999;"><span style="width:20px; height:20px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0;">3</span>파트너 확인 후 이메일 회신</div>
+                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#e53e3e;"><span style="width:20px; height:20px; background:#fee2e2; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#e53e3e;">!</span>정보 누락 → 배송 지연 반복</div>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center; padding:0 8px;">
+              <div style="font-size:32px; color:#0066ff; animation: arrowPulse 2s infinite;">→</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0f7ff,#e8f4fd); border-radius:20px; padding:32px; border:1px solid #d0e8ff;">
+              <div style="font-size:12px; font-weight:700; color:#0066ff; letter-spacing:1px; margin-bottom:16px;">TO-BE</div>
+              <div style="font-size:16px; font-weight:700; color:#1a1a1a; margin-bottom:20px;">프로덕트 기반 실시간 자동 조율</div>
+              <div style="text-align:center; margin-bottom:20px;">
+                <div style="font-size:13px; color:#0066ff; margin-bottom:6px;">평균 배송 소요 시간</div>
+                <div style="font-size:52px; font-weight:900; color:#0066ff; letter-spacing:-2px;">3.4일</div>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#444;"><span style="width:20px; height:20px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#2563eb;">1</span>계약 시 정보 자동 수집</div>
+                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#444;"><span style="width:20px; height:20px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#2563eb;">2</span>파트너 프로덕트로 자동 전달</div>
+                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#444;"><span style="width:20px; height:20px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#2563eb;">3</span>고객 앱에서 실시간 확인</div>
+                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#16a34a;"><span style="width:20px; height:20px; background:#dcfce7; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#16a34a;">✓</span>정보 누락 없이 배송 완료</div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="flow-visual">
           <div style="max-width:520px;">
@@ -960,40 +995,6 @@ footer {
             </div>
           </div>
 
-          <!-- AS-IS / TO-BE 비교 -->
-          <div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:24px; align-items:stretch; margin-top:40px;">
-            <div style="background:#f8f8fa; border-radius:20px; padding:32px; border:1px solid #e8e8ea;">
-              <div style="font-size:12px; font-weight:700; color:#999; letter-spacing:1px; margin-bottom:16px;">AS-IS</div>
-              <div style="font-size:16px; font-weight:700; color:#555; margin-bottom:20px;">이메일 기반 수동 커뮤니케이션</div>
-              <div style="text-align:center; margin-bottom:20px;">
-                <div style="font-size:13px; color:#bbb; margin-bottom:6px;">평균 배송 소요 시간</div>
-                <div style="font-size:52px; font-weight:900; color:#ccc; letter-spacing:-2px;">9.1일</div>
-              </div>
-              <div style="display:flex; flex-direction:column; gap:8px;">
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#999;"><span style="width:20px; height:20px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0;">1</span>고객 → Haulla 이메일 전송</div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#999;"><span style="width:20px; height:20px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0;">2</span>파트너에게 수동 전달</div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#999;"><span style="width:20px; height:20px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0;">3</span>파트너 확인 후 이메일 회신</div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#e53e3e;"><span style="width:20px; height:20px; background:#fee2e2; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#e53e3e;">!</span>정보 누락 → 배송 지연 반복</div>
-              </div>
-            </div>
-            <div style="display:flex; align-items:center; justify-content:center; padding:0 8px;">
-              <div style="font-size:32px; color:#0066ff; animation: arrowPulse 2s infinite;">→</div>
-            </div>
-            <div style="background:linear-gradient(135deg,#f0f7ff,#e8f4fd); border-radius:20px; padding:32px; border:1px solid #d0e8ff;">
-              <div style="font-size:12px; font-weight:700; color:#0066ff; letter-spacing:1px; margin-bottom:16px;">TO-BE</div>
-              <div style="font-size:16px; font-weight:700; color:#1a1a1a; margin-bottom:20px;">프로덕트 기반 실시간 자동 조율</div>
-              <div style="text-align:center; margin-bottom:20px;">
-                <div style="font-size:13px; color:#0066ff; margin-bottom:6px;">평균 배송 소요 시간</div>
-                <div style="font-size:52px; font-weight:900; color:#0066ff; letter-spacing:-2px;">3.4일</div>
-              </div>
-              <div style="display:flex; flex-direction:column; gap:8px;">
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#444;"><span style="width:20px; height:20px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#2563eb;">1</span>계약 시 정보 자동 수집</div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#444;"><span style="width:20px; height:20px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#2563eb;">2</span>파트너 프로덕트로 자동 전달</div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#444;"><span style="width:20px; height:20px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#2563eb;">3</span>고객 앱에서 실시간 확인</div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#16a34a;"><span style="width:20px; height:20px; background:#dcfce7; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#16a34a;">✓</span>정보 누락 없이 배송 완료</div>
-              </div>
-            </div>
-          </div>
           <div class="insight-quote" style="margin-top:32px;">
             <p>초기 단계에서는 직접 현장에서 문제를 체감하고 데이터를 수집하는 것이 가장 효과적인 문제 해결 방안이었습니다. 플랫폼 서비스를 하기 위해서는 공급자와 수요자 사이의 커뮤니케이션을 잘 이어주는 것이 핵심입니다.</p>
             <div class="quote-author">— Lessons Learned</div>
