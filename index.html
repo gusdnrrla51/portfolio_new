@@ -252,7 +252,8 @@ section { padding: 160px 0; }
 
 /* Visual / Mockup Area */
 .flow-visual {
-  position: relative; display: flex; justify-content: center; align-items: center;
+  position: relative; display: flex; justify-content: center; align-items: flex-start;
+  padding-top: 8px;
 }
 .mockup-laptop {
   background: #f8f8fa; border-radius: 16px; padding: 20px;
@@ -564,11 +565,11 @@ footer {
   margin-top: 48px;
 }
 .field-photo {
-  border-radius: 16px; overflow: hidden; aspect-ratio: 4/3;
+  border-radius: 16px; overflow: hidden; aspect-ratio: 16/10;
   position: relative;
 }
 .field-photo img {
-  width: 100%; height: 100%; object-fit: cover;
+  width: 100%; height: 100%; object-fit: cover; object-position: center top;
   transition: transform 0.6s ease;
 }
 .field-photo:hover img { transform: scale(1.05); }
@@ -675,6 +676,15 @@ footer {
   [style*="font-size:48px"], [style*="font-size: 48px"] { font-size: 36px !important; }
   [style*="font-size:42px"], [style*="font-size: 42px"] { font-size: 32px !important; }
   [style*="font-size:36px"], [style*="font-size: 36px"] { font-size: 28px !important; }
+  [style*="font-size:60px"], [style*="font-size: 60px"] { font-size: 40px !important; }
+  [style*="font-size:52px"], [style*="font-size: 52px"] { font-size: 36px !important; }
+
+  /* AS-IS/TO-BE 전체너비 그리드 모바일 대응 */
+  [style*="grid-template-columns: 1fr 80px 1fr"] { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns: 1fr 80px 1fr"] > [style*="align-items:center; justify-content:center"] { display: none !important; }
+
+  /* 프로토콜 4단계 2열 → 1열 */
+  [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
 }
 </style>
 </head>
@@ -921,46 +931,50 @@ footer {
             <span class="skill-tag">MVP 설계</span>
             <span class="skill-tag">이해관계자 협업</span>
           </div>
-
-          <!-- AS-IS / TO-BE 비교 -->
-          <div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:24px; align-items:stretch; margin-top:32px;">
-            <div style="background:#f8f8fa; border-radius:20px; padding:32px; border:1px solid #e8e8ea;">
-              <div style="font-size:12px; font-weight:700; color:#999; letter-spacing:1px; margin-bottom:16px;">AS-IS</div>
-              <div style="font-size:16px; font-weight:700; color:#555; margin-bottom:20px;">이메일 기반 수동 커뮤니케이션</div>
-              <div style="text-align:center; margin-bottom:20px;">
-                <div style="font-size:13px; color:#bbb; margin-bottom:6px;">평균 배송 소요 시간</div>
-                <div style="font-size:52px; font-weight:900; color:#ccc; letter-spacing:-2px;">9.1일</div>
-              </div>
-              <div style="display:flex; flex-direction:column; gap:8px;">
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#999;"><span style="width:20px; height:20px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0;">1</span>고객 → Haulla 이메일 전송</div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#999;"><span style="width:20px; height:20px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0;">2</span>파트너에게 수동 전달</div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#999;"><span style="width:20px; height:20px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0;">3</span>파트너 확인 후 이메일 회신</div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#e53e3e;"><span style="width:20px; height:20px; background:#fee2e2; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#e53e3e;">!</span>정보 누락 → 배송 지연 반복</div>
-              </div>
-            </div>
-            <div style="display:flex; align-items:center; justify-content:center; padding:0 8px;">
-              <div style="font-size:32px; color:#0066ff; animation: arrowPulse 2s infinite;">→</div>
-            </div>
-            <div style="background:linear-gradient(135deg,#f0f7ff,#e8f4fd); border-radius:20px; padding:32px; border:1px solid #d0e8ff;">
-              <div style="font-size:12px; font-weight:700; color:#0066ff; letter-spacing:1px; margin-bottom:16px;">TO-BE</div>
-              <div style="font-size:16px; font-weight:700; color:#1a1a1a; margin-bottom:20px;">프로덕트 기반 실시간 자동 조율</div>
-              <div style="text-align:center; margin-bottom:20px;">
-                <div style="font-size:13px; color:#0066ff; margin-bottom:6px;">평균 배송 소요 시간</div>
-                <div style="font-size:52px; font-weight:900; color:#0066ff; letter-spacing:-2px;">3.4일</div>
-              </div>
-              <div style="display:flex; flex-direction:column; gap:8px;">
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#444;"><span style="width:20px; height:20px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#2563eb;">1</span>계약 시 정보 자동 수집</div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#444;"><span style="width:20px; height:20px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#2563eb;">2</span>파트너 프로덕트로 자동 전달</div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#444;"><span style="width:20px; height:20px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#2563eb;">3</span>고객 앱에서 실시간 확인</div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#16a34a;"><span style="width:20px; height:20px; background:#dcfce7; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#16a34a;">✓</span>정보 누락 없이 배송 완료</div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="flow-visual">
           <div style="max-width:520px;">
             <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:12px; text-align:center;">실제 프로덕트 화면 — Awards (파트너 마켓플레이스)</div>
             <img src="haulla_product_01.png" alt="Haulla Awards 마켓플레이스 — 수거 파트너 입찰 수락/거절 및 지도 기반 가격 현황" style="width:100%; border-radius:16px; box-shadow:0 8px 40px rgba(0,0,0,0.10);">
+          </div>
+        </div>
+      </div>
+
+      <!-- AS-IS / TO-BE 비교 -->
+      <div class="flow-step reveal">
+        <div class="flow-content" style="grid-column: 1 / -1;">
+          <div style="display:grid; grid-template-columns: 1fr 80px 1fr; gap:24px; align-items:stretch;">
+            <div style="background:#f8f8fa; border-radius:20px; padding:36px; border:1px solid #e8e8ea;">
+              <div style="font-size:12px; font-weight:700; color:#999; letter-spacing:1px; margin-bottom:16px;">AS-IS</div>
+              <div style="font-size:17px; font-weight:700; color:#555; margin-bottom:24px;">이메일 기반 수동 커뮤니케이션</div>
+              <div style="text-align:center; margin-bottom:24px;">
+                <div style="font-size:13px; color:#bbb; margin-bottom:6px;">평균 배송 소요 시간</div>
+                <div style="font-size:60px; font-weight:900; color:#ccc; letter-spacing:-2px;">9.1일</div>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#999;"><span style="width:22px; height:22px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0;">1</span>고객 → Haulla 이메일 전송</div>
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#999;"><span style="width:22px; height:22px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0;">2</span>파트너에게 수동 전달</div>
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#999;"><span style="width:22px; height:22px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0;">3</span>파트너 확인 후 이메일 회신</div>
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#e53e3e;"><span style="width:22px; height:22px; background:#fee2e2; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; color:#e53e3e;">!</span>정보 누락 → 배송 지연 반복</div>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center;">
+              <div style="font-size:36px; color:#0066ff; animation: arrowPulse 2s infinite;">→</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0f7ff,#e8f4fd); border-radius:20px; padding:36px; border:1px solid #d0e8ff;">
+              <div style="font-size:12px; font-weight:700; color:#0066ff; letter-spacing:1px; margin-bottom:16px;">TO-BE</div>
+              <div style="font-size:17px; font-weight:700; color:#1a1a1a; margin-bottom:24px;">프로덕트 기반 실시간 자동 조율</div>
+              <div style="text-align:center; margin-bottom:24px;">
+                <div style="font-size:13px; color:#0066ff; margin-bottom:6px;">평균 배송 소요 시간</div>
+                <div style="font-size:60px; font-weight:900; color:#0066ff; letter-spacing:-2px;">3.4일</div>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#444;"><span style="width:22px; height:22px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; color:#2563eb;">1</span>계약 시 정보 자동 수집</div>
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#444;"><span style="width:22px; height:22px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; color:#2563eb;">2</span>파트너 프로덕트로 자동 전달</div>
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#444;"><span style="width:22px; height:22px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; color:#2563eb;">3</span>고객 앱에서 실시간 확인</div>
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#16a34a;"><span style="width:22px; height:22px; background:#dcfce7; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; color:#16a34a;">✓</span>정보 누락 없이 배송 완료</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1082,7 +1096,7 @@ footer {
             </div>
             <div style="margin-bottom:12px;">
               <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
-                <span style="font-size:13px; color:#555;">CS문의 전에 대체수거를 원함</span>
+                <span style="font-size:13px; color:#555;">빠른 CS대응</span>
                 <span style="font-size:13px; font-weight:700; color:#888;">20%</span>
               </div>
               <div style="height:24px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
@@ -1404,7 +1418,7 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
             입사 & 문제 인식
           </div>
-          <h3>광고 상품이 너무 없었다.<br>매출 극대화를 위한 BM 다각화가 급선무</h3>
+          <h3>광고 상품이 너무 없었다. 매출 극대화를 위한 BM 다각화가 급선무</h3>
           <p>
             입사 당시 광고 수익화 스쿼드의 광고 상품 포트폴리오가 <strong>극도로 제한적</strong>이었습니다. 네트워크 배너 외에는 변변한 수익원이 없었고, 매출 천장이 명확했습니다.
           </p>
@@ -1471,7 +1485,7 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
             초반 고전 → 전략 전환
           </div>
-          <h3>초반 반응은 미비했지만,<br>박리다매 전략으로 시장을 뚫었습니다</h3>
+          <h3>초반 반응은 미비했지만 박리다매 전략으로 시장을 뚫었습니다</h3>
           <p>
             출시 초반 광고주 반응이 미비했습니다. 시장에서 인지도가 없었기 때문입니다.
           </p>
@@ -1721,7 +1735,7 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
             문제 인식
           </div>
-          <h3>월 1.5억에서 정체.<br>데이터만으로는 답이 없었습니다</h3>
+          <h3>월 1.5억에서 정체, 데이터만으로는 답이 없었습니다</h3>
           <p>
             어필리에이트는 비용 효율이 좋은 매출원이었지만, 월 약 1.5억 수준에서 계속 정체돼 있었습니다. 클릭률·전환율 등 데이터를 아무리 들여다봐도 <strong>성장 레버를 찾을 수 없었습니다.</strong>
           </p>
@@ -1962,7 +1976,7 @@ footer {
 
       <!-- Action -->
       <div class="flow-step reveal">
-        <div class="flow-content">
+        <div class="flow-content" style="grid-column: 1 / -1;">
           <div class="flow-badge action-badge">
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
             대응 프로토콜
@@ -1971,62 +1985,34 @@ footer {
           <p>
             알람이 울리면 어느 네트워크·OS에서 문제가 발생하는지 대시보드로 즉시 식별하고, 해당 네트워크 담당자에게 핫라인으로 컨택합니다. 원인 파악·해결 전까지는 <strong>매출 감소 리스크를 감수하고 문제 네트워크를 OS 단위로 임시 차단</strong>해 고객 노출을 막습니다.
           </p>
-          <div style="margin-top:24px; display:flex; flex-direction:column; gap:0;">
-            <div style="display:flex; gap:16px; align-items:flex-start; padding:16px 0; border-bottom:1px solid #f0f0f0;">
-              <div style="min-width:28px; height:28px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#fff; margin-top:2px;">1</div>
+          <div style="margin-top:28px; display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
+              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">1</div>
               <div>
-                <div style="font-size:14px; font-weight:700; color:#1a1a1a;">이상 감지</div>
-                <div style="font-size:13px; color:#666; margin-top:2px;">Completion Rate -4SD 연속 2회 → 자동 알람</div>
+                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">이상 감지</div>
+                <div style="font-size:13px; color:#666; line-height:1.6;">Completion Rate -4SD 연속 2회 → 자동 알람</div>
               </div>
             </div>
-            <div style="display:flex; gap:16px; align-items:flex-start; padding:16px 0; border-bottom:1px solid #f0f0f0;">
-              <div style="min-width:28px; height:28px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#fff; margin-top:2px;">2</div>
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
+              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">2</div>
               <div>
-                <div style="font-size:14px; font-weight:700; color:#1a1a1a;">원인 네트워크 식별</div>
-                <div style="font-size:13px; color:#666; margin-top:2px;">네트워크별·OS별 대시보드로 문제 범위 특정</div>
+                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">원인 네트워크 식별</div>
+                <div style="font-size:13px; color:#666; line-height:1.6;">네트워크별·OS별 대시보드로 문제 범위 특정</div>
               </div>
             </div>
-            <div style="display:flex; gap:16px; align-items:flex-start; padding:16px 0; border-bottom:1px solid #f0f0f0;">
-              <div style="min-width:28px; height:28px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#fff; margin-top:2px;">3</div>
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
+              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">3</div>
               <div>
-                <div style="font-size:14px; font-weight:700; color:#1a1a1a;">핫라인 컨택</div>
-                <div style="font-size:13px; color:#666; margin-top:2px;">사전 구축한 네트워크사 담당자 직통 채널로 즉시 수정 요청</div>
+                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">핫라인 컨택</div>
+                <div style="font-size:13px; color:#666; line-height:1.6;">사전 구축한 네트워크사 담당자 직통 채널로 즉시 수정 요청</div>
               </div>
             </div>
-            <div style="display:flex; gap:16px; align-items:flex-start; padding:16px 0;">
-              <div style="min-width:28px; height:28px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#fff; margin-top:2px;">4</div>
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
+              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">4</div>
               <div>
-                <div style="font-size:14px; font-weight:700; color:#1a1a1a;">문제 네트워크 임시 차단</div>
-                <div style="font-size:13px; color:#666; margin-top:2px;">해결 완료 전까지 해당 OS에서 해당 네트워크 송출 중단 (매출 리스크 감수)</div>
+                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">문제 네트워크 임시 차단</div>
+                <div style="font-size:13px; color:#666; line-height:1.6;">해결 완료 전까지 해당 OS에서 해당 네트워크 송출 중단</div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="flow-visual">
-          <div style="background:#fff; border-radius:20px; padding:32px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
-            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:16px;">네트워크 차단 시 매출 영향 (AB 테스트)</div>
-            <div style="display:flex; flex-direction:column; gap:12px;">
-              <div>
-                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
-                  <span style="font-size:13px; font-weight:600; color:#555;">META (매출 비중 최고)</span>
-                  <span style="font-size:13px; font-weight:700; color:#e53e3e;">-16%</span>
-                </div>
-                <div style="height:10px; background:#f5f5f7; border-radius:5px; overflow:hidden;">
-                  <div style="width:16%; height:100%; background:#e53e3e; border-radius:5px;"></div>
-                </div>
-              </div>
-              <div>
-                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
-                  <span style="font-size:13px; font-weight:600; color:#555;">BidMachine</span>
-                  <span style="font-size:13px; font-weight:700; color:#f97316;">-1.6%</span>
-                </div>
-                <div style="height:10px; background:#f5f5f7; border-radius:5px; overflow:hidden;">
-                  <div style="width:1.6%; height:100%; background:#f97316; border-radius:5px;"></div>
-                </div>
-              </div>
-            </div>
-            <div style="margin-top:20px; padding:14px 16px; background:#fff7ed; border-radius:12px; font-size:13px; color:#92400e; line-height:1.6;">
-              <strong>판단 기준:</strong> 네트워크 차단으로 인한 매출 감소 vs 이슈 지속으로 인한 CS 폭증 · 사용자 이탈. CS 대응 비용 및 신뢰 손실을 감안해 선제 차단을 원칙으로 결정
             </div>
           </div>
         </div>
