@@ -685,6 +685,10 @@ footer {
 
   /* 프로토콜 4단계 2열 → 1열 */
   [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+
+  /* 광고매출 stat 박스 세로 스택 */
+  [style*="inline-flex"][style*="gap:0"] { flex-direction: column !important; }
+  [style*="inline-flex"][style*="gap:0"] > [style*="width:1px"] { width: 100% !important; height: 1px !important; align-self: auto !important; }
 }
 </style>
 </head>
@@ -1052,9 +1056,9 @@ footer {
               <div style="font-size:56px; font-weight:900; color:#e53e3e; margin:8px 0;">5%</div>
               <div style="font-size:13px; color:#999;">산업 평균의 5배</div>
             </div>
-            <div style="background:#fff; border-radius:20px; padding:32px; text-align:center; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0; flex:1; min-width:160px;">
-              <div style="font-size:13px; color:#e53e3e; font-weight:600;">수거 누락 인한 이탈</div>
-              <div style="font-size:56px; font-weight:900; color:#e53e3e; margin:8px 0;">80%</div>
+            <div style="background:#fff; border-radius:20px; padding:32px; text-align:center; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0; flex:1; min-width:180px;">
+              <div style="font-size:13px; color:#e53e3e; font-weight:600; white-space:nowrap;">수거 누락으로 인한 이탈</div>
+              <div style="font-size:56px; font-weight:900; color:#e53e3e; margin:8px 0; white-space:nowrap;">80%</div>
               <div style="font-size:13px; color:#999;">전체 이탈 비중</div>
             </div>
           </div>
@@ -1375,10 +1379,30 @@ footer {
   <h2>MAU 80~90만 모바일 커머스 앱<br><strong>광고 수익화 스쿼드 리드</strong></h2>
   <p>
     MAU 80~90만 규모의 모바일 커머스 앱에서 광고 수익화 스쿼드를 리드.<br>
-    네트워크 배너 / 라이브커머스 / 어필리에이트 포트폴리오를 다각화하며<br>
-    회사 첫 연간 흑자 달성에 기여했습니다.
+    올웨이즈 전체 매출의 <strong>70.7%가 광고매출</strong>이며, 그 성장을 직접 만들었습니다.
   </p>
-  <div class="company-keywords">
+
+  <!-- 광고매출 맥락 수치 -->
+  <div style="display:inline-flex; gap:0; justify-content:center; flex-wrap:wrap; margin:32px auto 0; background:#fff; border-radius:20px; box-shadow:0 4px 24px rgba(0,0,0,0.07); border:1px solid #f0ebe4; overflow:hidden; max-width:780px; width:100%;">
+    <div style="text-align:center; padding:24px 36px; flex:1; min-width:180px;">
+      <div style="font-size:12px; color:#aaa; margin-bottom:8px; font-weight:600; letter-spacing:0.5px; text-transform:uppercase;">광고매출 비중 (2025)</div>
+      <div style="font-size:34px; font-weight:900; color:#f97316; letter-spacing:-1px; white-space:nowrap;">70.7%</div>
+      <div style="font-size:12px; color:#bbb; margin-top:4px;">전체 영업수익 중</div>
+    </div>
+    <div style="width:1px; background:#f0ebe4; align-self:stretch;"></div>
+    <div style="text-align:center; padding:24px 36px; flex:1; min-width:200px;">
+      <div style="font-size:12px; color:#aaa; margin-bottom:8px; font-weight:600; letter-spacing:0.5px; text-transform:uppercase;">광고매출 성장 (2023→2025)</div>
+      <div style="font-size:34px; font-weight:900; color:#f97316; letter-spacing:-1px; white-space:nowrap;">127억 → 300억</div>
+      <div style="font-size:12px; color:#bbb; margin-top:4px;">약 2.4배 성장</div>
+    </div>
+    <div style="width:1px; background:#f0ebe4; align-self:stretch;"></div>
+    <div style="text-align:center; padding:24px 36px; flex:1; min-width:160px;">
+      <div style="font-size:12px; color:#aaa; margin-bottom:8px; font-weight:600; letter-spacing:0.5px; text-transform:uppercase;">담당 광고 BM</div>
+      <div style="font-size:15px; font-weight:700; color:#1a1a1a; line-height:1.6; margin-top:4px;">영상 · 라이브커머스<br>어필리에이트 · 배너</div>
+    </div>
+  </div>
+
+  <div class="company-keywords" style="margin-top:28px;">
     <span class="kw-tag kw-levit">광고 수익화</span>
     <span class="kw-tag kw-levit">Cross-functional 팀 리드</span>
     <span class="kw-tag kw-levit">B2C 모바일 커머스</span>
