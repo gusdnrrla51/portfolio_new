@@ -1380,6 +1380,7 @@ footer {
       <li><strong>04</strong> 입사 첫 달 올라이브(라이브커머스 광고) 0→1 출시 — 방송당 10만 PV, 월 1.5억 안정 매출</li>
       <li><strong>05</strong> 피드형 미션 광고 '보물찾기' 기획·출시 — 일 150만원 매출, 배너 섹션 전체 매출 6배 성장</li>
       <li><strong>06</strong> 어필리에이트 광고 구조 개선 — 고객 30명 직접 인터뷰로 문제 발굴, 월 매출 2억→4억 2배 성장</li>
+      <li><strong>07</strong> 영상광고 이슈 감지 시스템 & 대응 프로토콜 설계 — SD 기반 Completion Rate 알람 + 네트워크 핫라인, CS 유입률 70% 감소</li>
     </ul>
   </div>
 </div>
@@ -1850,6 +1851,221 @@ footer {
 </section>
 
 
+<!-- ===== 올웨이즈 Project 7 — 영상광고 이슈 감지 시스템 ===== -->
+<section class="project">
+  <div class="container">
+    <div class="project-header reveal">
+      <div class="project-number">07</div>
+      <div class="project-category data">운영 효율화 · 광고 운영</div>
+      <h2 class="project-title">영상광고 이슈를 고객 신고 전에<br>먼저 잡는 시스템을 만들었습니다</h2>
+      <p class="project-subtitle">Completion Rate 이상감지 · 대응 프로토콜 · CS 유입률 70% 감소</p>
+    </div>
+
+    <div class="psrFlow">
+
+      <!-- Problem -->
+      <div class="flow-step reveal">
+        <div class="flow-content">
+          <div class="flow-badge problem-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
+            문제 인식
+          </div>
+          <h3>"X 버튼이 안 눌려요"<br>CS가 쏟아졌지만 원인을 몰랐습니다</h3>
+          <p>
+            어느 날 갑자기 <strong>"넘어가기 버튼이 안 눌린다", "광고가 안 닫힌다"</strong>는 CS 문의가 급증했습니다. 처음엔 자사 코드 문제라고 의심했지만, 고객 캡처와 대시보드의 <strong>Display to Reward Ratio</strong>를 보고 나서야 메타 영상광고 이슈임을 파악했습니다.
+          </p>
+          <p style="margin-top:16px;">
+            확인 결과 메타의 Chained Ads(여러 광고주 광고를 연결해서 보게 만드는 구조)에서 발생한 이슈였습니다. 근본 문제는 따로 있었습니다. <strong>미디에이션사(AppLovin)는 각 네트워크 문제를 관리하지 않아서</strong>, 문제가 생겨도 어느 네트워크의 이슈인지 즉시 파악할 수단이 없었습니다.
+          </p>
+        </div>
+        <div class="flow-visual">
+          <div style="background:#fff; border-radius:20px; padding:32px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:16px;">실제 발생 이슈 사례</div>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div style="padding:14px 16px; background:#fff5f5; border-radius:12px; border-left:3px solid #e53e3e;">
+                <div style="font-size:12px; font-weight:700; color:#e53e3e; margin-bottom:4px;">META · Chained Ads</div>
+                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">X 버튼이 아예 안 눌리는 이슈</div>
+              </div>
+              <div style="padding:14px 16px; background:#fff5f5; border-radius:12px; border-left:3px solid #e53e3e;">
+                <div style="font-size:12px; font-weight:700; color:#e53e3e; margin-bottom:4px;">ADMOB · 소재 이슈</div>
+                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">X 버튼이 Status Bar 뒤에 위치</div>
+              </div>
+              <div style="padding:14px 16px; background:#fff5f5; border-radius:12px; border-left:3px solid #e53e3e;">
+                <div style="font-size:12px; font-weight:700; color:#e53e3e; margin-bottom:4px;">APPLOVIN · 특정 소재</div>
+                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">아랍풍 음악이 광고 종료 후에도 계속 재생</div>
+              </div>
+            </div>
+            <div style="margin-top:16px; padding:12px 16px; background:#f8f9ff; border-radius:10px; text-align:center;">
+              <div style="font-size:13px; color:#666;">공통점</div>
+              <div style="font-size:14px; font-weight:700; color:#1a1a1a; margin-top:2px;">자사 코드가 아닌 광고 네트워크 측 이슈</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hypothesis / Design -->
+      <div class="flow-step reverse reveal">
+        <div class="flow-content">
+          <div class="flow-badge hypothesis-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM6.5 8.5h3v4h-3z"/></svg>
+            감지 시스템 설계
+          </div>
+          <h3>절대값이 아닌 SD 기반으로<br>이상 낙폭만 정확하게 잡습니다</h3>
+          <p>
+            Completion Rate는 시간대·요일마다 자연스럽게 오르내리는 지표입니다. 절대값 기준으로 자르면 정상 변동도 모두 걸립니다. <strong>"평소 낙폭 대비 비정상적으로 큰 하락"</strong>만 잡으려면 표준편차(SD) 기반 설계가 필요했습니다.
+          </p>
+          <ul style="margin-top:16px; display:flex; flex-direction:column; gap:10px; list-style:none; padding:0;">
+            <li style="padding:12px 16px; background:#f0fdf4; border-radius:10px; font-size:14px; color:#1a1a1a; line-height:1.6;">
+              <strong style="color:#16a34a;">Baseline</strong> — 날짜 단위 평균이 아닌 <strong>동일 요일 × 동일 시간대 평균</strong>으로 시간대 효과 제거
+            </li>
+            <li style="padding:12px 16px; background:#f0fdf4; border-radius:10px; font-size:14px; color:#1a1a1a; line-height:1.6;">
+              <strong style="color:#16a34a;">Lower Bound</strong> — -3SD → <strong>-4SD</strong>로 조정 (정상 낙폭 99.9937% 커버, 헛알람 이론상 40배 감소)
+            </li>
+            <li style="padding:12px 16px; background:#f0fdf4; border-radius:10px; font-size:14px; color:#1a1a1a; line-height:1.6;">
+              <strong style="color:#16a34a;">알람 조건</strong> — 1회성 스파이크 제거, <strong>연속 2회 이상 하회 시에만</strong> 알람 발송
+            </li>
+            <li style="padding:12px 16px; background:#f0fdf4; border-radius:10px; font-size:14px; color:#1a1a1a; line-height:1.6;">
+              <strong style="color:#16a34a;">범위</strong> — 네트워크별 / OS별 분리 모니터링. Interstitial은 비중 낮고 항상 100% 수준이라 알람에서 제외
+            </li>
+          </ul>
+        </div>
+        <div class="flow-visual">
+          <div style="background:#fff; border-radius:20px; padding:32px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:20px;">Completion Rate 이상감지 구조</div>
+            <!-- SD Chart mockup -->
+            <div style="position:relative; height:120px; background:#f8f9ff; border-radius:12px; overflow:hidden; margin-bottom:16px; padding:12px;">
+              <div style="font-size:11px; color:#999; margin-bottom:6px;">Completion Rate (네트워크 A · iOS)</div>
+              <!-- Normal range band -->
+              <div style="position:absolute; bottom:28px; left:12px; right:12px; height:40px; background:rgba(22,163,74,0.08); border-radius:4px;"></div>
+              <!-- Normal line -->
+              <svg viewBox="0 0 280 60" style="width:100%; height:60px;">
+                <polyline points="0,20 40,22 80,18 120,24 160,20 200,22 230,30 240,48 260,50 280,52" fill="none" stroke="#f97316" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="230" y1="0" x2="230" y2="60" stroke="#e53e3e" stroke-width="1.5" stroke-dasharray="4,3"/>
+                <text x="232" y="12" font-size="9" fill="#e53e3e" font-weight="600">이상감지</text>
+                <!-- -4SD line -->
+                <line x1="0" y1="44" x2="280" y2="44" stroke="#16a34a" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="2" y="42" font-size="8" fill="#16a34a">-4SD</text>
+              </svg>
+            </div>
+            <!-- Alert flow -->
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:center;">
+              <div style="padding:8px 12px; background:#fff7ed; border-radius:8px; font-size:12px; font-weight:600; color:#ea580c;">-4SD 하회 2회 연속</div>
+              <div style="color:#aaa; font-size:14px;">→</div>
+              <div style="padding:8px 12px; background:#eff6ff; border-radius:8px; font-size:12px; font-weight:600; color:#2563eb;">알람 발송</div>
+              <div style="color:#aaa; font-size:14px;">→</div>
+              <div style="padding:8px 12px; background:#f0fdf4; border-radius:8px; font-size:12px; font-weight:600; color:#16a34a;">네트워크 컨택</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action -->
+      <div class="flow-step reveal">
+        <div class="flow-content">
+          <div class="flow-badge action-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
+            대응 프로토콜
+          </div>
+          <h3>감지 → 식별 → 차단까지<br>프로토콜로 표준화했습니다</h3>
+          <p>
+            알람이 울리면 어느 네트워크·OS에서 문제가 발생하는지 대시보드로 즉시 식별하고, 해당 네트워크 담당자에게 핫라인으로 컨택합니다. 원인 파악·해결 전까지는 <strong>매출 감소 리스크를 감수하고 문제 네트워크를 OS 단위로 임시 차단</strong>해 고객 노출을 막습니다.
+          </p>
+          <div style="margin-top:24px; display:flex; flex-direction:column; gap:0;">
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:16px 0; border-bottom:1px solid #f0f0f0;">
+              <div style="min-width:28px; height:28px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#fff; margin-top:2px;">1</div>
+              <div>
+                <div style="font-size:14px; font-weight:700; color:#1a1a1a;">이상 감지</div>
+                <div style="font-size:13px; color:#666; margin-top:2px;">Completion Rate -4SD 연속 2회 → 자동 알람</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:16px 0; border-bottom:1px solid #f0f0f0;">
+              <div style="min-width:28px; height:28px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#fff; margin-top:2px;">2</div>
+              <div>
+                <div style="font-size:14px; font-weight:700; color:#1a1a1a;">원인 네트워크 식별</div>
+                <div style="font-size:13px; color:#666; margin-top:2px;">네트워크별·OS별 대시보드로 문제 범위 특정</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:16px 0; border-bottom:1px solid #f0f0f0;">
+              <div style="min-width:28px; height:28px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#fff; margin-top:2px;">3</div>
+              <div>
+                <div style="font-size:14px; font-weight:700; color:#1a1a1a;">핫라인 컨택</div>
+                <div style="font-size:13px; color:#666; margin-top:2px;">사전 구축한 네트워크사 담당자 직통 채널로 즉시 수정 요청</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:16px 0;">
+              <div style="min-width:28px; height:28px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#fff; margin-top:2px;">4</div>
+              <div>
+                <div style="font-size:14px; font-weight:700; color:#1a1a1a;">문제 네트워크 임시 차단</div>
+                <div style="font-size:13px; color:#666; margin-top:2px;">해결 완료 전까지 해당 OS에서 해당 네트워크 송출 중단 (매출 리스크 감수)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flow-visual">
+          <div style="background:#fff; border-radius:20px; padding:32px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:16px;">네트워크 차단 시 매출 영향 (AB 테스트)</div>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                  <span style="font-size:13px; font-weight:600; color:#555;">META (매출 비중 최고)</span>
+                  <span style="font-size:13px; font-weight:700; color:#e53e3e;">-16%</span>
+                </div>
+                <div style="height:10px; background:#f5f5f7; border-radius:5px; overflow:hidden;">
+                  <div style="width:16%; height:100%; background:#e53e3e; border-radius:5px;"></div>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                  <span style="font-size:13px; font-weight:600; color:#555;">BidMachine</span>
+                  <span style="font-size:13px; font-weight:700; color:#f97316;">-1.6%</span>
+                </div>
+                <div style="height:10px; background:#f5f5f7; border-radius:5px; overflow:hidden;">
+                  <div style="width:1.6%; height:100%; background:#f97316; border-radius:5px;"></div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:20px; padding:14px 16px; background:#fff7ed; border-radius:12px; font-size:13px; color:#92400e; line-height:1.6;">
+              <strong>판단 기준:</strong> 네트워크 차단으로 인한 매출 감소 vs 이슈 지속으로 인한 CS 폭증 · 사용자 이탈. CS 대응 비용 및 신뢰 손실을 감안해 선제 차단을 원칙으로 결정
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="flow-step reveal">
+        <div class="flow-content" style="grid-column: 1 / -1;">
+          <div class="flow-badge result-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2.5 5 5.5.8-4 3.9.9 5.3L8 12.5 3.1 15l.9-5.3-4-3.9 5.5-.8z"/></svg>
+            성과
+          </div>
+          <h3>고객이 신고하기 전에 먼저 잡고,<br>CS 유입률을 70% 줄였습니다</h3>
+          <div class="result-metrics">
+            <div class="metric-card">
+              <div class="metric-label">CS 유입률</div>
+              <div class="metric-value">70%<span style="font-size:20px;"> 감소</span></div>
+              <div class="metric-change positive">이슈 발생 시 고객 문의 대비</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">헛알람 감소</div>
+              <div class="metric-value">40<span style="font-size:20px;">배</span></div>
+              <div class="metric-change positive">-3SD → -4SD + 연속 2회 조건 적용</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">커버리지</div>
+              <div class="metric-value">99.99<span style="font-size:20px;">%</span></div>
+              <div class="metric-change positive">정상 낙폭 범위 (이론값)</div>
+            </div>
+          </div>
+          <div class="insight-quote" style="margin-top:32px;">
+            <p>운영 이슈는 생기는 게 아니라 만들어지는 겁니다. 감지 체계 없이 CS에 의존하면 항상 늦습니다. 지표의 절대값이 아닌 변동 패턴을 보는 것, 그리고 알람이 울리면 누가 어떻게 움직일지 프로토콜을 미리 만들어두는 것 — 이 두 가지가 핵심이었습니다.</p>
+            <div class="quote-author">— Lessons Learned</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- ===== CAREER TIMELINE ===== -->
 <section id="career" style="background:#fafafa;">
