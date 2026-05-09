@@ -252,7 +252,8 @@ section { padding: 160px 0; }
 
 /* Visual / Mockup Area */
 .flow-visual {
-  position: relative; display: flex; justify-content: center; align-items: center;
+  position: relative; display: flex; justify-content: center; align-items: flex-start;
+  padding-top: 8px;
 }
 .mockup-laptop {
   background: #f8f8fa; border-radius: 16px; padding: 20px;
@@ -463,8 +464,6 @@ footer {
 .kw-ecube { background: #e8f1ff; color: #0055dd; }
 /* 레브잇 — 오렌지 */
 .kw-levit { background: #fff3e8; color: #d45e00; }
-/* 결 — 브라운 */
-.kw-gyeol { background: #f0ebe4; color: #7a5436; }
 
 /* ===== ROLE SUMMARY ===== */
 .role-summary {
@@ -488,7 +487,6 @@ footer {
 }
 .role-summary.ecube li::before { background: #0066ff; }
 .role-summary.levit li::before { background: #f97316; }
-.role-summary.gyeol li::before { background: #8b6348; }
 
 /* ===== STICKY NUMBER ===== */
 .sticky-section {
@@ -567,34 +565,20 @@ footer {
   margin-top: 48px;
 }
 .field-photo {
-  border-radius: 16px; overflow: hidden; aspect-ratio: 4/3;
+  border-radius: 16px; overflow: hidden;
   position: relative;
 }
 .field-photo img {
-  width: 100%; height: 100%; object-fit: cover;
+  width: 100%; height: auto; display: block; object-fit: contain;
   transition: transform 0.6s ease;
 }
-.field-photo:hover img { transform: scale(1.05); }
+.field-photo:hover img { transform: scale(1.02); }
 .field-photo-caption {
   position: absolute; bottom: 0; left: 0; right: 0;
   padding: 16px; background: linear-gradient(transparent, rgba(0,0,0,0.7));
   color: #fff; font-size: 13px; font-weight: 500;
 }
 
-/* ===== GYEOL SECTION ===== */
-.gyeol-banner {
-  background: linear-gradient(135deg, #f5f0eb, #efe8e0);
-}
-.gyeol-app-mockup {
-  display: flex; gap: 24px; justify-content: center; align-items: center; flex-wrap: wrap;
-}
-.gyeol-phone {
-  width: 220px; background: #2c2622; border-radius: 32px; padding: 10px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-}
-.gyeol-phone img {
-  width: 100%; border-radius: 24px; display: block;
-}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
@@ -673,7 +657,6 @@ footer {
   /* 폰 목업 */
   .phone-mockup-container { flex-direction: column; }
   .phone-frame { width: 160px; }
-  .gyeol-phone { width: 160px; }
 
   /* 이미지 쇼케이스 */
   .image-showcase { flex-direction: column; align-items: center; }
@@ -693,6 +676,26 @@ footer {
   [style*="font-size:48px"], [style*="font-size: 48px"] { font-size: 36px !important; }
   [style*="font-size:42px"], [style*="font-size: 42px"] { font-size: 32px !important; }
   [style*="font-size:36px"], [style*="font-size: 36px"] { font-size: 28px !important; }
+  [style*="font-size:60px"], [style*="font-size: 60px"] { font-size: 40px !important; }
+  [style*="font-size:52px"], [style*="font-size: 52px"] { font-size: 36px !important; }
+
+  /* AS-IS/TO-BE 전체너비 그리드 모바일 대응 */
+  [style*="grid-template-columns: 1fr 80px 1fr"] { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns: 1fr 80px 1fr"] > [style*="align-items:center; justify-content:center"] { display: none !important; }
+
+  /* 프로토콜 4단계 2열 → 1열 */
+  [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+
+  /* 광고매출 stat 박스 세로 스택 */
+  [style*="inline-flex"][style*="gap:0"] { flex-direction: column !important; }
+  [style*="inline-flex"][style*="gap:0"] > [style*="width:1px"] { width: 100% !important; height: 1px !important; align-self: auto !important; }
+
+  /* 과제&전략 2열 → 1열 */
+  [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+
+  /* DAU 매출 카드 세로 전환 */
+  [style*="padding:20px 24px; background:#f8f9ff"] { flex-direction: column !important; }
+  [style*="padding:20px 24px; background:#f8f9ff"] > [style*="width:1px; height:48px"] { display: none !important; }
 }
 </style>
 </head>
@@ -705,7 +708,6 @@ footer {
     <a href="#about">About</a>
     <a href="#haulla">Haulla</a>
     <a href="#olweiz">올웨이즈</a>
-    <a href="#gyeol">결</a>
     <a href="#career">Career</a>
     <a href="#contact">Contact</a>
   </div>
@@ -735,35 +737,16 @@ footer {
       <div class="section-label">About</div>
       <h2 class="section-title">문제를 정의하고, 해결하고,<br>사업적 성과를 만듭니다</h2>
     </div>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>
-          저는 <strong>불명확한 문제를 구조화해 제품으로 만들고</strong>, 이를 조직 단위의 성장 시스템으로 확장시키는 PO입니다.
-        </p>
-        <p>
-          현지 시장조사와 경쟁사 인터뷰부터 초기 제품 기획·런칭·안착, 영업 시스템 설계, 파트너 오퍼레이션 구축까지 — IT 제품의 <strong>0→1을 직접 만들었고</strong>, MAU 80~90만 규모의 모바일 커머스 앱에서 Cross-functional 팀을 리드하며 <strong>광고 수익화 스쿼드의 1→10 그로스</strong>를 이끌었습니다.
-        </p>
-        <p>
-          실무자부터 팀 리더까지, <strong>제품·사업·조직을 함께 설계해온 경험</strong>을 갖고 있습니다.
-        </p>
-      </div>
-      <div class="strength-cards stagger-children">
-        <div class="strength-card reveal">
-          <div class="strength-icon" style="background:#f0f7ff;">📊</div>
-          <h4>데이터 기반 문제 정의와 해결</h4>
-          <p>AARRR 퍼널 분석, GA 행동 분석, 고객 인터뷰 등을 활용한 구조적 문제 해결</p>
-        </div>
-        <div class="strength-card reveal">
-          <div class="strength-icon" style="background:#f0fff4;">🚀</div>
-          <h4>사용자 행동 기반 서비스 개선</h4>
-          <p>고객 행동 패턴 분석을 통한 UX 개선, A/B 테스트 기반 반복 최적화</p>
-        </div>
-        <div class="strength-card reveal">
-          <div class="strength-icon" style="background:#fef3c7;">🔄</div>
-          <h4>실험과 반복 개선으로 성과 창출</h4>
-          <p>MVP 빠른 출시 → 데이터 기반 Iteration → 성과 도출의 선순환</p>
-        </div>
-      </div>
+    <div class="about-text reveal" style="max-width:760px; margin-top:48px;">
+      <p>
+        저는 <strong>'왜 이 문제가 생기는가'를 끝까지 파고들어</strong>, 그 원인에 직접 대응하는 제품을 만드는 PO입니다. 데이터가 가리키는 병목을 확인한 뒤, 현장과 고객에게서 이유를 찾고, 잘못된 가설은 빠르게 버립니다.
+      </p>
+      <p>
+        현지 시장조사와 경쟁사 인터뷰부터 초기 제품 기획·런칭·안착, 영업 시스템 설계, 파트너 오퍼레이션 구축까지 — IT 제품의 <strong>0→1을 직접 만들었고</strong>, MAU 80~90만 규모의 모바일 커머스 앱에서 Cross-functional 팀을 리드하며 <strong>광고 수익화 스쿼드의 1→10 그로스</strong>를 이끌었습니다.
+      </p>
+      <p>
+        실무자부터 팀 리더까지, <strong>제품·사업·조직을 함께 설계해온 경험</strong>을 갖고 있습니다.
+      </p>
     </div>
   </div>
 </section>
@@ -793,10 +776,47 @@ footer {
   <div class="role-summary ecube container">
     <div class="role-summary-title">여기서 한 일</div>
     <ul>
-      <li><strong>01</strong> 계약 후 70% 이탈하던 Activation 병목 → 파트너 배송 프로덕트 출시로 전환율 30%→67% 달성</li>
-      <li><strong>02</strong> 월 이탈률 5%→1.9% 개선 — IoT 센서 기반 수거누락 자동 감지 & 대체 수거 알림 프로덕트</li>
+      <li><strong>01</strong> 계약 후 30%밖에 안되던 Activation 전환율 → 파트너 배송 프로덕트 출시로 67% 달성</li>
+      <li><strong>02</strong> 월 이탈률 5%→1.5% 개선 — IoT 센서 기반 수거누락 자동 감지 & 대체 수거 알림 프로덕트</li>
       <li><strong>03</strong> 영업팀 리드 관리 자동화 — 세일즈 성장을 위한 리드 생성 & 관리 프로덕트 구축</li>
     </ul>
+  </div>
+
+  <!-- Haulla 과제 & 전략 -->
+  <div style="max-width:780px; margin:40px auto 0; background:#fff; border-radius:20px; box-shadow:0 4px 24px rgba(0,0,0,0.07); border:1px solid #e8f0fe; padding:32px 36px; text-align:left;">
+    <div style="font-size:12px; font-weight:700; color:#0066ff; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:16px;">과제 & 전략</div>
+    <p style="font-size:15px; color:#333; line-height:1.8; margin:0 0 20px; word-break:keep-all;">
+      합류 시점의 Haulla는 별도의 제품 없이 <strong>브로커 역할에 머물러 있었고, 연매출 8억원 수준</strong>이었습니다. 수기·전화 기반의 오프라인 프로세스를 디지털화하여 플랫폼으로 전환하고, 빠른 성장 동력을 만드는 것이 핵심 과제였습니다.
+    </p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px;">
+      <div style="background:#eff6ff; border-radius:14px; padding:20px 24px; border-left:3px solid #0066ff;">
+        <div style="font-size:12px; font-weight:700; color:#0066ff; margin-bottom:8px;">과제 1</div>
+        <div style="font-size:14px; font-weight:700; color:#1a1a1a; line-height:1.6;">플랫폼 제품화</div>
+        <div style="font-size:13px; color:#888; margin-top:4px; line-height:1.6;">공급자(수거 파트너)·수요자(사업자 고객) 양면을 연결하는 웹 기반 제품을 만들어 매칭 과정을 자동화</div>
+      </div>
+      <div style="background:#eff6ff; border-radius:14px; padding:20px 24px; border-left:3px solid #0066ff;">
+        <div style="font-size:12px; font-weight:700; color:#0066ff; margin-bottom:8px;">과제 2</div>
+        <div style="font-size:14px; font-weight:700; color:#1a1a1a; line-height:1.6;">사업 정상궤도 진입</div>
+        <div style="font-size:13px; color:#888; margin-top:4px; line-height:1.6;">Activation·Retention 병목을 제거하며 매출 성장을 안정적으로 견인할 수 있는 구조 구축</div>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:20px; padding:20px 24px; background:#f8f9ff; border-radius:14px; flex-wrap:wrap;">
+      <div style="flex:1; min-width:120px;">
+        <div style="font-size:12px; color:#aaa; font-weight:600; margin-bottom:4px;">연매출</div>
+        <div style="display:flex; align-items:baseline; gap:10px;">
+          <span style="font-size:28px; font-weight:900; color:#ccc; letter-spacing:-1px;">8억</span>
+          <span style="font-size:20px; color:#0066ff;">→</span>
+          <span style="font-size:28px; font-weight:900; color:#0066ff; letter-spacing:-1px;">200억+</span>
+        </div>
+        <div style="font-size:12px; color:#0066ff; margin-top:4px; font-weight:600;">3년 5개월간 25배 성장</div>
+      </div>
+      <div style="width:1px; height:48px; background:#e8e8ea;"></div>
+      <div style="flex:2; min-width:200px;">
+        <div style="font-size:13px; color:#555; line-height:1.7; word-break:keep-all;">
+          브로커에서 플랫폼으로 전환하며 <strong>스케일이 생기는 구조를 직접 설계</strong>했습니다. 제품이 없던 시점부터 시장조사·기획·출시·운영까지 전 과정을 주도했습니다.
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Field Photos -->
@@ -898,16 +918,16 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM6.5 8.5h3v4h-3z"/></svg>
             가설 수립 & 검증
           </div>
-          <h3>3개월간 직접 트럭을 따라다니며<br>현장에서 답을 찾았습니다</h3>
+          <h3>문제는 배송이 아니라,<br>정보가 전달되는 방식이었습니다</h3>
           <p>
-            문제의 근본 원인을 파악하기 위해 <strong>3개월간 북미 시간대에 맞춰 고객과 수거 파트너 응대 업무를 직접 수행</strong>했습니다.
+            Activation 70% 이탈의 원인이 단순히 "배송이 느려서"가 아니라는 직감이 있었습니다. <strong>이메일로 오가는 조율 과정 어딘가에서 정보가 새는 것</strong>이라는 가설을 세우고, 3개월간 직접 파트너 응대 업무를 수행하며 검증했습니다.
           </p>
           <p style="margin-top:16px;">
-            분석 결과, 이메일 기반 커뮤니케이션 과정에서 Haulla와 파트너사 간 <strong>정보 누락이 빈번히 발생</strong>했으며, 이는 결국 고객 안내 및 배송 누락으로 이어졌습니다.
+            예상대로였습니다. 고객 → Haulla → 파트너로 이어지는 이메일 체인에서 <strong>정보 누락이 반복적으로 발생</strong>하고 있었고, 이것이 배송 지연과 고객 이탈의 실제 원인이었습니다.
           </p>
           <div class="insight-quote" style="margin-top:24px;">
-            <p>"배송이 언제 오는지 몰라서 불안하다", "연락이 너무 늦다"</p>
-            <div class="quote-author">— CS 문의 데이터 정밀 분석 결과 중</div>
+            <p>"배송 자체가 문제가 아니라, 배송 전 단계의 커뮤니케이션 구조가 문제였습니다. 이메일을 없애면 누락도 없어집니다."</p>
+            <div class="quote-author">— 현장 분석 후 내린 결론</div>
           </div>
         </div>
         <div class="flow-visual">
@@ -915,72 +935,6 @@ footer {
             <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:12px;">북미 수거 파트너 동행 현장</div>
             <img src="truck.gif" alt="수거 트럭 동행 현장" style="width:100%; max-width:420px; border-radius:16px; box-shadow:0 8px 40px rgba(0,0,0,0.10);">
             <div style="font-size:12px; color:#bbb; margin-top:10px; font-style:italic;">수거 트럭을 직접 따라다니며 현장 문제를 체감했습니다</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- AS-IS / TO-BE 비교 -->
-      <div class="flow-step reveal">
-        <div class="flow-content" style="grid-column: 1 / -1;">
-          <div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:24px; align-items:stretch; margin-top:8px;">
-            <!-- AS-IS -->
-            <div style="background:#f8f8fa; border-radius:20px; padding:32px; border:1px solid #e8e8ea;">
-              <div style="font-size:12px; font-weight:700; color:#999; letter-spacing:1px; margin-bottom:16px;">AS-IS</div>
-              <div style="font-size:16px; font-weight:700; color:#555; margin-bottom:20px;">이메일 기반 수동 커뮤니케이션</div>
-              <div style="text-align:center; margin-bottom:20px;">
-                <div style="font-size:13px; color:#bbb; margin-bottom:6px;">평균 배송 소요 시간</div>
-                <div style="font-size:52px; font-weight:900; color:#ccc; letter-spacing:-2px;">9.1일</div>
-              </div>
-              <div style="display:flex; flex-direction:column; gap:8px;">
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#999;">
-                  <span style="width:20px; height:20px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0;">1</span>
-                  고객 → Haulla 이메일 전송
-                </div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#999;">
-                  <span style="width:20px; height:20px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0;">2</span>
-                  파트너에게 수동 전달
-                </div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#999;">
-                  <span style="width:20px; height:20px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0;">3</span>
-                  파트너 확인 후 이메일 회신
-                </div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#e53e3e;">
-                  <span style="width:20px; height:20px; background:#fee2e2; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#e53e3e;">!</span>
-                  정보 누락 → 배송 지연 반복
-                </div>
-              </div>
-            </div>
-            <!-- Arrow -->
-            <div style="display:flex; align-items:center; justify-content:center; padding:0 8px;">
-              <div style="font-size:32px; color:#0066ff; animation: arrowPulse 2s infinite;">→</div>
-            </div>
-            <!-- TO-BE -->
-            <div style="background:linear-gradient(135deg,#f0f7ff,#e8f4fd); border-radius:20px; padding:32px; border:1px solid #d0e8ff;">
-              <div style="font-size:12px; font-weight:700; color:#0066ff; letter-spacing:1px; margin-bottom:16px;">TO-BE</div>
-              <div style="font-size:16px; font-weight:700; color:#1a1a1a; margin-bottom:20px;">프로덕트 기반 실시간 자동 조율</div>
-              <div style="text-align:center; margin-bottom:20px;">
-                <div style="font-size:13px; color:#0066ff; margin-bottom:6px;">평균 배송 소요 시간</div>
-                <div style="font-size:52px; font-weight:900; color:#0066ff; letter-spacing:-2px;">3.4일</div>
-              </div>
-              <div style="display:flex; flex-direction:column; gap:8px;">
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#444;">
-                  <span style="width:20px; height:20px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#2563eb;">1</span>
-                  계약 시 정보 자동 수집
-                </div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#444;">
-                  <span style="width:20px; height:20px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#2563eb;">2</span>
-                  파트너 프로덕트로 자동 전달
-                </div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#444;">
-                  <span style="width:20px; height:20px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#2563eb;">3</span>
-                  고객 앱에서 실시간 확인
-                </div>
-                <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#16a34a;">
-                  <span style="width:20px; height:20px; background:#dcfce7; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; flex-shrink:0; color:#16a34a;">✓</span>
-                  정보 누락 없이 배송 완료
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -1015,6 +969,45 @@ footer {
         </div>
       </div>
 
+      <!-- AS-IS / TO-BE 비교 -->
+      <div class="flow-step reveal">
+        <div class="flow-content" style="grid-column: 1 / -1;">
+          <div style="display:grid; grid-template-columns: 1fr 80px 1fr; gap:24px; align-items:stretch;">
+            <div style="background:#f8f8fa; border-radius:20px; padding:36px; border:1px solid #e8e8ea;">
+              <div style="font-size:12px; font-weight:700; color:#999; letter-spacing:1px; margin-bottom:16px;">AS-IS</div>
+              <div style="font-size:17px; font-weight:700; color:#555; margin-bottom:24px;">이메일 기반 수동 커뮤니케이션</div>
+              <div style="text-align:center; margin-bottom:24px;">
+                <div style="font-size:13px; color:#bbb; margin-bottom:6px;">평균 배송 소요 시간</div>
+                <div style="font-size:60px; font-weight:900; color:#ccc; letter-spacing:-2px;">9.1일</div>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#999;"><span style="width:22px; height:22px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0;">1</span>고객 → Haulla 이메일 전송</div>
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#999;"><span style="width:22px; height:22px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0;">2</span>파트너에게 수동 전달</div>
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#999;"><span style="width:22px; height:22px; background:#e8e8ea; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0;">3</span>파트너 확인 후 이메일 회신</div>
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#e53e3e;"><span style="width:22px; height:22px; background:#fee2e2; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; color:#e53e3e;">!</span>정보 누락 → 배송 지연 반복</div>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center;">
+              <div style="font-size:36px; color:#0066ff; animation: arrowPulse 2s infinite;">→</div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0f7ff,#e8f4fd); border-radius:20px; padding:36px; border:1px solid #d0e8ff;">
+              <div style="font-size:12px; font-weight:700; color:#0066ff; letter-spacing:1px; margin-bottom:16px;">TO-BE</div>
+              <div style="font-size:17px; font-weight:700; color:#1a1a1a; margin-bottom:24px;">프로덕트 기반 실시간 자동 조율</div>
+              <div style="text-align:center; margin-bottom:24px;">
+                <div style="font-size:13px; color:#0066ff; margin-bottom:6px;">평균 배송 소요 시간</div>
+                <div style="font-size:60px; font-weight:900; color:#0066ff; letter-spacing:-2px;">3.4일</div>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#444;"><span style="width:22px; height:22px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; color:#2563eb;">1</span>계약 시 정보 자동 수집</div>
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#444;"><span style="width:22px; height:22px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; color:#2563eb;">2</span>파트너 프로덕트로 자동 전달</div>
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#444;"><span style="width:22px; height:22px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; color:#2563eb;">3</span>고객 앱에서 실시간 확인</div>
+                <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#16a34a;"><span style="width:22px; height:22px; background:#dcfce7; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; color:#16a34a;">✓</span>정보 누락 없이 배송 완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Result -->
       <div class="flow-step reveal">
         <div class="flow-content" style="grid-column: 1 / -1;">
@@ -1044,8 +1037,9 @@ footer {
               <div class="metric-change"><span class="metric-arrow">↓</span> 9.1일 → 3.4일</div>
             </div>
           </div>
+
           <div class="insight-quote" style="margin-top:32px;">
-            <p>초기 단계에서는 직접 현장에서 문제를 체감하고 데이터를 수집하는 것이 가장 효과적인 문제 해결 방안이었습니다. 플랫폼 서비스를 하기 위해서는 공급자와 수요자 사이의 커뮤니케이션을 잘 이어주는 것이 핵심입니다.</p>
+            <p>AARRR 퍼널은 '어디서 무너지고 있는가'를 보여주지만, '왜 무너지는가'는 현장에 있었습니다. 데이터가 Activation 병목을 가리켰고, 현장이 원인을 알려줬습니다. 이메일이라는 도구 자체가 정보 누락의 구조적 원인이었고, 도구를 바꾸니 병목이 사라졌습니다.</p>
             <div class="quote-author">— Lessons Learned</div>
           </div>
         </div>
@@ -1087,9 +1081,9 @@ footer {
               <div style="font-size:56px; font-weight:900; color:#e53e3e; margin:8px 0;">5%</div>
               <div style="font-size:13px; color:#999;">산업 평균의 5배</div>
             </div>
-            <div style="background:#fff; border-radius:20px; padding:32px; text-align:center; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0; flex:1; min-width:160px;">
-              <div style="font-size:13px; color:#e53e3e; font-weight:600;">수거 누락 인한 이탈</div>
-              <div style="font-size:56px; font-weight:900; color:#e53e3e; margin:8px 0;">80%</div>
+            <div style="background:#fff; border-radius:20px; padding:32px; text-align:center; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0; flex:1; min-width:180px;">
+              <div style="font-size:13px; color:#e53e3e; font-weight:600; white-space:nowrap;">수거 누락으로 인한 이탈</div>
+              <div style="font-size:56px; font-weight:900; color:#e53e3e; margin:8px 0; white-space:nowrap;">80%</div>
               <div style="font-size:13px; color:#999;">전체 이탈 비중</div>
             </div>
           </div>
@@ -1131,7 +1125,7 @@ footer {
             </div>
             <div style="margin-bottom:12px;">
               <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
-                <span style="font-size:13px; color:#555;">CS문의 전에 대체수거를 원함</span>
+                <span style="font-size:13px; color:#555;">빠른 CS대응</span>
                 <span style="font-size:13px; font-weight:700; color:#888;">20%</span>
               </div>
               <div style="height:24px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
@@ -1169,7 +1163,7 @@ footer {
           </div>
           <h3>Dumpster에 센서를 달아<br>수거 누락을 자동으로 감지했습니다</h3>
           <ul>
-            <li>Dumpster에 센서를 부착하여 수거 완료 여부를 <strong>실시간으로 감지</strong>하는 시스템 구축</li>
+            <li style="white-space: nowrap; font-size: 13px;">Dumpster에 센서를 부착하여 수거 완료 여부를 <strong>실시간으로 감지</strong>하는 시스템 구축</li>
             <li>누락 발생 시 고객이 인지하기 전에 → <strong>파트너에게 자동 알림 전송</strong></li>
             <li><strong>보상 절차까지 자동화</strong>된 구조로 설계하여 고객 불만족 최소화</li>
           </ul>
@@ -1200,7 +1194,7 @@ footer {
             <div class="metric-card">
               <div class="metric-label">월 이탈률</div>
               <div class="metric-value count-up" data-target="1.5" data-suffix="%" data-decimal="1">0</div>
-              <div class="metric-change"><span class="metric-arrow">↓</span> 4% → 1.5%</div>
+              <div class="metric-change"><span class="metric-arrow">↓</span> 5% → 1.5%</div>
             </div>
             <div class="metric-card">
               <div class="metric-label">수거 누락 처리 소요</div>
@@ -1214,7 +1208,7 @@ footer {
             </div>
           </div>
           <div class="insight-quote" style="margin-top:32px;">
-            <p>VOC(Voice of Customer) 청취와 pain point 해결이 서비스 혁신의 핵심임을 재확인했으며, 이는 서비스 성장의 핵심 동력임을 체감하는 계기가 되었습니다.</p>
+            <p>1차 시도에서 틀렸다는 것을 데이터로 확인하고 바로 방향을 바꿀 수 있었던 것이 결정적이었습니다. "빠른 응답"과 "선제 해결"은 완전히 다른 제품을 만들어냅니다. 문제를 정확하게 다시 정의하지 않았다면, 계속 틀린 방향으로 개선했을 것입니다.</p>
             <div class="quote-author">— Lessons Learned</div>
           </div>
         </div>
@@ -1241,12 +1235,12 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
             문제 인식
           </div>
-          <h3>오퍼레이션은 안정화됐는데,<br>세일즈가 성장하지 않았습니다</h3>
+          <h3>영업팀이 2년째 제자리인 이유,<br>사람이 아니라 도구에 있었습니다</h3>
           <p>
-            오퍼레이션은 점점 안정화됐지만, <strong>세일즈 성과는 MRR 4천만원 수준을 벗어나지 못하면서</strong> 성장이 정체되고 있었습니다.
+            오퍼레이션이 안정화됐지만 MRR 4천만원 수준이 2년째 정체되어 있었습니다. 영업팀의 역량이 문제라는 시각이 지배적이었지만, <strong>직접 영업팀 일상 업무를 관찰해보니 전혀 달랐습니다.</strong>
           </p>
           <p style="margin-top:16px;">
-            특히 핵심 영업채널인 아웃바운드 <strong>콜영업팀의 계약 실적이 2년 동안 개선되지 않고</strong> 있었습니다.
+            영업사원들과 함께 직접 영업 현장에 동행하며 일상 업무 흐름을 분석한 결과, <strong>고객 선정 과정에서 구글맵과 내부 프로덕트를 반복적으로 전환하는 데 일일 평균 1시간 이상이 소요</strong>되고 있음을 발견했습니다. <strong>전화를 더 많이 할 수 없는 게 아니라, 전화 외에 해야 할 일이 너무 많았던 것입니다.</strong>
           </p>
         </div>
         <div class="flow-visual">
@@ -1283,9 +1277,9 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
             액션 1: Self-Mining 프로덕트
           </div>
-          <h3>영업사원의 비영업 시간을<br>프로덕트로 줄였습니다</h3>
+          <h3>영업사원이 영업에만 집중할 수 있는<br>환경을 만들었습니다</h3>
           <p>
-            일상 업무 분석 결과, 고객 선정 과정에서 구글맵과 내부 프로덕트 전환으로 인해 <strong>일일 평균 1시간 이상의 시간이 소요</strong>되는 것을 확인했습니다.
+            구글맵과 내부 시스템 전환에 쓰던 <strong>하루 1시간 이상의 비영업 시간을 제거</strong>하는 것이 목표였습니다.
           </p>
           <ul>
             <li>구글 맵 API를 활용하여 고객 정보 조회 및 영업 활동이 가능한 <strong>통합 프로덕트(Self-Mining)</strong> 개발</li>
@@ -1309,12 +1303,13 @@ footer {
           </div>
           <h3>고객 행동 데이터로<br>견적 전환율을 2배 올렸습니다</h3>
           <p>
-            GA 기반 유저 행동 분석 결과, 많은 고객이 랜딩페이지에서 '서비스 가능 지역 확인' 버튼을 클릭한 뒤, <strong>별도의 견적 요청 없이 이탈</strong>하는 패턴을 발견했습니다.
+            GA 분석을 통해 대부분의 고객이 견적 요청 페이지가 아닌 <strong>서비스 가능 지역 확인 페이지로 먼저 유입</strong>되고 있다는 패턴을 발견했습니다. 기존 지역 확인 방식은 지도를 직접 드래그해 찾아야 하는 구조였고, 이 불편함이 견적 전환의 병목이라는 가설을 세웠습니다.
           </p>
           <ul>
-            <li>메인 페이지에 ZIP 코드 입력 필드 추가 → 즉시 서비스 가능 여부 확인</li>
-            <li>"이 지역에서 이용 가능합니다. 견적 요청하시겠어요?" → CTA 버튼으로 자연스럽게 연결</li>
-            <li>GA 이벤트 + 유저 클릭 히트맵을 활용한 <strong>반복 A/B 테스트</strong> 실시</li>
+            <li>클릭 히트맵으로 지도 드래그 조작 구간에서의 <strong>조기 이탈 패턴</strong> 확인</li>
+            <li>지도 방식을 ZIP 코드 직접 입력 방식으로 교체 → 서비스 가능 여부 즉시 확인</li>
+            <li>"이 지역에서 이용 가능합니다. 견적 요청하시겠어요?" CTA로 자연스럽게 연결</li>
+            <li>GA 이벤트 기반 <strong>A/B 테스트</strong>로 반복 검증</li>
           </ul>
           <div class="skill-tags" style="margin-top:24px;">
             <span class="skill-tag">고객 행동 분석</span>
@@ -1410,10 +1405,48 @@ footer {
   <h2>MAU 80~90만 모바일 커머스 앱<br><strong>광고 수익화 스쿼드 리드</strong></h2>
   <p>
     MAU 80~90만 규모의 모바일 커머스 앱에서 광고 수익화 스쿼드를 리드.<br>
-    네트워크 배너 / 라이브커머스 / 어필리에이트 포트폴리오를 다각화하며<br>
-    회사 첫 연간 흑자 달성에 기여했습니다.
+    올웨이즈 전체 매출의 <strong>70.7%가 광고매출</strong>이며, 그 성장을 직접 만들었습니다.
   </p>
-  <div class="company-keywords">
+
+  <!-- DAU 하락 속 매출 방어 맥락 -->
+  <div style="max-width:780px; margin:28px auto 0; background:#fff; border-radius:20px; box-shadow:0 4px 24px rgba(0,0,0,0.07); border:1px solid #f0ebe4; padding:32px 36px; text-align:left;">
+    <div style="font-size:12px; font-weight:700; color:#f97316; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:16px;">과제 & 전략</div>
+    <p style="font-size:15px; color:#333; line-height:1.8; margin:0 0 20px; word-break:keep-all;">
+      2025년, 올웨이즈는 <strong>DAU가 지속적으로 감소하는 상황</strong>에서도 광고 매출을 방어해야 했습니다.
+      두 가지 원칙을 동시에 지켜야 했습니다.
+    </p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px;">
+      <div style="background:#fff7ed; border-radius:14px; padding:20px 24px; border-left:3px solid #f97316;">
+        <div style="font-size:12px; font-weight:700; color:#f97316; margin-bottom:8px;">원칙 1</div>
+        <div style="font-size:14px; font-weight:700; color:#1a1a1a; line-height:1.6;">광고로 인한 이탈 방지</div>
+        <div style="font-size:13px; color:#888; margin-top:4px; line-height:1.6;">스트레스 높은 영상광고 비중을 줄이고, 고객 경험을 해치지 않는 광고 믹스로 전환</div>
+      </div>
+      <div style="background:#fff7ed; border-radius:14px; padding:20px 24px; border-left:3px solid #f97316;">
+        <div style="font-size:12px; font-weight:700; color:#f97316; margin-bottom:8px;">원칙 2</div>
+        <div style="font-size:14px; font-weight:700; color:#1a1a1a; line-height:1.6;">DAU당 광고 매출 극대화</div>
+        <div style="font-size:13px; color:#888; margin-top:4px; line-height:1.6;">올라이브·보물찾기·어필리에이트를 출시해 줄어드는 DAU에서 더 많은 매출을 만들어냄</div>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:20px; padding:20px 24px; background:#f8f9ff; border-radius:14px; flex-wrap:wrap;">
+      <div style="flex:1; min-width:120px;">
+        <div style="font-size:12px; color:#aaa; font-weight:600; margin-bottom:4px;">DAU당 광고 매출</div>
+        <div style="display:flex; align-items:baseline; gap:10px;">
+          <span style="font-size:28px; font-weight:900; color:#ccc; letter-spacing:-1px;">89원</span>
+          <span style="font-size:20px; color:#0066ff;">→</span>
+          <span style="font-size:28px; font-weight:900; color:#0066ff; letter-spacing:-1px;">140원</span>
+        </div>
+        <div style="font-size:12px; color:#0066ff; margin-top:4px; font-weight:600;">+57% 인당 매출 성장</div>
+      </div>
+      <div style="width:1px; height:48px; background:#e8e8ea;"></div>
+      <div style="flex:2; min-width:200px;">
+        <div style="font-size:13px; color:#555; line-height:1.7; word-break:keep-all;">
+          DAU가 감소하는 상황에서도 <strong>인당 수익성을 끌어올려 매출을 방어</strong>했습니다. 고객 경험을 해치는 광고를 줄이면서도 더 건강한 방식으로 매출을 만드는 구조를 설계했습니다.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="company-keywords" style="margin-top:28px;">
     <span class="kw-tag kw-levit">광고 수익화</span>
     <span class="kw-tag kw-levit">Cross-functional 팀 리드</span>
     <span class="kw-tag kw-levit">B2C 모바일 커머스</span>
@@ -1430,6 +1463,7 @@ footer {
       <li><strong>04</strong> 입사 첫 달 올라이브(라이브커머스 광고) 0→1 출시 — 방송당 10만 PV, 월 1.5억 안정 매출</li>
       <li><strong>05</strong> 피드형 미션 광고 '보물찾기' 기획·출시 — 일 150만원 매출, 배너 섹션 전체 매출 6배 성장</li>
       <li><strong>06</strong> 어필리에이트 광고 구조 개선 — 고객 30명 직접 인터뷰로 문제 발굴, 월 매출 2억→4억 2배 성장</li>
+      <li><strong>07</strong> 영상광고 이슈 감지 시스템 & 대응 프로토콜 설계 — display to reward ratio SD 기반 알람 + 네트워크 핫라인, 선제적 이슈 대응 체계 구축</li>
     </ul>
   </div>
 </div>
@@ -1452,9 +1486,9 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
             입사 & 문제 인식
           </div>
-          <h3>광고 상품이 너무 없었다.<br>매출 극대화를 위한 BM 다각화가 급선무</h3>
+          <h3>광고 상품이 너무 없었다. 매출 극대화를 위한 BM 다각화가 급선무</h3>
           <p>
-            입사 당시 광고 수익화 스쿼드의 광고 상품 포트폴리오가 <strong>극도로 제한적</strong>이었습니다. 네트워크 배너 외에는 변변한 수익원이 없었고, 매출 천장이 명확했습니다.
+            입사 당시 광고 수익화 스쿼드의 광고 상품 포트폴리오가 <strong>극도로 제한적</strong>이었습니다. 네트워크 영상광고 외에는 변변한 수익원이 없었고, 매출 천장이 명확했습니다.
           </p>
           <p style="margin-top:16px;">
             들어가자마자 <strong>"가장 빠르게 매출을 만들 수 있는 새로운 프로덕트를 출시하자"</strong>는 목표를 세웠습니다. MAU 80~90만의 트래픽을 직접 매출로 전환할 수 있는 BM이 필요했습니다.
@@ -1493,15 +1527,10 @@ footer {
           </div>
           <h3>토스 애즈, 오케이캐시백을 분석해<br>라이브 방송이 답이라고 확신했습니다</h3>
           <p>
-            앱 트래픽을 가장 빠르게 매출로 전환할 수 있는 BM을 찾기 위해 업계를 집중 리서치했습니다.
+            MAU 80~90만이 있는데 수익으로 연결되는 BM이 배너 하나뿐이라는 게 핵심 문제였습니다. "이 트래픽을 가장 빠르게 매출로 바꿀 수 있는 포맷은 뭔가"를 놓고 업계를 집중 리서치했습니다.
           </p>
-          <ul>
-            <li><strong>토스 애즈 라이브커머스</strong>, <strong>오케이캐시백 라이브 방송</strong> 등 성공 사례 분석</li>
-            <li>라이브 방송 = 트래픽 → 매출 전환이 가장 빠른 BM이라 판단</li>
-            <li>광고주 입장에서 반복 구매 가능한 서비스형 상품 구조로 설계</li>
-          </ul>
           <p style="margin-top:16px;">
-            벤치마킹 후 <strong>1개월 만에 기획부터 출시까지</strong> 완료했습니다.
+            토스 애즈와 오케이캐시백의 라이브커머스를 분석하면서 두 가지를 확인했습니다. <strong>유저 입장에서는 라이브가 피드보다 구매 전환율이 높고</strong>, <strong>광고주 입장에서는 이미 라이브에 예산을 쓰고 있어 시장 수요가 검증돼 있다</strong>는 것이었습니다. 1개월 만에 기획부터 출시까지 완료했습니다.
           </p>
         </div>
         <div class="flow-visual">
@@ -1519,7 +1548,7 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
             초반 고전 → 전략 전환
           </div>
-          <h3>초반 반응은 미비했지만,<br>박리다매 전략으로 시장을 뚫었습니다</h3>
+          <h3>초반 반응은 미비했지만 박리다매 전략으로 시장을 뚫었습니다</h3>
           <p>
             출시 초반 광고주 반응이 미비했습니다. 시장에서 인지도가 없었기 때문입니다.
           </p>
@@ -1576,7 +1605,7 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2.5 5 5.5.8-4 3.9.9 5.3L8 12.5 3.1 15l.9-5.3-4-3.9 5.5-.8z"/></svg>
             성과
           </div>
-          <h3>방송당 10만 PV,<br>월 안정 매출 1.5억 달성</h3>
+          <h3>방송당 10만 PV, 월 안정 매출 1.5억 달성</h3>
           <div class="result-metrics">
             <div class="metric-card">
               <div class="metric-label">방송당 PV</div>
@@ -1595,7 +1624,7 @@ footer {
             </div>
           </div>
           <div class="insight-quote" style="margin-top:32px;">
-            <p>시장을 조사하고, 작동 원리를 파악해서, 제품을 만들고, 매출을 만들어내는 전 과정을 직접 해냈습니다. 광고주와 대행사의 목소리를 듣고 시장 적정가를 찾은 것이 핵심이었습니다.</p>
+            <p>새 BM을 만들 때 처음부터 완성형을 그릴 수 없습니다. 가격도, 구조도, 타겟 광고주도 — 출시하기 전까지는 가설일 뿐입니다. 광고주와 대행사에게 직접 물어보고 시장 적정가를 맞춰나간 것, 출시 자체가 리서치였고 그 과정에서 전략이 정교해졌습니다.</p>
             <div class="quote-author">— Lessons Learned</div>
           </div>
         </div>
@@ -1692,12 +1721,12 @@ footer {
           </div>
           <h3>CTR을 구조적으로 높이는<br>피드형 광고 제품을 만들었습니다</h3>
           <p>
-            CTR이 핵심이라는 인사이트를 바탕으로, <strong>유저가 피드 탐색 중 자연스럽게 광고를 클릭하게 만드는 미션형 광고 제품 '보물찾기'</strong>를 기획·출시했습니다.
+            인스타그램·페이스북을 쓰면서 피드 중간에 광고가 나와도 크게 거부감 없이 보게 되고, 자연스럽게 클릭으로 이어지는 경험에서 출발했습니다. <strong>광고 자체보다 피드를 보는 맥락이 클릭을 만든다</strong>는 가설이었습니다. 별다른 콘텐츠는 없지만 보상(리워드)을 제공하는 아이템들을 피드에 랜덤 배치해 유저가 피드를 탐색하게 유도하고, 탐색 흐름 속에서 광고를 자연스럽게 만나면 불만 없이 시청·클릭으로 이어질 것이라 판단했습니다.
           </p>
           <ul>
-            <li>피드 탐색 중 보물 상자 발견 → 클릭 시 리워드 획득 → <strong>자연스럽게 광고 노출</strong></li>
-            <li>유저의 '발견 이동 동기'를 광고 클릭으로 전환하는 <strong>게이미피케이션 구조</strong></li>
-            <li>AdMob CPM 과금과 결합하여 <strong>CTR 상승 → eCPM 상승의 선순환</strong> 구축</li>
+            <li>리워드 아이템을 피드에 랜덤 배치 → 유저가 <strong>피드를 능동적으로 탐색</strong>하게 유도</li>
+            <li>탐색 흐름 속 광고 노출 → 강요가 아닌 <strong>자연스러운 시청·클릭</strong>으로 연결</li>
+            <li>AdMob CPM 과금 구조와 결합해 <strong>CTR 상승 → eCPM 상승의 선순환</strong> 구축</li>
           </ul>
           <div class="skill-tags" style="margin-top:24px;">
             <span class="skill-tag">업계 인터뷰</span>
@@ -1722,7 +1751,7 @@ footer {
             성과
           </div>
           <h3>보물찾기 단일 제품 일 150만원 매출,<br>배너 섹션 전체 매출 6배 성장</h3>
-          <p style="margin-top:8px; color:#666;">출시 직후부터 매출이 폭발적으로 성장했습니다. 시장의 작동 원리를 파악하고, 핵심 레버를 제품으로 구현한 결과입니다.</p>
+          <p style="margin-top:8px; color:#666;">출시 직후부터 매출이 폭발적으로 성장했습니다. 시장의 작동 원리를 파악하고, 핵심 레버를 제품으로 구현한 결과입니다. <strong>Google에서도 성공적인 모바일 광고 수익화 사례로 공식 소개</strong>됐습니다.</p>
           <div class="result-metrics" style="margin-top:32px;">
             <div class="metric-card">
               <div class="metric-label">보물찾기 일 매출</div>
@@ -1741,7 +1770,7 @@ footer {
             </div>
           </div>
           <div class="insight-quote" style="margin-top:32px;">
-            <p>시장을 조사하고 → 작동 원리를 파악하고 → 핵심 레버를 제품으로 만들어 → 매출을 만들어낸 경험. 업계 담당자를 직접 만나 인터뷰한 것이 가장 결정적이었습니다.</p>
+            <p>핵심 레버를 잘못 잡으면, 아무리 개선해도 의미가 없습니다. 업계 담당자를 직접 만나서 확인하지 않았다면, 배너 노출수를 늘리는 방향으로 계속 작업했을 것입니다. CTR이 eCPM을 결정한다는 사실이 제품의 방향 자체를 바꿨습니다.</p>
             <div class="quote-author">— Lessons Learned</div>
           </div>
         </div>
@@ -1769,7 +1798,7 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
             문제 인식
           </div>
-          <h3>월 1.5억에서 정체.<br>데이터만으로는 답이 없었습니다</h3>
+          <h3>월 1.5억에서 정체, 데이터만으로는 답이 없었습니다</h3>
           <p>
             어필리에이트는 비용 효율이 좋은 매출원이었지만, 월 약 1.5억 수준에서 계속 정체돼 있었습니다. 클릭률·전환율 등 데이터를 아무리 들여다봐도 <strong>성장 레버를 찾을 수 없었습니다.</strong>
           </p>
@@ -1899,44 +1928,19 @@ footer {
   </div>
 </section>
 
-<!-- =========================================================== -->
-<!-- ===== 결(GYEOL) SECTION ===== -->
-<!-- =========================================================== -->
-<div class="company-banner gyeol-banner reveal" id="gyeol">
-  <div class="company-logo">SIDE PROJECT · 예비창업</div>
-  <h2>에이전틱 AI 기반 리워드형 일기 플랫폼<br><strong>결 (GYEOL)</strong></h2>
-  <p>
-    10년간 일기를 써온 경험에서 출발한 사이드 프로젝트.<br>
-    "기록이 쌓일수록 나를 더 잘 이해할 수 있는 서비스"를 직접 만들고 있습니다.
-  </p>
-  <div class="company-keywords">
-    <span class="kw-tag kw-gyeol">사이드 프로젝트 · 예비창업</span>
-    <span class="kw-tag kw-gyeol">에이전틱 AI</span>
-    <span class="kw-tag kw-gyeol">0→1 앱 기획</span>
-    <span class="kw-tag kw-gyeol">리워드형 UX</span>
-    <span class="kw-tag kw-gyeol">예비창업패키지 선정</span>
-    <span class="kw-tag kw-gyeol">창업자 · PO</span>
-  </div>
-  <div class="company-period">창업자 · Product Owner · AI 전략 총괄 · 2025 ~ 현재</div>
 
-  <div class="role-summary gyeol container">
-    <div class="role-summary-title">여기서 한 일</div>
-    <ul>
-      <li><strong>07</strong> "기록이 데이터가 되지 못한다"는 문제를 직접 해결 — 에이전틱 AI 기반 리워드형 일기 플랫폼 기획·창업, 예비창업패키지 선정</li>
-    </ul>
-  </div>
-</div>
-
+<!-- ===== 올웨이즈 Project 7 — 영상광고 이슈 감지 시스템 ===== -->
 <section class="project">
   <div class="container">
     <div class="project-header reveal">
       <div class="project-number">07</div>
-      <div class="project-category product">0→1 사이드 프로젝트</div>
-      <h2 class="project-title">기록이 데이터가 되지 못하는 문제,<br>AI로 해결합니다</h2>
-      <p class="project-subtitle">결 (GYEOL) · gyeoldiary.com · 예비창업패키지 선정</p>
+      <div class="project-category data">운영 효율화 · 광고 운영</div>
+      <h2 class="project-title">영상광고 이슈를 고객 신고 전에<br>먼저 잡는 시스템을 만들었습니다</h2>
+      <p class="project-subtitle">display to reward ratio 이상감지 · 대응 프로토콜 · 선제적 이슈 대응 체계 구축</p>
     </div>
 
     <div class="psrFlow">
+
       <!-- Problem -->
       <div class="flow-step reveal">
         <div class="flow-content">
@@ -1944,148 +1948,157 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
             문제 인식
           </div>
-          <h3>10년간 일기를 썼지만,<br>기록은 데이터가 되지 못했습니다</h3>
+          <h3>"X 버튼이 안 눌려요"<br>CS가 쏟아졌지만 원인을 몰랐습니다</h3>
           <p>
-            10년 넘게 꾸준히 일기를 작성해왔지만, 시간이 지나면 과거의 기록은 다시 보지 않게 됩니다. 특정 상황에 어떤 감정 패턴을 반복하는지, 이를 어떻게 회복하는지 등 <strong>장기적인 자기이해로 이어지지 않았습니다.</strong>
+            어느 날 갑자기 <strong>"넘어가기 버튼이 안 눌린다", "광고가 안 닫힌다"</strong>는 CS 문의가 급증했습니다. 처음엔 자사 코드 문제라고 의심했지만, 고객 캡처와 대시보드의 <strong>Display to Reward Ratio</strong>를 보고 나서야 메타 영상광고 이슈임을 파악했습니다.
           </p>
           <p style="margin-top:16px;">
-            일기 헤비 유저 대상 설문 결과, <strong>"기록을 데이터화하여 자신을 이해할 수 없다"(70%, 1위)</strong>가 핵심 문제로 확인됐습니다.
+            영상광고의 구조상 <strong>네트워크사에서 문제는 언제든지 발생할 수 있고</strong>, 미디에이션사는 각 네트워크의 이슈에 책임을 지지 않습니다. 결국 자체적으로 빠르게 파악하기 어렵고, 고객 문의가 쌓이고 나서야 문제가 있다는 것을 뒤늦게 인지하는 구조였습니다.
           </p>
         </div>
         <div class="flow-visual">
-          <div style="background:#fff; border-radius:20px; padding:40px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
-            <div style="font-size:14px; font-weight:700; color:#1a1a1a; margin-bottom:20px; text-align:center;">
-              "기존 일기 사용 방식에서 가장 아쉬운 점은?"
-            </div>
-            <div style="margin-bottom:12px;">
-              <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
-                <span style="font-size:13px; color:#555; font-weight:600;">기록을 데이터화하여 분석할 수 없다</span>
-                <span style="font-size:13px; font-weight:700; color:#0066ff;">70%</span>
+          <div style="background:#fff; border-radius:20px; padding:32px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:16px;">그외 실제 발생 이슈 정리</div>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div style="padding:14px 16px; background:#fff5f5; border-radius:12px; border-left:3px solid #e53e3e;">
+                <div style="font-size:12px; font-weight:700; color:#e53e3e; margin-bottom:4px;">META · Chained Ads</div>
+                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">X 버튼이 아예 안 눌리는 이슈</div>
               </div>
-              <div style="height:28px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
-                <div class="funnel-fill" data-width="70%" style="background:linear-gradient(90deg, #0066ff, #4d94ff); border-radius:6px;"></div>
+              <div style="padding:14px 16px; background:#fff5f5; border-radius:12px; border-left:3px solid #e53e3e;">
+                <div style="font-size:12px; font-weight:700; color:#e53e3e; margin-bottom:4px;">ADMOB · 소재 이슈</div>
+                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">X 버튼이 Status Bar 뒤에 위치</div>
               </div>
-            </div>
-            <div style="margin-bottom:12px;">
-              <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
-                <span style="font-size:13px; color:#888;">기타</span>
-                <span style="font-size:13px; color:#888;">30%</span>
-              </div>
-              <div style="height:28px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
-                <div class="funnel-fill" data-width="30%" style="background:#d1d5db; border-radius:6px;"></div>
+              <div style="padding:14px 16px; background:#fff5f5; border-radius:12px; border-left:3px solid #e53e3e;">
+                <div style="font-size:12px; font-weight:700; color:#e53e3e; margin-bottom:4px;">APPLOVIN · 특정 소재</div>
+                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">아랍풍 음악이 광고 종료 후에도 계속 재생</div>
               </div>
             </div>
-            <div style="margin-top:20px; padding:16px; background:#f8f9ff; border-radius:12px; text-align:center;">
-              <div style="font-size:13px; color:#666;">기존 일기 앱의 구조적 한계</div>
-              <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-top:4px;">저장 중심 → 장기 맥락 분석 불가</div>
+            <div style="margin-top:16px; padding:12px 16px; background:#f8f9ff; border-radius:10px; text-align:center;">
+              <div style="font-size:13px; color:#666;">공통점</div>
+              <div style="font-size:14px; font-weight:700; color:#1a1a1a; margin-top:2px;">자사 코드가 아닌 광고 네트워크 측 이슈</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Solution -->
+      <!-- Hypothesis / Design -->
       <div class="flow-step reverse reveal">
         <div class="flow-content">
-          <div class="flow-badge action-badge">
-            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
-            솔루션 & 제품
-          </div>
-          <h3>에이전틱 AI로<br>일기를 자기이해 데이터로 전환</h3>
-          <p>
-            기존 AI 일기 앱은 오늘 일기에만 답하며, 장기 맥락을 이해하지 못합니다. 결은 이 문제를 세 가지 구조로 해결합니다:
-          </p>
-          <ul>
-            <li><strong>정서 데이터 카탈로깅</strong>: 비정형 일기를 감정·인물·사건·행동 구조화 데이터로 자동 변환</li>
-            <li><strong>계층적 메모리 아키텍처</strong>: 매일 → 매월 → 매년 자동 요약으로 원문 대비 1/50 비용으로 장기 맥락 이해</li>
-            <li><strong>리워드 기반 성장 전략</strong>: 리워드로 유입 → AI 자기이해로 락인 → 정서 기반 커뮤니티 매칭으로 확장</li>
-          </ul>
-          <div class="skill-tags" style="margin-top:24px;">
-            <span class="skill-tag">0→1 제품 빌딩</span>
-            <span class="skill-tag">AI 제품 전략</span>
-            <span class="skill-tag">고객 검증</span>
-            <span class="skill-tag">예비창업패키지</span>
-            <span class="skill-tag">팀 빌딩</span>
-          </div>
-        </div>
-        <div class="flow-visual">
-          <!-- Gyeol App Screenshots -->
-          <div class="gyeol-app-mockup">
-            <div class="gyeol-phone">
-              <img src="gyeol_BIN0001.JPEG" alt="결 앱 - AI 주간 분석 메인화면">
-            </div>
-            <div class="gyeol-phone">
-              <img src="gyeol_BIN0002.JPEG" alt="결 앱 - 커뮤니티 매칭">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Architecture -->
-      <div class="flow-step reveal">
-        <div class="flow-content" style="grid-column: 1 / -1;">
           <div class="flow-badge hypothesis-badge">
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM6.5 8.5h3v4h-3z"/></svg>
-            기술 아키텍처
+            감지 시스템 설계
           </div>
-          <h3>AI가 알아서 분석하고,<br>유저는 일기만 씁니다</h3>
+          <h3>display to reward ratio의 편차를 이용해<br>감지 시스템을 설계했습니다</h3>
           <p>
-            에이전틱 AI가 백그라운드에서 자동으로 정서를 분류·군집·업데이트합니다. 유저는 일기만 쓰면 됩니다.
+            display to reward ratio는 시간대·요일마다 자연스럽게 오르내리는 지표입니다. 절대값 기준으로 자르면 정상 변동도 모두 걸립니다. <strong>"평소 낙폭 대비 비정상적으로 큰 하락"</strong>만 잡으려면 표준편차(SD) 기반 설계가 필요했습니다.
           </p>
-          <div style="margin-top:24px;">
-            <div class="process-flow">
-              <div class="process-step-item" style="background:#fff7ed; color:#ea580c;">사용자가 일기 쓴다</div>
-              <div class="process-arrow">→</div>
-              <div class="process-step-item" style="background:#eff6ff; color:#2563eb;">매일 자동 구조화</div>
-              <div class="process-arrow">→</div>
-              <div class="process-step-item" style="background:#f0fdf4; color:#16a34a;">매월 맥락 요약</div>
-              <div class="process-arrow">→</div>
-              <div class="process-step-item" style="background:#faf5ff; color:#9333ea;">매년 프로파일</div>
+          <ul style="margin-top:16px; display:flex; flex-direction:column; gap:10px; list-style:none; padding:0;">
+            <li style="padding:12px 16px; background:#f0fdf4; border-radius:10px; font-size:14px; color:#1a1a1a; line-height:1.6;">
+              <strong style="color:#16a34a;">Baseline</strong> — 날짜 단위 평균이 아닌 <strong>동일 요일 × 동일 시간대 평균</strong>으로 시간대 효과 제거
+            </li>
+            <li style="padding:12px 16px; background:#f0fdf4; border-radius:10px; font-size:14px; color:#1a1a1a; line-height:1.6;">
+              <strong style="color:#16a34a;">Lower Bound</strong> — -3SD → <strong>-4SD</strong>로 조정 (정상 낙폭 99.9937% 커버, 헛알람 이론상 40배 감소)
+            </li>
+            <li style="padding:12px 16px; background:#f0fdf4; border-radius:10px; font-size:14px; color:#1a1a1a; line-height:1.6;">
+              <strong style="color:#16a34a;">알람 조건</strong> — 1회성 스파이크 제거, <strong>연속 2회 이상 하회 시에만</strong> 알람 발송
+            </li>
+            <li style="padding:12px 16px; background:#f0fdf4; border-radius:10px; font-size:14px; color:#1a1a1a; line-height:1.6;">
+              <strong style="color:#16a34a;">범위</strong> — 네트워크별 / OS별 분리 모니터링. Interstitial은 비중 낮고 항상 100% 수준이라 알람에서 제외
+            </li>
+          </ul>
+        </div>
+        <div class="flow-visual">
+          <div style="background:#fff; border-radius:20px; padding:32px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:20px;">display to reward ratio 이상감지 구조</div>
+            <!-- SD Chart mockup -->
+            <div style="position:relative; height:120px; background:#f8f9ff; border-radius:12px; overflow:hidden; margin-bottom:16px; padding:12px;">
+              <div style="font-size:11px; color:#999; margin-bottom:6px;">display to reward ratio (네트워크 A · iOS)</div>
+              <!-- Normal range band -->
+              <div style="position:absolute; bottom:28px; left:12px; right:12px; height:40px; background:rgba(22,163,74,0.08); border-radius:4px;"></div>
+              <!-- Normal line -->
+              <svg viewBox="0 0 280 60" style="width:100%; height:60px;">
+                <polyline points="0,20 40,22 80,18 120,24 160,20 200,22 230,30 240,48 260,50 280,52" fill="none" stroke="#f97316" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="230" y1="0" x2="230" y2="60" stroke="#e53e3e" stroke-width="1.5" stroke-dasharray="4,3"/>
+                <text x="232" y="12" font-size="9" fill="#e53e3e" font-weight="600">이상감지</text>
+                <!-- -4SD line -->
+                <line x1="0" y1="44" x2="280" y2="44" stroke="#16a34a" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="2" y="42" font-size="8" fill="#16a34a">-4SD</text>
+              </svg>
             </div>
-          </div>
-          <div class="asistobe" style="margin-top:32px;">
-            <div class="asis-card">
-              <h4>기존 AI 일기앱</h4>
-              <p>1년 = 토큰 10만 개<br>비용 비례 증가<br><strong style="color:#e53e3e;">장기 맥락 분석 불가</strong></p>
-            </div>
-            <div class="tobe-card">
-              <h4>결 (GYEOL)</h4>
-              <p>요약 + 관련 일기 = 토큰 2,000개<br>비용 1/50<br><strong style="color:#0066ff;">1년 전 감정까지 맞춤 답변</strong></p>
+            <!-- Alert flow -->
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:center;">
+              <div style="padding:8px 12px; background:#fff7ed; border-radius:8px; font-size:12px; font-weight:600; color:#ea580c;">-4SD 하회 2회 연속</div>
+              <div style="color:#aaa; font-size:14px;">→</div>
+              <div style="padding:8px 12px; background:#eff6ff; border-radius:8px; font-size:12px; font-weight:600; color:#2563eb;">알람 발송</div>
+              <div style="color:#aaa; font-size:14px;">→</div>
+              <div style="padding:8px 12px; background:#f0fdf4; border-radius:8px; font-size:12px; font-weight:600; color:#16a34a;">네트워크 컨택</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Current Status -->
+      <!-- Action -->
+      <div class="flow-step reveal">
+        <div class="flow-content" style="grid-column: 1 / -1;">
+          <div class="flow-badge action-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
+            대응 프로토콜
+          </div>
+          <h3>감지 → 식별 → 차단까지<br>프로토콜로 표준화했습니다</h3>
+          <p>
+            알람이 울리면 어느 네트워크·OS에서 문제가 발생하는지 대시보드로 즉시 식별하고, 해당 네트워크 담당자에게 핫라인으로 컨택합니다. 원인 파악·해결 전까지는 <strong>매출 감소 리스크를 감수하고 문제 네트워크를 OS 단위로 임시 차단</strong>해 고객 노출을 막습니다.
+          </p>
+          <div style="margin-top:28px; display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
+              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">1</div>
+              <div>
+                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">이상 감지</div>
+                <div style="font-size:13px; color:#666; line-height:1.6;">display to reward ratio -4SD 연속 2회 → 자동 알람</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
+              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">2</div>
+              <div>
+                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">원인 네트워크 식별</div>
+                <div style="font-size:13px; color:#666; line-height:1.6;">네트워크별·OS별 대시보드로 문제 범위 특정</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
+              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">3</div>
+              <div>
+                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">핫라인 컨택</div>
+                <div style="font-size:13px; color:#666; line-height:1.6;">사전 구축한 네트워크사 담당자 직통 채널로 즉시 수정 요청</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
+              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">4</div>
+              <div>
+                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">문제 네트워크 임시 차단</div>
+                <div style="font-size:13px; color:#666; line-height:1.6;">해결 완료 전까지 해당 OS에서 해당 네트워크 송출 중단</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result -->
       <div class="flow-step reveal">
         <div class="flow-content" style="grid-column: 1 / -1;">
           <div class="flow-badge result-badge">
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2.5 5 5.5.8-4 3.9.9 5.3L8 12.5 3.1 15l.9-5.3-4-3.9 5.5-.8z"/></svg>
-            현재 진행 상황
+            성과
           </div>
-          <h3>웹 MVP 출시 완료,<br>예비창업패키지 선정</h3>
-          <div class="result-metrics">
-            <div class="metric-card">
-              <div class="metric-label">현재 상태</div>
-              <div class="metric-value" style="font-size:24px;">MVP 운영 중</div>
-              <div class="metric-change">gyeoldiary.com</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">팀 구성</div>
-              <div class="metric-value" style="font-size:24px;">2인</div>
-              <div class="metric-change">PO + 주니어 엔지니어</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">목표</div>
-              <div class="metric-value" style="font-size:24px;">MAU 2만</div>
-              <div class="metric-change">BEP 달성 후 자생 구조</div>
-            </div>
-          </div>
+          <h3>고객이 문의하기 전에<br>먼저 파악하고 처리할 수 있게 됐습니다</h3>
+          <p style="margin-top:16px; color:#666; line-height:1.8;">
+            감지 시스템 도입 이후, 이슈가 CS 문의로 이어지기 전에 내부에서 먼저 인지하고 대응할 수 있는 체계가 갖춰졌습니다. 알람이 울리면 누가 어떻게 움직일지 프로토콜도 사전에 설계해두어, 발생 시 혼선 없이 빠르게 처리할 수 있었습니다.
+          </p>
           <div class="insight-quote" style="margin-top:32px;">
-            <p>10년간 일기를 써온 사용자이자 PO로서, 내가 직접 느낀 문제를 제품으로 풀고 있습니다. 데이터 기반 문제 정의와 제품화 경험을 개인 프로젝트에도 그대로 적용하고 있습니다.</p>
-            <div class="quote-author">— Why I Build</div>
+            <p>운영 이슈는 생기는 게 아니라 만들어지는 겁니다. 감지 체계 없이 CS에 의존하면 항상 늦습니다. 지표의 절대값이 아닌 변동 패턴을 보는 것, 그리고 알람이 울리면 누가 어떻게 움직일지 프로토콜을 미리 만들어두는 것 — 이 두 가지가 핵심이었습니다.</p>
+            <div class="quote-author">— Lessons Learned</div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -2166,10 +2179,6 @@ footer {
       <a href="mailto:hyunwook.kim510@gmail.com" class="contact-link">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         hyunwook.kim510@gmail.com
-      </a>
-      <a href="https://www.gyeoldiary.com" class="contact-link" target="_blank">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        gyeoldiary.com
       </a>
     </div>
   </div>
