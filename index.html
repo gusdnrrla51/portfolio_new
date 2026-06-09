@@ -1698,12 +1698,12 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
             문제 인식
           </div>
-          <h3>CS 문의가 갑자기 폭증했는데,<br>원인이 뭘까?</h3>
+          <h3>CS 문의가 폭증했는데,<br>원인이 뭘까?</h3>
           <p>
-            어느 날 갑자기 <strong>"넘어가기 버튼이 안 눌린다", "광고가 안 닫힌다"</strong>는 CS 문의가 급증했습니다. 처음엔 자사 코드 문제라고 의심했지만, 고객 캡처와 대시보드의 <strong>Display to Reward Ratio</strong>(광고가 표시된 횟수 대비 리워드가 실제로 지급된 비율)를 보고 나서야 메타 영상광고 이슈임을 파악했습니다.
+            어느 날 갑자기 <strong>"넘어가기 버튼이 안 눌린다", "광고가 안 닫힌다"</strong>는 CS 문의가 급증했습니다. 고객 정보를 분석한 결과, <strong>메타 네트워크(써드파티 SSP)의 이슈</strong>였습니다.
           </p>
           <p style="margin-top:16px;">
-            <strong>네트워크사 이슈는 언제든 발생할 수 있지만</strong>, 미디에이션사는 책임지지 않습니다. 결국 고객 문의가 쌓이고 나서야 뒤늦게 인지하는 구조였습니다.
+            문제는 <strong>미디에이션사는 네트워크 측 이슈에 책임지지 않는다</strong>는 것입니다. 결국 고객 문의가 쌓인 뒤에야 인지하는 구조적 공백이 존재했습니다. 우리가 먼저 감지해야 했습니다.
           </p>
         </div>
         <div class="flow-visual">
@@ -1738,9 +1738,9 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM6.5 8.5h3v4h-3z"/></svg>
             감지 시스템 설계
           </div>
-          <h3>display to reward ratio의 편차를 이용해<br>감지 시스템을 설계했습니다</h3>
+          <h3>광고 노출 대비 리워드 지급의 편차를 이용해<br>감지 시스템을 설계했습니다</h3>
           <p>
-            display to reward ratio는 시간대·요일마다 자연스럽게 오르내립니다. 절대값으로 기준을 잡으면 정상 변동도 걸립니다. <strong>비정상적으로 큰 낙폭만 잡으려면 표준편차(SD) 기반 설계</strong>가 필요했습니다.
+            <strong>Display to Reward Ratio</strong>는 광고가 표시된 횟수 대비 리워드가 실제로 지급된 비율입니다. 이 지표는 시간대·요일마다 자연스럽게 오르내립니다. 절대값으로 기준을 잡으면 정상 변동도 걸리므로, <strong>비정상적으로 큰 낙폭만 잡으려면 표준편차(SD) 기반 설계</strong>가 필요했습니다.
           </p>
         </div>
         <div class="flow-visual">
