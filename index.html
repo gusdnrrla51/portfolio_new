@@ -586,6 +586,30 @@ footer {
   color: #fff; font-size: 13px; font-weight: 500;
 }
 
+/* ===== GYEOL / INTERN SECTIONS ===== */
+.company-banner.gyeol-banner { background: linear-gradient(135deg, #f5f0eb, #efe8e0); }
+.company-banner.intern-banner { background: #fafafa; }
+.gyeol-app-mockup {
+  display: flex; gap: 24px; justify-content: center; align-items: center; flex-wrap: wrap;
+}
+.gyeol-phone {
+  width: 220px; background: #2c2622; border-radius: 32px; padding: 10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+.gyeol-phone img { width: 100%; border-radius: 24px; display: block; }
+.role-summary.intern li::before { background: #94a3b8; }
+.role-summary.gyeol li::before { background: #a1887f; }
+
+/* ===== SKILLS & AWARDS ===== */
+.skill-group {
+  background: #fff; border: 1px solid #f0f0f0; border-radius: 20px;
+  padding: 32px 36px; box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+}
+.skill-group-title {
+  font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #999; margin-bottom: 18px;
+}
+.skill-group .skill-tag { font-size: 14px; padding: 8px 16px; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
@@ -715,6 +739,7 @@ footer {
     <a href="#about">About</a>
     <a href="#olweiz">Alwayz</a>
     <a href="#haulla">Haulla</a>
+    <a href="#gyeol">Side</a>
     <a href="#career">Career</a>
     <a href="#contact">Contact</a>
   </div>
@@ -728,8 +753,8 @@ footer {
     <span class="highlight">구조화하고 해결</span>합니다
   </h1>
   <p class="hero-sub">
-    스타트업의 0→1 제품 빌딩부터 1→10 그로스까지,<br>
-    데이터와 현장의 목소리로 사업적 성과를 만들어내는 PO입니다.
+    현장에 직접 뛰어들어 문제를 찾고, 제품으로 해결해온 5년차 PO입니다.<br>
+    눈앞의 지표를 10% 올리는 방법보다, 그 지표를 움직이는 상위 레버를 먼저 찾습니다.
   </p>
   <div class="scroll-indicator">
     <span>SCROLL</span>
@@ -744,15 +769,18 @@ footer {
       <div class="section-label">About</div>
       <h2 class="section-title">문제를 정의하고, 해결하고,<br>사업적 성과를 만듭니다</h2>
     </div>
-    <div class="about-text reveal" style="max-width:760px; margin:48px auto 0; text-align:center;">
-      <p>
-        저는 <strong>사업자의 현장을 직접 뛰어들어 문제를 찾고, 제품으로 해결해온 5년차 PO 김현욱</strong>입니다.
+    <div class="about-text reveal" style="max-width:820px; margin:48px auto 0; text-align:left;">
+      <p style="text-align:center;">
+        저는 <strong>현장에 직접 뛰어들어 문제를 찾고, 제품으로 해결해온 5년차 PO 김현욱</strong>입니다.
+      </p>
+      <p style="margin-top:24px;">
+        <strong>이큐브랩</strong>에서는 아무것도 없던 북미 쓰레기 수거 시장에 뛰어들어, 현지 사장님들을 고객으로 하는 <strong>Haulla 플랫폼을 구축해 연매출 200억원+ 사업으로 성장</strong>시켰습니다. 수거기사의 동선을 직접 따라다니며 문제를 찾았고, 배송 일정 관리 시스템으로 <strong>배송 소요를 9.1일에서 3.4일로</strong> 줄였습니다. 특히 <strong>“품질을 사람의 점검에 의존하는” 구조가 규모의 한계</strong>라고 판단해, Dumpster에 IoT 센서를 부착하고 고객이 문제를 인지하기 전에 파트너 자동 알림과 보상 절차까지 연결했습니다. <strong>월 이탈률은 5%에서 1.5%로</strong> 내려갔습니다.
       </p>
       <p style="margin-top:20px;">
-        오프라인 공간을 직접 운영한 경험, 영업사원과 함께 현장에 동행하며 시스템을 설계한 경험을 바탕으로 <strong>사용자가 말하지 않는 맥락까지 읽는 것</strong>이 제 강점입니다.
+        <strong>레브잇</strong>에서는 100만 MAU 커머스앱(올웨이즈)의 광고 스쿼드를 리드하며, <strong>영상광고 하나에 의존하던 수익 구조를 17개 매출원이 도는 포트폴리오로 재설계</strong>했습니다. <strong>DAU가 8% 역성장하는 국면에서도 DAU당 광고 매출을 44% 끌어올려 회사 첫 연간 흑자에 기여</strong>했습니다.
       </p>
       <p style="margin-top:20px;">
-        이큐브랩에서는 <strong>북미 쓰레기 수거 플랫폼(Haulla)을 구축해 연매출 200억원+ 사업으로 성장</strong>시켰고, 레브잇에서는 <strong>100만 MAU 커머스앱(올웨이즈)의 광고 스쿼드를 리드</strong>하며 DAU당 광고 매출을 <strong>3분기 동안 57% 올리며</strong> <strong>회사 첫 연간 흑자에 기여</strong>했습니다.
+        제가 가장 잘하는 일은 <strong>지금의 구조를 당연하게 받아들이지 않는 것</strong>입니다. 눈앞의 지표를 10% 올리는 방법보다 <strong>그 지표를 움직이는 상위 레버를 먼저</strong> 찾습니다. 오프라인 공간을 직접 운영하고, 현장 기사와 영업사원의 하루를 따라다니며 시스템을 설계해왔습니다. <strong>그 레버는 대부분 책상이 아니라 현장에 있었습니다.</strong>
       </p>
     </div>
   </div>
@@ -765,66 +793,617 @@ footer {
   <div class="company-logo">레브잇 (Alwayz)</div>
   <h2>MAU 100만 모바일 커머스 앱<br><strong>Alwayz</strong></h2>
   <p>
-    MAU 100만 모바일 커머스 앱 Alwayz에서 광고 수익화 스쿼드를 리드.<br>
-    Alwayz 전체 매출의 <strong>70.7%가 광고매출</strong>이며, 그 성장을 직접 만들었습니다.
+    MAU 100만 모바일 커머스 앱 Alwayz에서 올애즈(광고) 스쿼드를 리드.<br>
+    <strong>영상광고 하나에 의존하던 수익 구조를 17개 매출원이 도는 포트폴리오</strong>로 재설계했습니다.
   </p>
 
-  <!-- DAU 하락 속 매출 방어 맥락 -->
+  <!-- DAU 역성장 속 매출 방어 맥락 -->
   <div style="max-width:780px; margin:28px auto 0; background:#fff; border-radius:20px; box-shadow:0 4px 24px rgba(0,0,0,0.07); border:1px solid #f0ebe4; padding:32px 36px; text-align:left;">
     <div style="font-size:12px; font-weight:700; color:#f97316; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:16px;">과제 & 전략</div>
     <p style="font-size:15px; color:#333; line-height:1.8; margin:0 0 20px; word-break:keep-all;">
-      Alwayz는 <strong>DAU가 지속적으로 감소하는 상황</strong>에서도 광고 매출을 방어해야 했습니다.
-      두 가지 원칙을 동시에 지켜야 했습니다.
+      Alwayz는 <strong>DAU가 역성장하는 국면</strong>에서도 광고 매출을 키워야 했습니다.
+      트래픽 증가에 기대지 않고, 두 가지를 동시에 풀어야 했습니다.
     </p>
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px;">
       <div style="background:#fff7ed; border-radius:14px; padding:20px 24px; border-left:3px solid #f97316;">
         <div style="font-size:12px; font-weight:700; color:#f97316; margin-bottom:8px;">과제 1</div>
-        <div style="font-size:14px; font-weight:700; color:#1a1a1a; line-height:1.6;">광고 수익 다각화</div>
-        <div style="font-size:13px; color:#888; margin-top:4px; line-height:1.6;">영상광고 비중을 줄이고 고객 경험을 해치지 않는 광고 믹스로 전환</div>
+        <div style="font-size:14px; font-weight:700; color:#1a1a1a; line-height:1.6;">광고 수익 구조 다각화</div>
+        <div style="font-size:13px; color:#888; margin-top:4px; line-height:1.6;">앱러빈 영상광고 단일 BM 의존을 분산해, 한 채널이 흔들려도 무너지지 않는 매출원 구조 구축</div>
       </div>
       <div style="background:#fff7ed; border-radius:14px; padding:20px 24px; border-left:3px solid #f97316;">
         <div style="font-size:12px; font-weight:700; color:#f97316; margin-bottom:8px;">과제 2</div>
         <div style="font-size:14px; font-weight:700; color:#1a1a1a; line-height:1.6;">DAU당 광고 매출 극대화</div>
-        <div style="font-size:13px; color:#888; margin-top:4px; line-height:1.6;">기존 광고들의 효율성을 높여 더 비싼 광고로 전환해야 했음</div>
+        <div style="font-size:13px; color:#888; margin-top:4px; line-height:1.6;">트래픽이 줄어드는 구간에서 단위 수익(ATRPDAU)을 끌어올려 총매출을 방어·성장</div>
       </div>
     </div>
     <div style="display:flex; align-items:center; gap:20px; padding:20px 24px; background:#fff7ed; border-radius:14px; flex-wrap:wrap;">
-      <div style="flex:1; min-width:120px;">
-        <div style="font-size:12px; color:#aaa; font-weight:600; margin-bottom:4px;">DAU당 광고 매출</div>
+      <div style="flex:1; min-width:150px;">
+        <div style="font-size:12px; color:#aaa; font-weight:600; margin-bottom:4px;">DAU당 광고 매출 (ATRPDAU)</div>
         <div style="display:flex; align-items:baseline; gap:8px;">
-          <span style="font-size:32px; font-weight:900; color:#f97316; letter-spacing:-1px;">+57%</span>
+          <span style="font-size:22px; font-weight:900; color:#ccc; letter-spacing:-1px;">₩115</span>
+          <span style="font-size:16px; color:#f97316;">→</span>
+          <span style="font-size:32px; font-weight:900; color:#f97316; letter-spacing:-1px;">₩165</span>
         </div>
-        <div style="font-size:12px; color:#999; margin-top:6px;">인당 매출 성장</div>
+        <div style="font-size:12px; color:#f97316; margin-top:6px; font-weight:700;">+44% · DAU 7.9% 역성장 구간에서 달성</div>
       </div>
       <div style="width:1px; height:48px; background:#e8e8ea;"></div>
       <div style="flex:2; min-width:200px;">
         <div style="font-size:13px; color:#555; line-height:1.7; word-break:keep-all;">
-          DAU가 감소하는 상황에서도 <strong>인당 수익성을 끌어올려 매출을 방어</strong>했습니다. 고객 경험을 해치는 광고를 줄이면서도 더 건강한 방식으로 매출을 만드는 구조를 설계했습니다.
+          ATRPDAU 증분의 <strong>87%가 시장 eCPM 상승이 아닌 자체 기획 기여분</strong>입니다. 지면·어드민·타게팅 자산을 먼저 만들고 그 위에 매출원을 얹는 순서로 설계했습니다.
         </div>
       </div>
     </div>
   </div>
 
-  <div class="company-period">Product Owner | Ads Business Owner | Cross-functional 팀 리드 (5인+) · 2025.09 ~ 재직중</div>
+  <div class="company-period">정규직 · Product Owner · 올애즈 스쿼드 PO · 2025.09 ~ 재직중 (1년)</div>
 
   <div class="role-summary levit container">
     <div class="role-summary-title">여기서 한 일</div>
     <ul>
-      <li><strong>01</strong> 입사 첫 달 올라이브(라이브커머스 광고) 0→1 출시 — 방송당 10만 PV, 월 1.5억 안정 매출</li>
-      <li><strong>02</strong> 피드형 미션 광고 '보물찾기' 기획·출시 — 일 150만원 매출, 배너 섹션 전체 매출 6배 성장</li>
-      <li><strong>03</strong> 영상광고 이슈 감지 시스템 & 대응 프로토콜 설계 — display to reward ratio SD 기반 알람 + 네트워크 핫라인, 선제적 이슈 대응 체계 구축</li>
+      <li><strong>01</strong> 광고 수익 구조 다각화 &amp; 안정화 — 매출원 6개 → 17개, 영상광고 의존도 66% → 55%, ATRPDAU +44%</li>
+      <li><strong>02</strong> 영상광고 이상감지 &amp; 대응 프로토콜 설계 — 동일 요일×시간대 Baseline 기반 선제 감지, CS 문의 전 내부 대응</li>
+      <li><strong>03</strong> 네트워크 광고 효율 최적화 제품 '보물찾기' 출시 — 배너 eCPM 1.5배, 배너 섹션 매출 6배, 구글 컨퍼런스 공식 사례 소개</li>
+      <li><strong>04</strong> 라이브커머스 광고 제품 '올라이브' 0→1 출시 — 방송당 10만 PV, 광고주 7개사, 월 1.5억 안정 매출</li>
     </ul>
+  </div>
+
+  <div style="max-width:420px; margin:40px auto 0;">
+    <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:12px;">레브잇 팀 블로그 인터뷰</div>
+    <img src="team_blog.png" alt="레브잇 팀 블로그 인터뷰 — 올애즈팀 Product Owner 김현욱" style="width:100%; border-radius:16px; box-shadow:0 8px 40px rgba(0,0,0,0.10);">
   </div>
 
 </div>
 
-<!-- ===== Alwayz Project 1 — 올라이브 (라이브커머스) ===== -->
+<!-- ===== Alwayz Project 01 — 광고 수익 구조 다각화 & 안정화 ===== -->
 <section class="project">
   <div class="container">
     <div class="project-header reveal">
       <div class="project-number">01</div>
+      <h2 class="project-title">광고 수익 구조 다각화 &amp; 안정화</h2>
+      <p class="project-subtitle">2026.04 – 재직중 · 매출원 6개 → 17개, ATRPDAU ₩115 → ₩165</p>
+    </div>
+
+    <div class="psrFlow">
+      <!-- Problem -->
+      <div class="flow-step reveal">
+        <div class="flow-content">
+          <div class="flow-badge problem-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
+            문제 정의
+          </div>
+          <h3>매출원이 6개뿐인데,<br>그중 하나가 사실상 전부였습니다</h3>
+          <p>
+            입사 시점 올애즈는 <strong>앱러빈 영상광고가 사실상 전부인 단일 BM</strong>이었습니다. 일평균 3만원 이상 발생하는 매출원이 6개뿐이라, <strong>네트워크 장애·정책 변경·시장 eCPM 변동이 그대로 전사 매출 리스크</strong>로 이어지는 구조였습니다.
+          </p>
+          <p style="margin-top:16px;">
+            게다가 <strong>DAU가 역성장 국면</strong>에 들어서면서, 트래픽 증가에 기대지 않고 단위 수익으로 매출을 올려야 하는 상황이었습니다. 미션도 영상 시청 위주로 구성되어 있어 <strong>영상광고를 거부하는 유저는 매출로 전환할 방법 자체가 없었습니다.</strong>
+          </p>
+        </div>
+        <div class="flow-visual">
+          <div style="background:#fff; border-radius:20px; padding:36px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:20px;">입사 시점 매출 구조</div>
+            <div style="display:flex; align-items:flex-end; gap:10px; height:150px; margin-bottom:20px;">
+              <div style="flex:3; display:flex; flex-direction:column; align-items:center; gap:6px;">
+                <div style="font-size:13px; font-weight:900; color:#dc2626;">66%</div>
+                <div style="width:100%; height:120px; background:linear-gradient(180deg,#f87171,#dc2626); border-radius:8px 8px 0 0;"></div>
+                <div style="font-size:11px; color:#666; font-weight:600;">앱러빈 영상광고</div>
+              </div>
+              <div style="flex:5; display:flex; align-items:flex-end; gap:6px; height:100%;">
+                <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px; justify-content:flex-end;">
+                  <div style="width:100%; height:32px; background:#e5e7eb; border-radius:6px 6px 0 0;"></div>
+                </div>
+                <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px; justify-content:flex-end;">
+                  <div style="width:100%; height:24px; background:#e5e7eb; border-radius:6px 6px 0 0;"></div>
+                </div>
+                <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px; justify-content:flex-end;">
+                  <div style="width:100%; height:18px; background:#e5e7eb; border-radius:6px 6px 0 0;"></div>
+                </div>
+                <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px; justify-content:flex-end;">
+                  <div style="width:100%; height:12px; background:#e5e7eb; border-radius:6px 6px 0 0;"></div>
+                </div>
+                <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px; justify-content:flex-end;">
+                  <div style="width:100%; height:8px; background:#e5e7eb; border-radius:6px 6px 0 0;"></div>
+                </div>
+              </div>
+            </div>
+            <div style="font-size:11px; color:#aaa; text-align:right; margin-top:-14px; margin-bottom:16px;">나머지 5개 매출원</div>
+            <div style="padding:16px; background:#fef2f2; border-radius:12px; text-align:center;">
+              <div style="font-size:13px; color:#dc2626; font-weight:700;">단일 채널 장애 = 전사 매출 리스크</div>
+              <div style="font-size:12px; color:#999; margin-top:4px;">일평균 3만원 이상 매출원 6개</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hypothesis -->
+      <div class="flow-step reverse reveal">
+        <div class="flow-content">
+          <div class="flow-badge hypothesis-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM6.5 8.5h3v4h-3z"/></svg>
+            전략 수립
+          </div>
+          <h3>지면을 더 붙이는 대신,<br>분기마다 수익 축을 하나씩 늘렸습니다</h3>
+          <p>
+            <strong>분기마다 새로운 수익 축을 하나씩 붙여 단일 채널 의존을 분산한다</strong>는 전략을 세웠습니다. 핵심은 순서였습니다. 매출원을 먼저 늘리는 게 아니라, <strong>지면·어드민·타게팅 자산을 먼저 만들고 그 위에 매출원을 얹는 순서</strong>로 설계했습니다.
+          </p>
+          <div class="insight-quote" style="margin-top:20px;">
+            <p>자산이 먼저 있어야 매출원을 얹을 수 있다. 지면과 어드민, 타게팅 데이터가 쌓이면 그 다음 매출원은 훨씬 싸게 붙는다.</p>
+            <div class="quote-author">— 다각화 설계 원칙</div>
+          </div>
+        </div>
+        <div class="flow-visual">
+          <div style="background:#fff; border-radius:20px; padding:32px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:20px;">자산 → 매출원 순서 설계</div>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div style="padding:16px 20px; background:#eff6ff; border-radius:12px; border-left:3px solid #2563eb;">
+                <div style="font-size:12px; font-weight:700; color:#2563eb; margin-bottom:4px;">STEP 1 · 자산 구축</div>
+                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">지면 · 어드민 · 디타게팅 데이터</div>
+              </div>
+              <div style="text-align:center; color:#ccc; font-size:18px;">↓</div>
+              <div style="padding:16px 20px; background:#fff7ed; border-radius:12px; border-left:3px solid #f97316;">
+                <div style="font-size:12px; font-weight:700; color:#f97316; margin-bottom:4px;">STEP 2 · 매출원 적재</div>
+                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">게임형 지면 · 태그광고 · 리텐션 연계 · 배너 확장</div>
+              </div>
+              <div style="text-align:center; color:#ccc; font-size:18px;">↓</div>
+              <div style="padding:16px 20px; background:#f0fdf4; border-radius:12px; border-left:3px solid #16a34a;">
+                <div style="font-size:12px; font-weight:700; color:#16a34a; margin-bottom:4px;">STEP 3 · 분기별 반복</div>
+                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">분기마다 수익 축 1개씩 추가</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action -->
+      <div class="flow-step reveal">
+        <div class="flow-content" style="grid-column: 1 / -1;">
+          <div class="flow-badge action-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
+            액션
+          </div>
+          <h3>5개의 축으로 매출원을 늘렸습니다</h3>
+          <div style="margin-top:32px; display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+            <div style="padding:28px; background:#fff7ed; border-radius:16px; border-left:3px solid #f97316;">
+              <div style="font-size:12px; font-weight:700; color:#f97316; margin-bottom:8px;">01 · 게임형 광고 지면</div>
+              <div style="font-size:16px; font-weight:700; color:#1a1a1a; margin-bottom:10px;">진주팡 · 틀린그림찾기 · 비구름</div>
+              <div style="font-size:14px; color:#666; line-height:1.7; word-break:keep-all;">광고를 봐야 재도전할 수 있는 루프로 설계해, <strong>영상광고를 미션 소진형에서 플레이 루프형으로 전환</strong>. 속도 판정별 보상 기댓값과 재화 원가까지 단위 경제성 기준으로 정의.</div>
+            </div>
+            <div style="padding:28px; background:#fff7ed; border-radius:16px; border-left:3px solid #f97316;">
+              <div style="font-size:12px; font-weight:700; color:#f97316; margin-bottom:8px;">02 · 외부 태그광고 직접 유치</div>
+              <div style="font-size:16px; font-weight:700; color:#1a1a1a; margin-bottom:10px;">오퍼월 연동</div>
+              <div style="font-size:14px; color:#666; line-height:1.7; word-break:keep-all;">그동안 쌓은 지면·어드민·디타게팅 자산을 근거로 <strong>외부 광고주를 직접 영업</strong>해 오퍼월 형식으로 연동. 영상 시청을 거부하던 유저도 참여할 수 있는 매출원 확보.</div>
+            </div>
+            <div style="padding:28px; background:#fff7ed; border-radius:16px; border-left:3px solid #f97316;">
+              <div style="font-size:12px; font-weight:700; color:#f97316; margin-bottom:8px;">03 · 리텐션 × 광고 연계</div>
+              <div style="font-size:16px; font-weight:700; color:#1a1a1a; margin-bottom:10px;">연속출석 스트릭 결합</div>
+              <div style="font-size:14px; color:#666; line-height:1.7; word-break:keep-all;">연속출석 스트릭을 광고 미션과 결합해, <strong>광고 시청을 하루치 한도 소진이 아니라 다음 방문의 이유로 전환.</strong></div>
+            </div>
+            <div style="padding:28px; background:#fff7ed; border-radius:16px; border-left:3px solid #f97316;">
+              <div style="font-size:12px; font-weight:700; color:#f97316; margin-bottom:8px;">04 · 지면 확장</div>
+              <div style="font-size:16px; font-weight:700; color:#1a1a1a; margin-bottom:10px;">옵트인 띠배너 · 영상형 배너 · 신규 네트워크 2곳</div>
+              <div style="font-size:14px; color:#666; line-height:1.7; word-break:keep-all;">옵트인 보상형 띠배너로 <strong>유저 반발 없이 상시 지면화</strong>하고, 영상형 배너를 신설해 지면 단가 개선. 이벤트 배너 어드민을 만들어 오퍼월 운영을 체계화하고, 신규 네트워크 2곳을 직접 유치·연동 조건 협상.</div>
+            </div>
+          </div>
+          <div style="margin-top:20px; padding:28px; background:#f8f9ff; border-radius:16px; border-left:3px solid #2563eb;">
+            <div style="font-size:12px; font-weight:700; color:#2563eb; margin-bottom:8px;">05 · 플랫폼 리스크 선제 대응</div>
+            <div style="font-size:16px; font-weight:700; color:#1a1a1a; margin-bottom:10px;">구글 애드몹 보상 누락 경고 사전 감지</div>
+            <div style="font-size:14px; color:#666; line-height:1.7; word-break:keep-all;">구글 애드몹의 보상 누락 경고를 사전 감지해 <strong>전 지면 보상 명시 및 로직을 수정</strong>, 매출 중단 리스크를 방어했습니다.</div>
+          </div>
+          <div class="skill-tags" style="margin-top:28px;">
+            <span class="skill-tag">수익 포트폴리오 설계</span>
+            <span class="skill-tag">단위 경제성</span>
+            <span class="skill-tag">광고주 직접 영업</span>
+            <span class="skill-tag">어드민 제품화</span>
+            <span class="skill-tag">네트워크 협상</span>
+            <span class="skill-tag">플랫폼 리스크 관리</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 게임형 지면 시각 -->
+      <div class="flow-step reverse reveal">
+        <div class="flow-content">
+          <div class="flow-badge action-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
+            지면 사례
+          </div>
+          <h3>미션 소진형에서<br>플레이 루프형으로</h3>
+          <p>
+            기존 영상광고는 <strong>"하루치 한도를 소진하면 끝"</strong>인 구조였습니다. 게임형 지면은 <strong>광고를 봐야 재도전할 수 있는 루프</strong>로 설계해, 같은 유저가 하루에 여러 번 자발적으로 광고를 소비하도록 만들었습니다.
+          </p>
+          <p style="margin-top:16px;">
+            보상은 감으로 정하지 않았습니다. <strong>속도 판정별 보상 기댓값과 재화 원가를 단위 경제성 기준으로 정의</strong>해, 매출이 늘어도 원가가 따라 붙지 않도록 설계했습니다.
+          </p>
+          <p style="margin-top:16px;">
+            그 결과 미션 목록에는 영상광고뿐 아니라 <strong>게임형 지면, 상품 구경, 외부 태그광고(오퍼월)까지 서로 다른 성격의 매출원</strong>이 함께 돌게 됐습니다. 영상 시청을 거부하던 유저도 참여할 통로가 생겼습니다.
+          </p>
+        </div>
+        <div class="flow-visual">
+          <div style="text-align:center;">
+            <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:12px;">다각화 이후 미션 목록 — 영상광고 · 게임형 지면 · 외부 태그광고 공존</div>
+            <img src="badaham.gif" alt="다각화 이후 미션 목록 화면 — 영상광고, 게임형 지면, 외부 태그광고가 함께 노출됨" style="width:100%; max-width:280px; border-radius:20px; box-shadow:0 12px 48px rgba(0,0,0,0.12);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="flow-step reveal">
+        <div class="flow-content" style="grid-column: 1 / -1;">
+          <div class="flow-badge result-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2.5 5 5.5.8-4 3.9.9 5.3L8 12.5 3.1 15l.9-5.3-4-3.9 5.5-.8z"/></svg>
+            성과
+          </div>
+          <h3>매출원 6개 → 17개,<br>영상광고 의존도를 낮추면서 총매출은 오히려 증가</h3>
+          <div class="result-metrics" style="margin-top:32px;">
+            <div class="metric-card">
+              <div class="metric-label">매출원 개수</div>
+              <div class="metric-value count-up" data-target="17" data-suffix="개">0</div>
+              <div class="metric-change"><span class="metric-arrow">↑</span> 6개 → 17개</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">영상광고 의존도</div>
+              <div class="metric-value">55%</div>
+              <div class="metric-change"><span class="metric-arrow">↓</span> 66% → 55%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">일평균 광고 매출</div>
+              <div class="metric-value">+25.3%</div>
+              <div class="metric-change">총매출 증가</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">ATRPDAU</div>
+              <div class="metric-value">₩165</div>
+              <div class="metric-change"><span class="metric-arrow">↑</span> ₩115 → ₩165 (+44%)</div>
+            </div>
+          </div>
+
+          <div style="margin-top:32px; padding:28px 32px; background:#f8f9ff; border-radius:16px;">
+            <div style="font-size:13px; font-weight:700; color:#2563eb; letter-spacing:1px; text-transform:uppercase; margin-bottom:16px;">성과의 질</div>
+            <p style="font-size:15px; color:#333; line-height:1.8; margin:0; word-break:keep-all;">
+              <strong>DAU 7.9% 역성장 구간에서 달성</strong>한 수치입니다. ATRPDAU 증분의 <strong>87%가 시장 eCPM 상승이 아닌 자체 기획 기여분</strong>으로, 시장 호조에 따라온 결과가 아닙니다.
+            </p>
+          </div>
+
+          <div style="margin-top:20px; display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:16px;">
+            <div style="padding:24px; background:#fff; border:1px solid #f0f0f0; border-radius:14px; text-align:center;">
+              <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:8px;">배너</div>
+              <div style="font-size:clamp(20px, 4.5vw, 28px); font-weight:900; color:#16a34a; letter-spacing:-1px; white-space:nowrap;">+198.9%</div>
+            </div>
+            <div style="padding:24px; background:#fff; border:1px solid #f0f0f0; border-radius:14px; text-align:center;">
+              <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:8px;">신규 오퍼월</div>
+              <div style="font-size:clamp(20px, 4.5vw, 28px); font-weight:900; color:#16a34a; letter-spacing:-1px; white-space:nowrap;">+1,752.7%</div>
+            </div>
+            <div style="padding:24px; background:#fff; border:1px solid #f0f0f0; border-radius:14px; text-align:center;">
+              <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:8px;">직판</div>
+              <div style="font-size:clamp(20px, 4.5vw, 28px); font-weight:900; color:#16a34a; letter-spacing:-1px; white-space:nowrap;">+86.7%</div>
+            </div>
+          </div>
+          <p style="margin-top:16px; font-size:14px; color:#888; text-align:center;">태그광고는 송출 첫 달부터 신규 매출 축으로 안착했습니다.</p>
+
+          <div class="lessons-learned">
+            <strong>Lessons Learned:</strong> 매출을 늘리는 가장 확실한 방법은 지면을 더 붙이는 게 아니라, 한 채널이 흔들려도 무너지지 않는 매출원 구조를 만드는 것이었습니다.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Alwayz Project 02 — 영상광고 이상감지 & 대응 프로토콜 ===== -->
+<section class="project">
+  <div class="container">
+    <div class="project-header reveal">
+      <div class="project-number">02</div>
+      <h2 class="project-title">영상광고 이상감지 &amp;<br>대응 프로토콜 설계</h2>
+      <p class="project-subtitle">2026.03 – 2026.05 · CS 문의가 쌓이기 전에 먼저 감지하는 체계</p>
+    </div>
+
+    <div class="psrFlow">
+
+      <!-- Problem -->
+      <div class="flow-step reveal">
+        <div class="flow-content">
+          <div class="flow-badge problem-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
+            문제 인식
+          </div>
+          <h3>CS 문의가 폭증했는데,<br>원인이 뭘까?</h3>
+          <p>
+            어느 날 갑자기 <strong>"넘어가기 버튼이 안 눌린다", "광고가 안 닫힌다"</strong>는 CS 문의가 급증했습니다. 고객 정보를 분석한 결과, <strong>메타 네트워크(써드파티 SSP)의 이슈</strong>였습니다.
+          </p>
+          <p style="margin-top:16px;">
+            문제는 <strong>미디에이션사는 네트워크 측의 광고 이슈를 먼저 파악하거나 해결해주지 않는다</strong>는 것이었습니다. 결국 고객 문의가 쌓인 뒤에야 인지하는 구조적 공백이 존재했습니다. 우리가 먼저 감지해야 했습니다.
+          </p>
+        </div>
+        <div class="flow-visual">
+          <div style="background:#fff; border-radius:20px; padding:32px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:16px;">그외 실제 발생 이슈 정리</div>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div style="padding:14px 16px; background:#fff5f5; border-radius:12px; border-left:3px solid #e53e3e;">
+                <div style="font-size:12px; font-weight:700; color:#e53e3e; margin-bottom:4px;">META · Chained Ads</div>
+                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">X 버튼이 아예 안 눌리는 이슈</div>
+              </div>
+              <div style="padding:14px 16px; background:#fff5f5; border-radius:12px; border-left:3px solid #e53e3e;">
+                <div style="font-size:12px; font-weight:700; color:#e53e3e; margin-bottom:4px;">ADMOB · 소재 이슈</div>
+                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">X 버튼이 Status Bar 뒤에 위치</div>
+              </div>
+              <div style="padding:14px 16px; background:#fff5f5; border-radius:12px; border-left:3px solid #e53e3e;">
+                <div style="font-size:12px; font-weight:700; color:#e53e3e; margin-bottom:4px;">APPLOVIN · 특정 소재</div>
+                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">아랍풍 음악이 광고 종료 후에도 계속 재생</div>
+              </div>
+            </div>
+            <div style="margin-top:16px; padding:12px 16px; background:#f8f9ff; border-radius:10px; text-align:center;">
+              <div style="font-size:13px; color:#666;">공통점</div>
+              <div style="font-size:14px; font-weight:700; color:#1a1a1a; margin-top:2px;">자사 코드가 아닌 광고 네트워크 측 이슈</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hypothesis / Design -->
+      <div class="flow-step reverse reveal">
+        <div class="flow-content">
+          <div class="flow-badge hypothesis-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM6.5 8.5h3v4h-3z"/></svg>
+            감지 시스템 설계
+          </div>
+          <h3>시청 시작 대비 완료 비율에<br>요일×시간대 Baseline을 걸었습니다</h3>
+          <p>
+            로그를 심어 <strong>광고 시청을 시작하고 완료한 비율</strong>을 지표로 잡았습니다. 이 지표는 시간대·요일마다 자연스럽게 오르내립니다. 절대값으로 기준을 잡으면 정상 변동도 걸리므로, <strong>동일 요일 × 동일 시간대의 Baseline을 설정</strong>해 그 대비 비정상적인 낙폭만 잡도록 설계했습니다.
+          </p>
+          <p style="margin-top:16px;">
+            여기에 <strong>이상 판정 기준과 차단 조건을 문서로 확정</strong>하고 CS팀에 공유해, <strong>담당자가 바뀌어도 같은 판단이 나오도록</strong> 정리했습니다.
+          </p>
+        </div>
+        <div class="flow-visual">
+          <div style="background:#fff; border-radius:20px; padding:32px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:20px;">시청 완료율 이상감지 구조</div>
+            <!-- Baseline Chart mockup -->
+            <div style="position:relative; height:120px; background:#f8f9ff; border-radius:12px; overflow:hidden; margin-bottom:16px; padding:12px;">
+              <div style="font-size:11px; color:#999; margin-bottom:6px;">시청 시작 → 완료 비율 (네트워크 A · iOS)</div>
+              <!-- Normal range band -->
+              <div style="position:absolute; bottom:28px; left:12px; right:12px; height:40px; background:rgba(22,163,74,0.08); border-radius:4px;"></div>
+              <!-- Normal line -->
+              <svg viewBox="0 0 280 60" style="width:100%; height:60px;">
+                <polyline points="0,20 40,22 80,18 120,24 160,20 200,22 230,30 240,48 260,50 280,52" fill="none" stroke="#f97316" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="230" y1="0" x2="230" y2="60" stroke="#e53e3e" stroke-width="1.5" stroke-dasharray="4,3"/>
+                <text x="232" y="12" font-size="9" fill="#e53e3e" font-weight="600">이상감지</text>
+                <!-- -4SD line -->
+                <line x1="0" y1="44" x2="280" y2="44" stroke="#16a34a" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="2" y="42" font-size="8" fill="#16a34a">Baseline 하한</text>
+              </svg>
+            </div>
+            <!-- Alert flow -->
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:center;">
+              <div style="padding:8px 12px; background:#fff7ed; border-radius:8px; font-size:12px; font-weight:600; color:#ea580c;">동일 요일×시간대 Baseline 하회</div>
+              <div style="color:#aaa; font-size:14px;">→</div>
+              <div style="padding:8px 12px; background:#eff6ff; border-radius:8px; font-size:12px; font-weight:600; color:#2563eb;">알람 발송</div>
+              <div style="color:#aaa; font-size:14px;">→</div>
+              <div style="padding:8px 12px; background:#f0fdf4; border-radius:8px; font-size:12px; font-weight:600; color:#16a34a;">네트워크 컨택</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action -->
+      <div class="flow-step reveal">
+        <div class="flow-content" style="grid-column: 1 / -1;">
+          <div class="flow-badge action-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
+            대응 프로토콜
+          </div>
+          <h3>감지 → 식별 → 차단까지<br>프로토콜로 표준화했습니다</h3>
+          <p>
+            알람이 울리면 대시보드로 문제 네트워크·OS를 즉시 식별하고, 담당자에게 핫라인으로 연락합니다. 해결 전까지는 <strong>매출 손실을 감수하고 해당 네트워크를 임시 차단</strong>해 고객 노출을 차단합니다.
+          </p>
+          <div style="margin-top:28px; display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
+              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">1</div>
+              <div>
+                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">이상 감지</div>
+                <div style="font-size:13px; color:#666; line-height:1.6;">시청 완료율이 동일 요일×시간대 Baseline을 하회 → 자동 알람</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
+              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">2</div>
+              <div>
+                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">원인 네트워크 식별</div>
+                <div style="font-size:13px; color:#666; line-height:1.6;">네트워크별·OS별 대시보드로 문제 범위 특정</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
+              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">3</div>
+              <div>
+                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">핫라인 컨택</div>
+                <div style="font-size:13px; color:#666; line-height:1.6;">사전 구축한 네트워크사 담당자 직통 채널로 즉시 수정 요청</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
+              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">4</div>
+              <div>
+                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">문제 네트워크 임시 차단</div>
+                <div style="font-size:13px; color:#666; line-height:1.6;">해결 완료 전까지 해당 OS에서 해당 네트워크 송출 중단</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="flow-step reveal">
+        <div class="flow-content" style="grid-column: 1 / -1;">
+          <div class="flow-badge result-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2.5 5 5.5.8-4 3.9.9 5.3L8 12.5 3.1 15l.9-5.3-4-3.9 5.5-.8z"/></svg>
+            성과
+          </div>
+          <h3>고객이 문의하기 전에<br>먼저 파악하고 처리할 수 있게 됐습니다</h3>
+          <p style="margin-top:16px; color:#666; line-height:1.8;">
+            이슈가 CS 문의로 번지기 전에 내부에서 먼저 인지하고 처리할 수 있는 체계가 갖춰졌습니다.
+          </p>
+          <div class="lessons-learned">
+            <strong>Lessons Learned:</strong> 외부 의존도가 높은 영역일수록, 스스로 감지하고 대응할 수 있는 체계를 사전에 구축할 필요가 있음을 배웠습니다.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Alwayz Project 03 — 네트워크 광고 효율 최적화 (보물찾기) ===== -->
+<section class="project">
+  <div class="container">
+    <div class="project-header reveal">
+      <div class="project-number">03</div>
+      <h2 class="project-title">네트워크 광고 효율 최적화<br>제품 출시</h2>
+      <p class="project-subtitle">2026.01 – 2026.03 · 보물찾기 · eCPM 1.5배, 배너 섹션 매출 6배</p>
+    </div>
+
+    <div class="psrFlow">
+      <!-- Problem -->
+      <div class="flow-step reveal">
+        <div class="flow-content">
+          <div class="flow-badge problem-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
+            문제 인식
+          </div>
+          <h3>어떻게하면<br>배너 광고 효율을 높일 수 있을까?</h3>
+          <p>
+            네트워크 광고 수익을 더 키워야 했지만, <strong>단순 배너 노출 방식은 eCPM의 구조적 한계</strong>가 있었습니다. 노출을 아무리 늘려도 수익 천장이 보였습니다.
+          </p>
+          <p style="margin-top:16px;">
+            <strong>"어떤 지표를 바꿔야 eCPM이 근본적으로 올라가는가?"</strong>를 파악하기 위해 업계 스터디를 시작했습니다.
+          </p>
+        </div>
+        <div class="flow-visual">
+          <div style="background:#fff; border-radius:20px; padding:40px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0; text-align:center;">
+            <div style="font-size:48px; font-weight:900; color:#e5e7eb;">eCPM ↓</div>
+            <div style="font-size:15px; color:#999; margin-top:12px;">단순 노출 중심 → 수익 한계</div>
+            <div style="margin-top:24px; padding:16px; background:#fef2f2; border-radius:12px; font-size:14px; color:#dc2626; font-weight:600;">
+              핵심 질문: "어떤 지표를 바꿔야 eCPM이 올라가는가?"
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Study: 캐시워크·캐시슬라이드 인터뷰 -->
+      <div class="flow-step reverse reveal">
+        <div class="flow-content">
+          <div class="flow-badge hypothesis-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM6.5 8.5h3v4h-3z"/></svg>
+            업계 인터뷰 & 핵심 발견
+          </div>
+          <h3>캐시워크·캐시슬라이드 담당자를<br>직접 만나 인터뷰했습니다</h3>
+          <p>
+            <strong>캐시워크, 캐시슬라이드 등 리워드 앱 담당자를 직접 만나</strong> 광고 수익 구조를 물었습니다.
+          </p>
+          <p style="margin-top:16px;">
+            확인된 핵심은 단순했습니다. <strong>CTR(클릭률)을 높이면 eCPM이 오른다.</strong> AdMob 과금 구조에서 CTR은 eCPM을 결정하는 가장 직접적인 레버였습니다.
+          </p>
+          <div class="insight-quote" style="margin-top:20px;">
+            <p>노출 수를 늘리는 것보다, 유저가 자발적으로 클릭하게 만드는 구조를 설계하는 것이 핵심이다. CTR이 올라가면 eCPM은 자동으로 따라온다.</p>
+            <div class="quote-author">— 캐시워크/캐시슬라이드 담당자 인터뷰</div>
+          </div>
+        </div>
+        <div class="flow-visual">
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div style="background:#fff; border-radius:16px; padding:24px; box-shadow:0 4px 20px rgba(0,0,0,0.04); border:1px solid #f0f0f0;">
+              <div style="font-size:12px; color:#0066ff; font-weight:600; margin-bottom:12px;">🎤 업계 인터뷰 프로세스</div>
+              <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+                <div style="background:#f0f7ff; padding:8px 12px; border-radius:8px; font-size:12px; color:#0066ff; font-weight:600;">캐시워크 인터뷰</div>
+                <span style="color:#ccc;">→</span>
+                <div style="background:#f0f7ff; padding:8px 12px; border-radius:8px; font-size:12px; color:#0066ff; font-weight:600;">캐시슬라이드 인터뷰</div>
+                <span style="color:#ccc;">→</span>
+                <div style="background:#f0f7ff; padding:8px 12px; border-radius:8px; font-size:12px; color:#0066ff; font-weight:600;">AdMob 구조 분석</div>
+              </div>
+              <div style="border-top:1px solid #f0f0f0; padding-top:16px;">
+                <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:8px;">핵심 발견</div>
+                <div style="font-size:15px; color:#0066ff; font-weight:700;">CTR ↑ = eCPM ↑</div>
+                <div style="font-size:13px; color:#555; margin-top:8px; line-height:1.7;">
+                  CTR을 올리기 쉬운 피드형 제품을 만들면<br>eCPM이 구조적으로 상승한다
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action: 보물찾기 -->
+      <div class="flow-step reveal">
+        <div class="flow-content">
+          <div class="flow-badge action-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
+            제품 출시: '보물찾기'
+          </div>
+          <h3>CTR을 구조적으로 높이는<br>피드형 광고 제품을 만들었습니다</h3>
+          <p>
+            인스타그램·페이스북 피드에서 광고가 나와도 자연스럽게 보고 클릭하게 되는 경험에서 출발했습니다. <strong>맥락 속 광고는 강요가 아니다.</strong> 리워드 아이템을 피드에 랜덤 배치해 유저가 탐색하게 유도하고, 그 흐름 속에서 광고를 만나면 자연스럽게 시청·클릭으로 이어진다는 가설이었습니다.
+          </p>
+          <ul>
+            <li>리워드 아이템을 피드에 랜덤 배치 → 유저가 <strong>피드를 능동적으로 탐색</strong>하게 유도</li>
+            <li>탐색 흐름 속 광고 노출 → 강요가 아닌 <strong>자연스러운 시청·클릭</strong>으로 연결</li>
+            <li>AdMob CPM 과금 구조와 결합해 <strong>CTR 상승 → eCPM 상승의 선순환</strong> 구축</li>
+            <li>주요 네트워크사와 직접 미팅해 <strong>올웨이즈 고객군에 적합한 고단가 광고 물량 협상</strong></li>
+          </ul>
+          <div class="skill-tags" style="margin-top:24px;">
+            <span class="skill-tag">업계 인터뷰</span>
+            <span class="skill-tag">광고 수익 구조 분석</span>
+            <span class="skill-tag">게이미피케이션</span>
+            <span class="skill-tag">CTR 최적화</span>
+            <span class="skill-tag">네트워크사 협상</span>
+          </div>
+        </div>
+        <div class="flow-visual">
+          <div style="text-align:center;">
+            <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:12px;">Google 2026 Commerce &amp; Fintech App Summit 발표 자료</div>
+            <img src="google_conf.jpeg" alt="구글 2026 Commerce &amp; Fintech App Summit — 올웨이즈 올팜 보물찾기가 효과적인 광고 캠페인 사례로 소개된 발표 슬라이드" style="width:100%; border-radius:16px; box-shadow:0 8px 40px rgba(0,0,0,0.10);">
+            <div style="font-size:12px; color:#bbb; margin-top:10px; font-style:italic;">커머스 연계 게임 내 고관여 접점에 광고를 배치한 사례로 공식 소개됐습니다</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="flow-step reveal">
+        <div class="flow-content" style="grid-column: 1 / -1;">
+          <div class="flow-badge result-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2.5 5 5.5.8-4 3.9.9 5.3L8 12.5 3.1 15l.9-5.3-4-3.9 5.5-.8z"/></svg>
+            성과
+          </div>
+          <h3>배너 eCPM 1.5배 이상 상승,<br>배너 섹션 매출 2개월 만에 6배 성장</h3>
+          <p style="margin-top:8px; color:#666;">출시 직후부터 매출이 빠르게 성장했습니다. 시장의 작동 원리를 파악하고, 핵심 레버를 제품으로 구현한 결과입니다. <strong>구글 컨퍼런스에서 효과적인 광고 캠페인 사례로 공식 소개</strong>됐습니다.</p>
+          <div class="result-metrics" style="margin-top:32px;">
+            <div class="metric-card">
+              <div class="metric-label">배너 광고 eCPM</div>
+              <div class="metric-value">1.5x</div>
+              <div class="metric-change"><span class="metric-arrow">↑</span> CTR 구조 개선</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">배너 섹션 매출</div>
+              <div class="metric-value">6x</div>
+              <div class="metric-change"><span class="metric-arrow">↑</span> 런칭 후 2개월</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">외부 공식 소개</div>
+              <div class="metric-value" style="font-size:26px;">구글 컨퍼런스</div>
+              <div class="metric-change">효과적인 광고 캠페인 사례</div>
+            </div>
+          </div>
+          <div class="lessons-learned">
+            <strong>Lessons Learned:</strong> 목표 지표를 직접 건드리기보다, 그 지표를 움직이는 상위 레버를 먼저 파악할 필요가 있음을 배웠습니다.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Alwayz Project 04 — 올라이브 (라이브커머스) ===== -->
+<section class="project">
+  <div class="container">
+    <div class="project-header reveal">
+      <div class="project-number">04</div>
       <h2 class="project-title">라이브커머스 광고 제품 출시</h2>
-      <p class="project-subtitle">올라이브 · 월 1.5억 안정 매출, 방송당 10만 PV</p>
+      <p class="project-subtitle">2025.09 – 2025.12 · 올라이브 · 월 1.5억 안정 매출, 방송당 10만 PV</p>
     </div>
 
     <div class="psrFlow">
@@ -978,308 +1557,6 @@ footer {
   </div>
 </section>
 
-<!-- ===== Alwayz Project 2 — 보물찾기 (네트워크 광고 수익화) ===== -->
-<section class="project">
-  <div class="container">
-    <div class="project-header reveal">
-      <div class="project-number">02</div>
-      <h2 class="project-title">피드형 미션 광고 제품 출시</h2>
-      <p class="project-subtitle">보물찾기 · 일 150만원 매출, 배너 섹션 6배 성장</p>
-    </div>
-
-    <div class="psrFlow">
-      <!-- Problem -->
-      <div class="flow-step reveal">
-        <div class="flow-content">
-          <div class="flow-badge problem-badge">
-            <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
-            문제 인식
-          </div>
-          <h3>어떻게하면<br>배너 광고 효율을 높일 수 있을까?</h3>
-          <p>
-            네트워크 광고 수익을 더 키워야 했지만, <strong>단순 배너 노출 방식은 eCPM의 구조적 한계</strong>가 있었습니다. 노출을 아무리 늘려도 수익 천장이 보였습니다.
-          </p>
-          <p style="margin-top:16px;">
-            <strong>"어떤 지표를 바꿔야 eCPM이 근본적으로 올라가는가?"</strong>를 파악하기 위해 업계 스터디를 시작했습니다.
-          </p>
-        </div>
-        <div class="flow-visual">
-          <div style="background:#fff; border-radius:20px; padding:40px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0; text-align:center;">
-            <div style="font-size:48px; font-weight:900; color:#e5e7eb;">eCPM ↓</div>
-            <div style="font-size:15px; color:#999; margin-top:12px;">단순 노출 중심 → 수익 한계</div>
-            <div style="margin-top:24px; padding:16px; background:#fef2f2; border-radius:12px; font-size:14px; color:#dc2626; font-weight:600;">
-              핵심 질문: "어떤 지표를 바꿔야 eCPM이 올라가는가?"
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Study: 캐시워크·캐시슬라이드 인터뷰 -->
-      <div class="flow-step reverse reveal">
-        <div class="flow-content">
-          <div class="flow-badge hypothesis-badge">
-            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM6.5 8.5h3v4h-3z"/></svg>
-            업계 인터뷰 & 핵심 발견
-          </div>
-          <h3>캐시워크·캐시슬라이드 담당자를<br>직접 만나 인터뷰했습니다</h3>
-          <p>
-            <strong>캐시워크, 캐시슬라이드 등 리워드 앱 담당자를 직접 만나</strong> 광고 수익 구조를 물었습니다.
-          </p>
-          <p style="margin-top:16px;">
-            확인된 핵심은 단순했습니다. <strong>CTR(클릭률)을 높이면 eCPM이 오른다.</strong> AdMob 과금 구조에서 CTR은 eCPM을 결정하는 가장 직접적인 레버였습니다.
-          </p>
-          <div class="insight-quote" style="margin-top:20px;">
-            <p>노출 수를 늘리는 것보다, 유저가 자발적으로 클릭하게 만드는 구조를 설계하는 것이 핵심이다. CTR이 올라가면 eCPM은 자동으로 따라온다.</p>
-            <div class="quote-author">— 캐시워크/캐시슬라이드 담당자 인터뷰</div>
-          </div>
-        </div>
-        <div class="flow-visual">
-          <div style="display:flex; flex-direction:column; gap:16px;">
-            <div style="background:#fff; border-radius:16px; padding:24px; box-shadow:0 4px 20px rgba(0,0,0,0.04); border:1px solid #f0f0f0;">
-              <div style="font-size:12px; color:#0066ff; font-weight:600; margin-bottom:12px;">🎤 업계 인터뷰 프로세스</div>
-              <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
-                <div style="background:#f0f7ff; padding:8px 12px; border-radius:8px; font-size:12px; color:#0066ff; font-weight:600;">캐시워크 인터뷰</div>
-                <span style="color:#ccc;">→</span>
-                <div style="background:#f0f7ff; padding:8px 12px; border-radius:8px; font-size:12px; color:#0066ff; font-weight:600;">캐시슬라이드 인터뷰</div>
-                <span style="color:#ccc;">→</span>
-                <div style="background:#f0f7ff; padding:8px 12px; border-radius:8px; font-size:12px; color:#0066ff; font-weight:600;">AdMob 구조 분석</div>
-              </div>
-              <div style="border-top:1px solid #f0f0f0; padding-top:16px;">
-                <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:8px;">핵심 발견</div>
-                <div style="font-size:15px; color:#0066ff; font-weight:700;">CTR ↑ = eCPM ↑</div>
-                <div style="font-size:13px; color:#555; margin-top:8px; line-height:1.7;">
-                  CTR을 올리기 쉬운 피드형 제품을 만들면<br>eCPM이 구조적으로 상승한다
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action: 보물찾기 -->
-      <div class="flow-step reveal">
-        <div class="flow-content">
-          <div class="flow-badge action-badge">
-            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
-            제품 출시: '보물찾기'
-          </div>
-          <h3>CTR을 구조적으로 높이는<br>피드형 광고 제품을 만들었습니다</h3>
-          <p>
-            인스타그램·페이스북 피드에서 광고가 나와도 자연스럽게 보고 클릭하게 되는 경험에서 출발했습니다. <strong>맥락 속 광고는 강요가 아니다.</strong> 리워드 아이템을 피드에 랜덤 배치해 유저가 탐색하게 유도하고, 그 흐름 속에서 광고를 만나면 자연스럽게 시청·클릭으로 이어진다는 가설이었습니다.
-          </p>
-          <ul>
-            <li>리워드 아이템을 피드에 랜덤 배치 → 유저가 <strong>피드를 능동적으로 탐색</strong>하게 유도</li>
-            <li>탐색 흐름 속 광고 노출 → 강요가 아닌 <strong>자연스러운 시청·클릭</strong>으로 연결</li>
-            <li>AdMob CPM 과금 구조와 결합해 <strong>CTR 상승 → eCPM 상승의 선순환</strong> 구축</li>
-          </ul>
-          <div class="skill-tags" style="margin-top:24px;">
-            <span class="skill-tag">업계 인터뷰</span>
-            <span class="skill-tag">광고 수익 구조 분석</span>
-            <span class="skill-tag">게이미피케이션</span>
-            <span class="skill-tag">CTR 최적화</span>
-          </div>
-        </div>
-        <div class="flow-visual">
-          <div style="text-align:center;">
-            <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:12px;">보물찾기 실제 앱 화면</div>
-            <img src="badaham.gif" alt="보물찾기 앱 화면" style="width:100%; max-width:280px; border-radius:20px; box-shadow:0 12px 48px rgba(0,0,0,0.12);">
-          </div>
-        </div>
-      </div>
-
-      <!-- Result -->
-      <div class="flow-step reveal">
-        <div class="flow-content" style="grid-column: 1 / -1;">
-          <div class="flow-badge result-badge">
-            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2.5 5 5.5.8-4 3.9.9 5.3L8 12.5 3.1 15l.9-5.3-4-3.9 5.5-.8z"/></svg>
-            성과
-          </div>
-          <h3>보물찾기 단일 제품 일 150만원 매출,<br>배너 섹션 전체 매출 6배 성장</h3>
-          <p style="margin-top:8px; color:#666;">출시 직후부터 매출이 폭발적으로 성장했습니다. 시장의 작동 원리를 파악하고, 핵심 레버를 제품으로 구현한 결과입니다. <strong>Google에서도 성공적인 모바일 광고 수익화 사례로 공식 소개</strong>됐습니다.</p>
-          <div class="result-metrics" style="margin-top:32px;">
-            <div class="metric-card">
-              <div class="metric-label">보물찾기 일 매출</div>
-              <div class="metric-value count-up" data-target="150" data-suffix="만원">0</div>
-              <div class="metric-change">단일 제품 기준</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">eCPM</div>
-              <div class="metric-value">1.5x</div>
-              <div class="metric-change"><span class="metric-arrow">↑</span> CTR 구조 개선</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">배너 섹션 매출</div>
-              <div class="metric-value">6x</div>
-              <div class="metric-change"><span class="metric-arrow">↑</span> 구조적 성장</div>
-            </div>
-          </div>
-          <div class="lessons-learned">
-            <strong>Lessons Learned:</strong> 목표 지표를 직접 건드리기보다, 그 지표를 움직이는 상위 레버를 먼저 파악할 필요가 있음을 배웠습니다.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Alwayz Project 3 — 영상광고 이슈 감지 시스템 ===== -->
-<section class="project">
-  <div class="container">
-    <div class="project-header reveal">
-      <div class="project-number">03</div>
-      <h2 class="project-title">네트워크 광고 효율 최적화 제품 출시</h2>
-      <p class="project-subtitle">SD 기반 이슈 감지 · 선제적 대응 시스템</p>
-    </div>
-
-    <div class="psrFlow">
-
-      <!-- Problem -->
-      <div class="flow-step reveal">
-        <div class="flow-content">
-          <div class="flow-badge problem-badge">
-            <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
-            문제 인식
-          </div>
-          <h3>CS 문의가 폭증했는데,<br>원인이 뭘까?</h3>
-          <p>
-            어느 날 갑자기 <strong>"넘어가기 버튼이 안 눌린다", "광고가 안 닫힌다"</strong>는 CS 문의가 급증했습니다. 고객 정보를 분석한 결과, <strong>메타 네트워크(써드파티 SSP)의 이슈</strong>였습니다.
-          </p>
-          <p style="margin-top:16px;">
-            문제는 <strong>미디에이션사는 네트워크 측의 광고 이슈를 먼저 파악하거나 해결해주지 않는다</strong>는 것이었습니다. 결국 고객 문의가 쌓인 뒤에야 인지하는 구조적 공백이 존재했습니다. 우리가 먼저 감지해야 했습니다.
-          </p>
-        </div>
-        <div class="flow-visual">
-          <div style="background:#fff; border-radius:20px; padding:32px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
-            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:16px;">그외 실제 발생 이슈 정리</div>
-            <div style="display:flex; flex-direction:column; gap:12px;">
-              <div style="padding:14px 16px; background:#fff5f5; border-radius:12px; border-left:3px solid #e53e3e;">
-                <div style="font-size:12px; font-weight:700; color:#e53e3e; margin-bottom:4px;">META · Chained Ads</div>
-                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">X 버튼이 아예 안 눌리는 이슈</div>
-              </div>
-              <div style="padding:14px 16px; background:#fff5f5; border-radius:12px; border-left:3px solid #e53e3e;">
-                <div style="font-size:12px; font-weight:700; color:#e53e3e; margin-bottom:4px;">ADMOB · 소재 이슈</div>
-                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">X 버튼이 Status Bar 뒤에 위치</div>
-              </div>
-              <div style="padding:14px 16px; background:#fff5f5; border-radius:12px; border-left:3px solid #e53e3e;">
-                <div style="font-size:12px; font-weight:700; color:#e53e3e; margin-bottom:4px;">APPLOVIN · 특정 소재</div>
-                <div style="font-size:14px; color:#1a1a1a; font-weight:600;">아랍풍 음악이 광고 종료 후에도 계속 재생</div>
-              </div>
-            </div>
-            <div style="margin-top:16px; padding:12px 16px; background:#f8f9ff; border-radius:10px; text-align:center;">
-              <div style="font-size:13px; color:#666;">공통점</div>
-              <div style="font-size:14px; font-weight:700; color:#1a1a1a; margin-top:2px;">자사 코드가 아닌 광고 네트워크 측 이슈</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hypothesis / Design -->
-      <div class="flow-step reverse reveal">
-        <div class="flow-content">
-          <div class="flow-badge hypothesis-badge">
-            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM6.5 8.5h3v4h-3z"/></svg>
-            감지 시스템 설계
-          </div>
-          <h3>광고 노출 대비 리워드 지급의 편차를 이용해<br>감지 시스템을 설계했습니다</h3>
-          <p>
-            <strong>Display to Reward Ratio</strong>는 광고가 표시된 횟수 대비 리워드가 실제로 지급된 비율입니다. 이 지표는 시간대·요일마다 자연스럽게 오르내립니다. 절대값으로 기준을 잡으면 정상 변동도 걸리므로, <strong>비정상적으로 큰 낙폭만 잡으려면 표준편차(SD) 기반 설계</strong>가 필요했습니다.
-          </p>
-        </div>
-        <div class="flow-visual">
-          <div style="background:#fff; border-radius:20px; padding:32px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
-            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:20px;">display to reward ratio 이상감지 구조</div>
-            <!-- SD Chart mockup -->
-            <div style="position:relative; height:120px; background:#f8f9ff; border-radius:12px; overflow:hidden; margin-bottom:16px; padding:12px;">
-              <div style="font-size:11px; color:#999; margin-bottom:6px;">display to reward ratio (네트워크 A · iOS)</div>
-              <!-- Normal range band -->
-              <div style="position:absolute; bottom:28px; left:12px; right:12px; height:40px; background:rgba(22,163,74,0.08); border-radius:4px;"></div>
-              <!-- Normal line -->
-              <svg viewBox="0 0 280 60" style="width:100%; height:60px;">
-                <polyline points="0,20 40,22 80,18 120,24 160,20 200,22 230,30 240,48 260,50 280,52" fill="none" stroke="#f97316" stroke-width="2.5" stroke-linecap="round"/>
-                <line x1="230" y1="0" x2="230" y2="60" stroke="#e53e3e" stroke-width="1.5" stroke-dasharray="4,3"/>
-                <text x="232" y="12" font-size="9" fill="#e53e3e" font-weight="600">이상감지</text>
-                <!-- -4SD line -->
-                <line x1="0" y1="44" x2="280" y2="44" stroke="#16a34a" stroke-width="1" stroke-dasharray="3,3"/>
-                <text x="2" y="42" font-size="8" fill="#16a34a">-4SD</text>
-              </svg>
-            </div>
-            <!-- Alert flow -->
-            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:center;">
-              <div style="padding:8px 12px; background:#fff7ed; border-radius:8px; font-size:12px; font-weight:600; color:#ea580c;">-4SD 하회 2회 연속</div>
-              <div style="color:#aaa; font-size:14px;">→</div>
-              <div style="padding:8px 12px; background:#eff6ff; border-radius:8px; font-size:12px; font-weight:600; color:#2563eb;">알람 발송</div>
-              <div style="color:#aaa; font-size:14px;">→</div>
-              <div style="padding:8px 12px; background:#f0fdf4; border-radius:8px; font-size:12px; font-weight:600; color:#16a34a;">네트워크 컨택</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action -->
-      <div class="flow-step reveal">
-        <div class="flow-content" style="grid-column: 1 / -1;">
-          <div class="flow-badge action-badge">
-            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
-            대응 프로토콜
-          </div>
-          <h3>감지 → 식별 → 차단까지<br>프로토콜로 표준화했습니다</h3>
-          <p>
-            알람이 울리면 대시보드로 문제 네트워크·OS를 즉시 식별하고, 담당자에게 핫라인으로 연락합니다. 해결 전까지는 <strong>매출 손실을 감수하고 해당 네트워크를 임시 차단</strong>해 고객 노출을 차단합니다.
-          </p>
-          <div style="margin-top:28px; display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
-            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
-              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">1</div>
-              <div>
-                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">이상 감지</div>
-                <div style="font-size:13px; color:#666; line-height:1.6;">display to reward ratio -4SD 연속 2회 → 자동 알람</div>
-              </div>
-            </div>
-            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
-              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">2</div>
-              <div>
-                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">원인 네트워크 식별</div>
-                <div style="font-size:13px; color:#666; line-height:1.6;">네트워크별·OS별 대시보드로 문제 범위 특정</div>
-              </div>
-            </div>
-            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
-              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">3</div>
-              <div>
-                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">핫라인 컨택</div>
-                <div style="font-size:13px; color:#666; line-height:1.6;">사전 구축한 네트워크사 담당자 직통 채널로 즉시 수정 요청</div>
-              </div>
-            </div>
-            <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:#f8f9ff; border-radius:16px;">
-              <div style="min-width:32px; height:32px; background:#0066ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; flex-shrink:0;">4</div>
-              <div>
-                <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">문제 네트워크 임시 차단</div>
-                <div style="font-size:13px; color:#666; line-height:1.6;">해결 완료 전까지 해당 OS에서 해당 네트워크 송출 중단</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Result -->
-      <div class="flow-step reveal">
-        <div class="flow-content" style="grid-column: 1 / -1;">
-          <div class="flow-badge result-badge">
-            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2.5 5 5.5.8-4 3.9.9 5.3L8 12.5 3.1 15l.9-5.3-4-3.9 5.5-.8z"/></svg>
-            성과
-          </div>
-          <h3>고객이 문의하기 전에<br>먼저 파악하고 처리할 수 있게 됐습니다</h3>
-          <p style="margin-top:16px; color:#666; line-height:1.8;">
-            이슈가 CS 문의로 번지기 전에 내부에서 먼저 인지하고 처리할 수 있는 체계가 갖춰졌습니다.
-          </p>
-          <div class="lessons-learned">
-            <strong>Lessons Learned:</strong> 외부 의존도가 높은 영역일수록, 스스로 감지하고 대응할 수 있는 체계를 사전에 구축할 필요가 있음을 배웠습니다.
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- =========================================================== -->
 <!-- ===== HAULLA SECTION ===== -->
 <!-- =========================================================== -->
@@ -1328,26 +1605,329 @@ footer {
     </div>
   </div>
 
-  <div class="company-period">Business Analyst → 전략팀 Lead (PO) · 2022.04 ~ 2025.08 · 3년 5개월</div>
+  <div class="company-period">정규직 · Business Analyst (PO Role) · Growth Team Lead · 2022.04 ~ 2025.08 (3년 5개월)</div>
 
   <div class="role-summary ecube container">
     <div class="role-summary-title">여기서 한 일</div>
     <ul>
-      <li><strong>04</strong> 계약 후 30%밖에 안되던 Activation 전환율 → 파트너 배송 프로덕트 출시로 67% 달성</li>
-      <li><strong>05</strong> 월 이탈률 5%→1.5% 개선 — IoT 센서 기반 수거누락 자동 감지 & 대체 수거 알림 프로덕트</li>
-      <li><strong>06</strong> 영업팀 리드 관리 자동화 — 세일즈 성장을 위한 리드 생성 & 관리 프로덕트 구축</li>
+      <li><strong>05</strong> 내부 콜영업 전용 CRM 출시 — 비영업 시간 제거로 영업 통화량 1.5배, 월 매출 +57%, MRR 200% 성장</li>
+      <li><strong>06</strong> 센서 기반 수거 누락 알림/보상 프로덕트 출시 — IoT 센서 자동 감지 + 보상 자동화로 월 이탈률 5% → 1.5%</li>
+      <li><strong>07</strong> Dumpster 배송 프로덕트 출시 — 이메일 체인을 제품으로 대체해 Activation 30% → 67%, 배송 소요 9.1일 → 3.4일</li>
     </ul>
+  </div>
+
+  <div class="container" style="margin-top:48px;">
+    <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:16px;">북미 현장 — 수거 파트너 동행 &amp; Smart Dumpster 센서 설치</div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px;">
+      <div class="field-photo">
+        <img src="field_partner.jpg" alt="북미 수거 파트너사(Frontier Waste Solutions) 현장 방문">
+        <div class="field-photo-caption">수거 파트너사 직접 방문 · 현장 프로세스 관찰</div>
+      </div>
+      <div class="field-photo">
+        <img src="field_sensor.jpg" alt="IoT 센서를 부착한 Smart Dumpster 현장">
+        <div class="field-photo-caption">IoT 센서를 부착한 Smart Dumpster</div>
+      </div>
+    </div>
   </div>
 
 </div>
 
-<!-- Haulla: Project 4 — Dumpster 배송 프로덕트 -->
+<!-- Haulla: Project 05 — 내부 콜영업 전용 CRM -->
 <section class="project">
   <div class="container">
     <div class="project-header reveal">
-      <div class="project-number">04</div>
+      <div class="project-number">05</div>
+      <h2 class="project-title">내부 콜영업 전용 CRM 출시</h2>
+      <p class="project-subtitle">2024.07 – 2025.03 · Self-Mining · 영업 통화량 1.5배, MRR 200% 성장</p>
+    </div>
+
+    <div class="psrFlow">
+      <!-- Problem -->
+      <div class="flow-step reveal">
+        <div class="flow-content">
+          <div class="flow-badge problem-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
+            문제 인식
+          </div>
+          <h3>영업팀의 매출이 2년째<br>왜 증가하지 않을까?</h3>
+          <p>
+            오퍼레이션이 안정화됐지만 MRR 4천만원 수준이 2년째 정체되어 있었습니다. 영업팀의 역량이 문제라는 시각이 지배적이었지만, <strong>직접 영업팀 일상 업무를 관찰해보니 전혀 달랐습니다.</strong>
+          </p>
+          <p style="margin-top:16px;">
+            영업사원들과 함께 직접 영업 현장에 동행하며 일상 업무 흐름을 분석한 결과, <strong>고객 선정 과정에서 구글맵과 내부 프로덕트를 반복적으로 전환하는 데 일일 평균 1시간 이상이 소요</strong>되고 있음을 발견했습니다. <strong>전화를 더 많이 할 수 없는 게 아니라, 전화 외에 해야 할 일이 너무 많았던 것입니다.</strong>
+          </p>
+        </div>
+        <div class="flow-visual">
+          <div style="background:#fff; border-radius:20px; padding:40px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0; text-align:center;">
+            <div style="font-size:14px; color:#999; font-weight:600;">MRR 추이</div>
+            <div style="display:flex; align-items:flex-end; justify-content:center; gap:12px; height:160px; margin:24px 0; padding:0 20px;">
+              <div style="display:flex; flex-direction:column; align-items:center; gap:4px; flex:1;">
+                <div style="font-size:11px; color:#999;">Q1</div>
+                <div style="width:100%; height:100px; background:#e5e7eb; border-radius:8px 8px 0 0;"></div>
+              </div>
+              <div style="display:flex; flex-direction:column; align-items:center; gap:4px; flex:1;">
+                <div style="font-size:11px; color:#999;">Q2</div>
+                <div style="width:100%; height:105px; background:#e5e7eb; border-radius:8px 8px 0 0;"></div>
+              </div>
+              <div style="display:flex; flex-direction:column; align-items:center; gap:4px; flex:1;">
+                <div style="font-size:11px; color:#999;">Q3</div>
+                <div style="width:100%; height:98px; background:#e5e7eb; border-radius:8px 8px 0 0;"></div>
+              </div>
+              <div style="display:flex; flex-direction:column; align-items:center; gap:4px; flex:1;">
+                <div style="font-size:11px; color:#999;">Q4</div>
+                <div style="width:100%; height:102px; background:#e5e7eb; border-radius:8px 8px 0 0;"></div>
+              </div>
+            </div>
+            <div style="font-size:28px; font-weight:900; color:#999;">₩40M</div>
+            <div style="font-size:14px; color:#ccc; margin-top:4px;">2년간 정체된 MRR</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hypothesis -->
+      <div class="flow-step reveal">
+        <div class="flow-content">
+          <div class="flow-badge hypothesis-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
+            가설 수립 & 검증
+          </div>
+          <h3>직접 관찰한 결과,<br>근본 원인은 도구의 부재였습니다</h3>
+          <p>
+            영업사원들과 함께 직접 영업 현장에 동행하며 일상 업무 흐름을 분석했습니다. <strong>고객 선정 과정에서 구글맵과 내부 프로덕트를 반복적으로 전환하는 데 일일 평균 1시간 이상이 소요</strong>되고 있었습니다. 문제는 영업팀의 역량이 아니라 업무 효율을 떨어뜨리는 도구 구조였습니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- Action -->
+      <div class="flow-step reverse reveal">
+        <div class="flow-content">
+          <div class="flow-badge action-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
+            액션
+          </div>
+          <h3>영업사원이 영업에만 집중할 수 있는<br>환경을 만들었습니다</h3>
+          <p>
+            구글맵과 내부 시스템 전환에 쓰던 <strong>하루 1시간 이상의 비영업 시간을 제거</strong>하는 것이 목표였습니다.
+          </p>
+          <ul>
+            <li>구글 맵 API를 활용하여 고객 정보 조회 및 영업 활동이 가능한 <strong>통합 프로덕트(Self-Mining)</strong> 개발</li>
+            <li>고객 영업 데이터 분석을 통해 <strong>수익성 높은 지역을 시각화</strong>한 Good Market Marker 대시보드 구축</li>
+          </ul>
+        </div>
+        <div class="flow-visual">
+          <div style="max-width:520px;">
+            <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:12px; text-align:center;">실제 프로덕트 화면 — Self-Mining & 리드 관리 CRM</div>
+            <img src="haulla_product_03.png" alt="Haulla 리드 관리 CRM — 고객 정보 조회 및 지도 기반 영업 활동 원스톱" style="width:100%; border-radius:16px; box-shadow:0 8px 40px rgba(0,0,0,0.10);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Action 2: UX Redesign -->
+      <!-- Result -->
+      <div class="flow-step reveal">
+        <div class="flow-content" style="grid-column: 1 / -1;">
+          <div class="flow-badge result-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2.5 5 5.5.8-4 3.9.9 5.3L8 12.5 3.1 15l.9-5.3-4-3.9 5.5-.8z"/></svg>
+            성과
+          </div>
+          <h3>MRR 200% 성장,<br>영업 성과 2배 향상</h3>
+          <div class="result-metrics">
+            <div class="metric-card">
+              <div class="metric-label">세일즈 성과</div>
+              <div class="metric-value">2x</div>
+              <div class="metric-change"><span class="metric-arrow">↑</span> 4개월 만에 달성</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">영업통화량</div>
+              <div class="metric-value">1.5x</div>
+              <div class="metric-change"><span class="metric-arrow">↑</span> Self-Mining 도입 후</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">월 매출 증가</div>
+              <div class="metric-value">+57%</div>
+              <div class="metric-change"><span class="metric-arrow">↑</span> MoM 기준</div>
+            </div>
+          </div>
+          <div class="lessons-learned">
+            <strong>Lessons Learned:</strong> 사람의 행동을 바꾸려 하기 전에, 그 행동을 막고 있는 환경을 먼저 제거할 필요가 있음을 배웠습니다.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Haulla: Project 06 — 센서 기반 수거 누락 알림/보상 -->
+<section class="project">
+  <div class="container">
+    <div class="project-header reveal">
+      <div class="project-number">06</div>
+      <h2 class="project-title">센서 기반 수거 누락 알림/<br>보상 프로덕트 출시</h2>
+      <p class="project-subtitle">2023.08 – 2023.12 · 월 이탈률 5% → 1.5% (산업 평균 수준 달성)</p>
+    </div>
+
+    <div class="psrFlow">
+      <!-- Problem -->
+      <div class="flow-step reveal">
+        <div class="flow-content">
+          <div class="flow-badge problem-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
+            문제 인식
+          </div>
+          <h3>왜 고객들은 계속 떠나갈까?</h3>
+          <p>
+            파트너 프로덕트 출시 이후 매출이 크게 증가했음에도, 예상보다 높은 <strong>5%의 고객 이탈률</strong>이 발생했습니다. 이는 산업 평균인 1%를 크게 상회하는 수준이었습니다.
+          </p>
+          <p style="margin-top:16px;">
+            분석 결과, 전체 이탈 고객의 80%가 정기 <strong>"수거 누락"으로 인한 서비스 불만족</strong>이 주요 원인이었습니다.
+          </p>
+        </div>
+        <div class="flow-visual">
+          <div style="display:flex; gap:24px; flex-wrap:wrap; justify-content:center;">
+            <div style="background:#fff; border-radius:20px; padding:32px; text-align:center; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0; flex:1; min-width:160px;">
+              <div style="font-size:13px; color:#e53e3e; font-weight:600;">월 이탈률</div>
+              <div style="font-size:56px; font-weight:900; color:#e53e3e; margin:8px 0;">5%</div>
+              <div style="font-size:13px; color:#999;">산업 평균의 5배</div>
+            </div>
+            <div style="background:#fff; border-radius:20px; padding:32px; text-align:center; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0; flex:1; min-width:180px;">
+              <div style="font-size:13px; color:#e53e3e; font-weight:600; white-space:nowrap;">수거 누락으로 인한 이탈</div>
+              <div style="font-size:56px; font-weight:900; color:#e53e3e; margin:8px 0; white-space:nowrap;">80%</div>
+              <div style="font-size:13px; color:#999;">전체 이탈 비중</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1차 시도와 실패 -->
+      <div class="flow-step reverse reveal">
+        <div class="flow-content">
+          <div class="flow-badge hypothesis-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM6.5 8.5h3v4h-3z"/></svg>
+            고객 설문조사로 핵심 니즈 발견
+          </div>
+          <h3>고객이 원하는 것은 빠른 응답이 아니라,<br>자동 해결이었습니다</h3>
+          <p>
+            이탈 고객 설문조사 결과, 고객의 진짜 니즈는 "빠른 CS 응답"이 아닌 <strong>"문제를 인지하기 전에 미리 자동으로 해결되는 것"</strong>이었습니다.
+          </p>
+          <div class="insight-quote" style="margin-top:20px;">
+            <p>"대체수거가 CS문의 전에 자동으로 오거나, 내가 문제를 인지하기 전에 미리 해결되면 좋겠다"</p>
+            <div class="quote-author">— 이탈 고객 인터뷰 중</div>
+          </div>
+        </div>
+        <div class="flow-visual">
+          <div style="background:#fff; border-radius:20px; padding:40px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+            <div style="font-size:14px; font-weight:700; color:#1a1a1a; margin-bottom:24px; text-align:center;">
+              "수거 누락 발생 시, 어떤 대응을 원하시나요?"
+            </div>
+            <div style="margin-bottom:12px;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+                <span style="font-size:13px; color:#555;">수거누락 발생시 알아서 미리 처리해라</span>
+                <span style="font-size:13px; font-weight:700; color:#0066ff;">65%</span>
+              </div>
+              <div style="height:24px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
+                <div class="funnel-fill" data-width="65%" style="background:#0066ff; border-radius:6px;"></div>
+              </div>
+            </div>
+            <div style="margin-bottom:12px;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+                <span style="font-size:13px; color:#555;">빠른 CS대응</span>
+                <span style="font-size:13px; font-weight:700; color:#888;">20%</span>
+              </div>
+              <div style="height:24px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
+                <div class="funnel-fill" data-width="20%" style="background:#94a3b8; border-radius:6px;"></div>
+              </div>
+            </div>
+            <div style="margin-bottom:12px;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+                <span style="font-size:13px; color:#555;">금전적 보상을 희망</span>
+                <span style="font-size:13px; font-weight:700; color:#888;">12%</span>
+              </div>
+              <div style="height:24px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
+                <div class="funnel-fill" data-width="12%" style="background:#d1d5db; border-radius:6px;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+                <span style="font-size:13px; color:#555;">그 외</span>
+                <span style="font-size:13px; font-weight:700; color:#888;">3%</span>
+              </div>
+              <div style="height:24px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
+                <div class="funnel-fill" data-width="3%" style="background:#e5e7eb; border-radius:6px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action: IoT 센서 -->
+      <div class="flow-step reveal">
+        <div class="flow-content">
+          <div class="flow-badge action-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
+            액션
+          </div>
+          <h3>Dumpster에 센서를 달아<br>수거 누락을 자동으로 감지했습니다</h3>
+          <ul>
+            <li style="white-space: nowrap; font-size: 13px;">Dumpster에 센서를 부착하여 수거 완료 여부를 <strong>실시간으로 감지</strong>하는 시스템 구축</li>
+            <li>누락 발생 시 고객이 인지하기 전에 → <strong>파트너에게 자동 알림 전송</strong></li>
+            <li><strong>보상 절차까지 자동화</strong>된 구조로 설계하여 고객 불만족 최소화</li>
+          </ul>
+          <div class="skill-tags" style="margin-top:24px;">
+            <span class="skill-tag">실패를 통한 학습</span>
+            <span class="skill-tag">고객 인사이트 기반 기획</span>
+            <span class="skill-tag">IoT 센서 활용</span>
+            <span class="skill-tag">리텐션 전략 설계</span>
+          </div>
+        </div>
+        <div class="flow-visual">
+          <div style="max-width:520px;">
+            <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:12px; text-align:center;">실제 프로덕트 화면 — IoT 센서 모니터링 대시보드</div>
+            <img src="haulla_product_02.png" alt="Haulla IoT 센서 모니터링 — 카메라 기반 수거 상태 확인 및 적재량 차트" style="width:100%; border-radius:16px; box-shadow:0 8px 40px rgba(0,0,0,0.10);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="flow-step reveal">
+        <div class="flow-content" style="grid-column: 1 / -1;">
+          <div class="flow-badge result-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2.5 5 5.5.8-4 3.9.9 5.3L8 12.5 3.1 15l.9-5.3-4-3.9 5.5-.8z"/></svg>
+            성과
+          </div>
+          <h3>고객 이탈률 62% 감소,<br>CS 문의 33% 감소</h3>
+          <div class="result-metrics">
+            <div class="metric-card">
+              <div class="metric-label">월 이탈률</div>
+              <div class="metric-value count-up" data-target="1.5" data-suffix="%" data-decimal="1">0</div>
+              <div class="metric-change"><span class="metric-arrow">↓</span> 5% → 1.5%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">수거 누락 처리 소요</div>
+              <div class="metric-value count-up" data-target="1.2" data-suffix="일" data-decimal="1">0</div>
+              <div class="metric-change"><span class="metric-arrow">↓</span> 3.5일 → 1.2일</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">수거 누락 관련 CS 문의</div>
+              <div class="metric-value count-up" data-target="235" data-suffix="건">0</div>
+              <div class="metric-change"><span class="metric-arrow">↓</span> 350건 → 235건</div>
+            </div>
+          </div>
+          <div class="lessons-learned">
+            <strong>Lessons Learned:</strong> 고객의 표면적인 요청이 아닌, 그 뒤에 숨은 진정한 니즈를 파악하는 것이 문제 해결의 시작임을 배웠습니다.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Haulla: Project 07 — Dumpster 배송 프로덕트 -->
+<section class="project">
+  <div class="container">
+    <div class="project-header reveal">
+      <div class="project-number">07</div>
       <h2 class="project-title">Dumpster 배송 프로덕트 출시</h2>
-      <p class="project-subtitle">Dumpster(컨테이너형 쓰레기통) 배송 · 고객 활성화율 30% → 67%</p>
+      <p class="project-subtitle">2023.04 – 2023.07 · Activation 전환율 30% → 67%, 배송 소요 9.1일 → 3.4일</p>
     </div>
 
     <div class="psrFlow">
@@ -1549,163 +2129,71 @@ footer {
   </div>
 </section>
 
-<!-- Haulla: Project 5 — 수거누락 알림 프로덕트 -->
+<!-- =========================================================== -->
+<!-- ===== 밑미 SECTION ===== -->
+<!-- =========================================================== -->
+<div class="company-banner intern-banner reveal" id="meetme">
+  <div class="company-logo">(주)밑미 (Meetme)</div>
+  <h2>상담/명상 플랫폼의<br><strong>B2B 시장 확장 기획</strong></h2>
+  <p>
+    B2C 상담/명상 플랫폼의 성장 확장을 위해<br>
+    B2B 확장 가능성을 빠르게 검증하고, 오프라인 공간을 직접 운영했습니다.
+  </p>
+  <div class="company-period">인턴 · Business Analyst Intern · 2021.03 ~ 2021.08 (6개월)</div>
+</div>
+
 <section class="project">
   <div class="container">
     <div class="project-header reveal">
-      <div class="project-number">05</div>
-      <h2 class="project-title">센서 기반 수거 누락 알림/<br>보상 프로덕트 출시</h2>
-      <p class="project-subtitle">고객 이탈률 5% → 1.5%</p>
+      <div class="project-number">08</div>
+      <h2 class="project-title">상담/명상 플랫폼 사업의<br>B2B 시장 확장 기획 및 오프라인 공간 운영</h2>
+      <p class="project-subtitle">2021.03 – 2021.08 · 기존 자산 리패키징을 통한 신규 채널 검증</p>
     </div>
 
     <div class="psrFlow">
-      <!-- Problem -->
       <div class="flow-step reveal">
         <div class="flow-content">
           <div class="flow-badge problem-badge">
             <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
-            문제 인식
+            문제 정의
           </div>
-          <h3>왜 고객들은 계속 떠나갈까?</h3>
+          <h3>B2C만으로는 성장 폭이 제한적이었습니다</h3>
           <p>
-            파트너 프로덕트 출시 이후 매출이 크게 증가했음에도, 예상보다 높은 <strong>5%의 고객 이탈률</strong>이 발생했습니다. 이는 산업 평균인 1%를 크게 상회하는 수준이었습니다.
-          </p>
-          <p style="margin-top:16px;">
-            분석 결과, 전체 이탈 고객의 80%가 정기 <strong>"수거 누락"으로 인한 서비스 불만족</strong>이 주요 원인이었습니다.
+            B2C 상담/명상 플랫폼의 성장 확장을 위해 <strong>B2B 확장 가능성을 빠르게 검증</strong>해야 했습니다.
           </p>
         </div>
         <div class="flow-visual">
-          <div style="display:flex; gap:24px; flex-wrap:wrap; justify-content:center;">
-            <div style="background:#fff; border-radius:20px; padding:32px; text-align:center; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0; flex:1; min-width:160px;">
-              <div style="font-size:13px; color:#e53e3e; font-weight:600;">월 이탈률</div>
-              <div style="font-size:56px; font-weight:900; color:#e53e3e; margin:8px 0;">5%</div>
-              <div style="font-size:13px; color:#999;">산업 평균의 5배</div>
-            </div>
-            <div style="background:#fff; border-radius:20px; padding:32px; text-align:center; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0; flex:1; min-width:180px;">
-              <div style="font-size:13px; color:#e53e3e; font-weight:600; white-space:nowrap;">수거 누락으로 인한 이탈</div>
-              <div style="font-size:56px; font-weight:900; color:#e53e3e; margin:8px 0; white-space:nowrap;">80%</div>
-              <div style="font-size:13px; color:#999;">전체 이탈 비중</div>
+          <div style="background:#fff; border-radius:20px; padding:36px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:20px;">검증 구조</div>
+            <div class="process-flow" style="flex-direction:column; align-items:stretch;">
+              <div class="process-step-item" style="background:#f5f5f7; color:#555;">기존 B2C 상담 자산</div>
+              <div class="process-arrow" style="text-align:center;">↓</div>
+              <div class="process-step-item" style="background:#eff6ff; color:#2563eb;">기업 프로그램으로 리패키징</div>
+              <div class="process-arrow" style="text-align:center;">↓</div>
+              <div class="process-step-item" style="background:#f0fdf4; color:#16a34a;">운영 프로세스 · 제안서 · GTM 실행</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 1차 시도와 실패 -->
-      <div class="flow-step reverse reveal">
-        <div class="flow-content">
-          <div class="flow-badge hypothesis-badge">
-            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM6.5 8.5h3v4h-3z"/></svg>
-            고객 설문조사로 핵심 니즈 발견
-          </div>
-          <h3>고객이 원하는 것은 빠른 응답이 아니라,<br>자동 해결이었습니다</h3>
-          <p>
-            이탈 고객 설문조사 결과, 고객의 진짜 니즈는 "빠른 CS 응답"이 아닌 <strong>"문제를 인지하기 전에 미리 자동으로 해결되는 것"</strong>이었습니다.
-          </p>
-          <div class="insight-quote" style="margin-top:20px;">
-            <p>"대체수거가 CS문의 전에 자동으로 오거나, 내가 문제를 인지하기 전에 미리 해결되면 좋겠다"</p>
-            <div class="quote-author">— 이탈 고객 인터뷰 중</div>
-          </div>
-        </div>
-        <div class="flow-visual">
-          <div style="background:#fff; border-radius:20px; padding:40px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
-            <div style="font-size:14px; font-weight:700; color:#1a1a1a; margin-bottom:24px; text-align:center;">
-              "수거 누락 발생 시, 어떤 대응을 원하시나요?"
-            </div>
-            <div style="margin-bottom:12px;">
-              <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
-                <span style="font-size:13px; color:#555;">수거누락 발생시 알아서 미리 처리해라</span>
-                <span style="font-size:13px; font-weight:700; color:#0066ff;">65%</span>
-              </div>
-              <div style="height:24px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
-                <div class="funnel-fill" data-width="65%" style="background:#0066ff; border-radius:6px;"></div>
-              </div>
-            </div>
-            <div style="margin-bottom:12px;">
-              <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
-                <span style="font-size:13px; color:#555;">빠른 CS대응</span>
-                <span style="font-size:13px; font-weight:700; color:#888;">20%</span>
-              </div>
-              <div style="height:24px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
-                <div class="funnel-fill" data-width="20%" style="background:#94a3b8; border-radius:6px;"></div>
-              </div>
-            </div>
-            <div style="margin-bottom:12px;">
-              <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
-                <span style="font-size:13px; color:#555;">금전적 보상을 희망</span>
-                <span style="font-size:13px; font-weight:700; color:#888;">12%</span>
-              </div>
-              <div style="height:24px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
-                <div class="funnel-fill" data-width="12%" style="background:#d1d5db; border-radius:6px;"></div>
-              </div>
-            </div>
-            <div>
-              <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
-                <span style="font-size:13px; color:#555;">그 외</span>
-                <span style="font-size:13px; font-weight:700; color:#888;">3%</span>
-              </div>
-              <div style="height:24px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
-                <div class="funnel-fill" data-width="3%" style="background:#e5e7eb; border-radius:6px;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action: IoT 센서 -->
-      <div class="flow-step reveal">
-        <div class="flow-content">
-          <div class="flow-badge action-badge">
-            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
-            액션
-          </div>
-          <h3>Dumpster에 센서를 달아<br>수거 누락을 자동으로 감지했습니다</h3>
-          <ul>
-            <li style="white-space: nowrap; font-size: 13px;">Dumpster에 센서를 부착하여 수거 완료 여부를 <strong>실시간으로 감지</strong>하는 시스템 구축</li>
-            <li>누락 발생 시 고객이 인지하기 전에 → <strong>파트너에게 자동 알림 전송</strong></li>
-            <li><strong>보상 절차까지 자동화</strong>된 구조로 설계하여 고객 불만족 최소화</li>
-          </ul>
-          <div class="skill-tags" style="margin-top:24px;">
-            <span class="skill-tag">실패를 통한 학습</span>
-            <span class="skill-tag">고객 인사이트 기반 기획</span>
-            <span class="skill-tag">IoT 센서 활용</span>
-            <span class="skill-tag">리텐션 전략 설계</span>
-          </div>
-        </div>
-        <div class="flow-visual">
-          <div style="max-width:520px;">
-            <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:12px; text-align:center;">실제 프로덕트 화면 — IoT 센서 모니터링 대시보드</div>
-            <img src="haulla_product_02.png" alt="Haulla IoT 센서 모니터링 — 카메라 기반 수거 상태 확인 및 적재량 차트" style="width:100%; border-radius:16px; box-shadow:0 8px 40px rgba(0,0,0,0.10);">
-          </div>
-        </div>
-      </div>
-
-      <!-- Result -->
       <div class="flow-step reveal">
         <div class="flow-content" style="grid-column: 1 / -1;">
-          <div class="flow-badge result-badge">
-            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2.5 5 5.5.8-4 3.9.9 5.3L8 12.5 3.1 15l.9-5.3-4-3.9 5.5-.8z"/></svg>
-            성과
+          <div class="flow-badge action-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
+            액션 &amp; 성과
           </div>
-          <h3>고객 이탈률 62% 감소,<br>CS 문의 33% 감소</h3>
-          <div class="result-metrics">
-            <div class="metric-card">
-              <div class="metric-label">월 이탈률</div>
-              <div class="metric-value count-up" data-target="1.5" data-suffix="%" data-decimal="1">0</div>
-              <div class="metric-change"><span class="metric-arrow">↓</span> 5% → 1.5%</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">수거 누락 처리 소요</div>
-              <div class="metric-value count-up" data-target="1.2" data-suffix="일" data-decimal="1">0</div>
-              <div class="metric-change"><span class="metric-arrow">↓</span> 3.5일 → 1.2일</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">수거 누락 관련 CS 문의</div>
-              <div class="metric-value count-up" data-target="235" data-suffix="건">0</div>
-              <div class="metric-change"><span class="metric-arrow">↓</span> 350건 → 235건</div>
-            </div>
-          </div>
-          <div class="lessons-learned">
-            <strong>Lessons Learned:</strong> 고객의 표면적인 요청이 아닌, 그 뒤에 숨은 진정한 니즈를 파악하는 것이 문제 해결의 시작임을 배웠습니다.
+          <h3>기존 상담 자산을 기업 프로그램으로<br>리패키징했습니다</h3>
+          <p>
+            기존 상담 자산을 기업 프로그램으로 리패키징해 <strong>B2B 서비스 초기 기획 및 운영 프로세스·제안서 등 Go-to-Market 실행을 지원</strong>했습니다. 동시에 오프라인 공간을 직접 운영하며 고객 접점을 관찰했습니다.
+          </p>
+          <p style="margin-top:16px;">
+            <strong>기존 인프라를 활용한 신규 채널 확장 기반을 마련하며 초기 사업화 검증을 보조</strong>했습니다.
+          </p>
+          <div class="skill-tags" style="margin-top:24px;">
+            <span class="skill-tag">B2B 확장 기획</span>
+            <span class="skill-tag">Go-to-Market</span>
+            <span class="skill-tag">오프라인 공간 운영</span>
+            <span class="skill-tag">제안서 · 운영 프로세스</span>
           </div>
         </div>
       </div>
@@ -1713,13 +2201,121 @@ footer {
   </div>
 </section>
 
-<!-- Haulla: Project 6 — 리드 생성 & 관리 프로덕트 -->
+<!-- =========================================================== -->
+<!-- ===== igloohome SECTION ===== -->
+<!-- =========================================================== -->
+<div class="company-banner intern-banner reveal" id="igloohome">
+  <div class="company-logo">igloohome</div>
+  <h2>글로벌 스마트 도어락 브랜드의<br><strong>한국 시장 진출 지원</strong></h2>
+  <p>
+    HOME IoT 제품의 한국 시장 진입 초기 단계에서<br>
+    "첫 매출과 레퍼런스 확보"를 과제로 B2B 진입 전략을 설계했습니다.
+  </p>
+  <div class="company-period">인턴 · Business Analyst Intern · 2017.07 ~ 2018.06 (1년)</div>
+</div>
+
 <section class="project">
   <div class="container">
     <div class="project-header reveal">
-      <div class="project-number">06</div>
-      <h2 class="project-title">내부 콜 영업 전용 CRM 출시</h2>
-      <p class="project-subtitle">영업 성과 2배, MRR 200% 성장</p>
+      <div class="project-number">09</div>
+      <h2 class="project-title">HOME IoT 제품의<br>한국 시장 진출 지원</h2>
+      <p class="project-subtitle">2017.07 – 2018.06 · 국내 첫 매출 · 지사 설립 연결 · $100K 상금 확보</p>
+    </div>
+
+    <div class="psrFlow">
+      <div class="flow-step reveal">
+        <div class="flow-content">
+          <div class="flow-badge problem-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
+            문제 정의
+          </div>
+          <h3>현지 시장에 맞는<br>B2B 진입 전략이 없었습니다</h3>
+          <p>
+            글로벌 스마트 도어락 브랜드 igloohome의 한국 시장 진출 초기 단계에서, <strong>현지 시장에 맞는 B2B 진입 전략이 부재</strong>했고 <strong>"첫 매출과 레퍼런스 확보"가 가장 중요한 과제</strong>였습니다.
+          </p>
+        </div>
+        <div class="flow-visual">
+          <div style="background:#fff; border-radius:20px; padding:36px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+            <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; text-transform:uppercase; margin-bottom:20px;">진입 전략</div>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div style="padding:16px 20px; background:#f8f9ff; border-radius:12px; border-left:3px solid #2563eb;">
+                <div style="font-size:14px; font-weight:700; color:#1a1a1a;">B2B 공유 공간 중심 진입</div>
+                <div style="font-size:13px; color:#666; margin-top:4px; line-height:1.6;">공유오피스 등 스마트락 니즈가 명확한 세그먼트 우선 공략</div>
+              </div>
+              <div style="padding:16px 20px; background:#f8f9ff; border-radius:12px; border-left:3px solid #2563eb;">
+                <div style="font-size:14px; font-weight:700; color:#1a1a1a;">온·오프라인 접점 생성</div>
+                <div style="font-size:13px; color:#666; margin-top:4px; line-height:1.6;">Airbnb 호스트 대상 컨설팅 이벤트 등 직접 접점 운영</div>
+              </div>
+              <div style="padding:16px 20px; background:#f8f9ff; border-radius:12px; border-left:3px solid #2563eb;">
+                <div style="font-size:14px; font-weight:700; color:#1a1a1a;">정부 프로그램 활용</div>
+                <div style="font-size:13px; color:#666; margin-top:4px; line-height:1.6;">K-Startup Challenge 참가로 신뢰도·초기 레퍼런스 확보</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step reveal">
+        <div class="flow-content" style="grid-column: 1 / -1;">
+          <div class="flow-badge result-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2.5 5 5.5.8-4 3.9.9 5.3L8 12.5 3.1 15l.9-5.3-4-3.9 5.5-.8z"/></svg>
+            성과
+          </div>
+          <h3>국내 첫 매출과 지사 설립까지 연결했습니다</h3>
+          <p style="margin-top:8px; color:#666;">
+            한국 도어락 시장을 분석해 B2B 공유 공간(공유오피스 등) 시장 중심의 진입 전략을 제안하고, 세일즈 채널 확보를 위해 파트너 영업 및 캠페인 실행을 주도했습니다.
+          </p>
+          <div class="result-metrics" style="margin-top:32px;">
+            <div class="metric-card">
+              <div class="metric-label">공유오피스 파트너 계약</div>
+              <div class="metric-value count-up" data-target="2" data-suffix="곳">0</div>
+              <div class="metric-change">국내 첫 매출 → 지사 설립 연결</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">이벤트 현장 매출</div>
+              <div class="metric-value">300만원+</div>
+              <div class="metric-change">온·오프라인 접점 운영</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">정부 프로그램 상금</div>
+              <div class="metric-value">$100K</div>
+              <div class="metric-change">K-Startup Challenge</div>
+            </div>
+          </div>
+          <p style="margin-top:20px; font-size:15px; color:#666; line-height:1.8;">
+            한국 시장 내 <strong>브랜드 신뢰도와 확장 기반</strong>을 마련했습니다.
+          </p>
+          <div class="skill-tags" style="margin-top:24px;">
+            <span class="skill-tag">시장 진입 전략</span>
+            <span class="skill-tag">B2B 파트너 영업</span>
+            <span class="skill-tag">캠페인 실행</span>
+            <span class="skill-tag">정부 프로그램</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================== -->
+<!-- ===== 사이드 프로젝트 — 결(GYEOL) SECTION ===== -->
+<!-- =========================================================== -->
+<div class="company-banner gyeol-banner reveal" id="gyeol">
+  <div class="company-logo">SIDE PROJECT · 개인 프로젝트</div>
+  <h2>일기 기록을 회고 가능한 데이터로 바꾸는<br><strong>결 (GYEOL)</strong></h2>
+  <p>
+    10년 넘게 일기를 써온 경험에서 출발한 개인 프로젝트.<br>
+    기획부터 개발·배포까지 혼자 수행해 웹 서비스로 출시했습니다.
+  </p>
+  <div class="company-period">개인 프로젝트 · 2025</div>
+</div>
+
+<section class="project">
+  <div class="container">
+    <div class="project-header reveal">
+      <div class="project-number">10</div>
+      <h2 class="project-title">결 (GYEOL)</h2>
+      <p class="project-subtitle">2025 · 일기 기록을 회고 가능한 데이터로 바꾸는 웹 서비스</p>
     </div>
 
     <div class="psrFlow">
@@ -1728,82 +2324,97 @@ footer {
         <div class="flow-content">
           <div class="flow-badge problem-badge">
             <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
-            문제 인식
+            문제 정의
           </div>
-          <h3>영업팀의 매출이 2년째<br>왜 증가하지 않을까?</h3>
+          <h3>10년간 일기를 썼지만,<br>기록이 자기이해로 이어지지 않았습니다</h3>
           <p>
-            오퍼레이션이 안정화됐지만 MRR 4천만원 수준이 2년째 정체되어 있었습니다. 영업팀의 역량이 문제라는 시각이 지배적이었지만, <strong>직접 영업팀 일상 업무를 관찰해보니 전혀 달랐습니다.</strong>
+            10년 넘게 일기를 써왔지만 <strong>기록이 자기이해로 이어지지 않았습니다.</strong> 시간이 지나면 과거의 기록은 다시 열어보지 않게 됩니다.
           </p>
           <p style="margin-top:16px;">
-            영업사원들과 함께 직접 영업 현장에 동행하며 일상 업무 흐름을 분석한 결과, <strong>고객 선정 과정에서 구글맵과 내부 프로덕트를 반복적으로 전환하는 데 일일 평균 1시간 이상이 소요</strong>되고 있음을 발견했습니다. <strong>전화를 더 많이 할 수 없는 게 아니라, 전화 외에 해야 할 일이 너무 많았던 것입니다.</strong>
+            일기 헤비 유저 설문에서도 <strong>"기록을 데이터화해 나를 이해할 수 없다"가 70%로 1위 문제</strong>였습니다.
           </p>
         </div>
         <div class="flow-visual">
-          <div style="background:#fff; border-radius:20px; padding:40px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0; text-align:center;">
-            <div style="font-size:14px; color:#999; font-weight:600;">MRR 추이</div>
-            <div style="display:flex; align-items:flex-end; justify-content:center; gap:12px; height:160px; margin:24px 0; padding:0 20px;">
-              <div style="display:flex; flex-direction:column; align-items:center; gap:4px; flex:1;">
-                <div style="font-size:11px; color:#999;">Q1</div>
-                <div style="width:100%; height:100px; background:#e5e7eb; border-radius:8px 8px 0 0;"></div>
+          <div style="background:#fff; border-radius:20px; padding:40px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+            <div style="font-size:14px; font-weight:700; color:#1a1a1a; margin-bottom:20px; text-align:center;">
+              "기존 일기 사용 방식에서 가장 아쉬운 점은?"
+            </div>
+            <div style="margin-bottom:12px;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+                <span style="font-size:13px; color:#555; font-weight:600;">기록을 데이터화해 나를 이해할 수 없다</span>
+                <span style="font-size:13px; font-weight:700; color:#0066ff;">70%</span>
               </div>
-              <div style="display:flex; flex-direction:column; align-items:center; gap:4px; flex:1;">
-                <div style="font-size:11px; color:#999;">Q2</div>
-                <div style="width:100%; height:105px; background:#e5e7eb; border-radius:8px 8px 0 0;"></div>
-              </div>
-              <div style="display:flex; flex-direction:column; align-items:center; gap:4px; flex:1;">
-                <div style="font-size:11px; color:#999;">Q3</div>
-                <div style="width:100%; height:98px; background:#e5e7eb; border-radius:8px 8px 0 0;"></div>
-              </div>
-              <div style="display:flex; flex-direction:column; align-items:center; gap:4px; flex:1;">
-                <div style="font-size:11px; color:#999;">Q4</div>
-                <div style="width:100%; height:102px; background:#e5e7eb; border-radius:8px 8px 0 0;"></div>
+              <div style="height:28px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
+                <div class="funnel-fill" data-width="70%" style="background:linear-gradient(90deg, #0066ff, #4d94ff); border-radius:6px;"></div>
               </div>
             </div>
-            <div style="font-size:28px; font-weight:900; color:#999;">₩40M</div>
-            <div style="font-size:14px; color:#ccc; margin-top:4px;">2년간 정체된 MRR</div>
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+                <span style="font-size:13px; color:#888;">기타</span>
+                <span style="font-size:13px; color:#888;">30%</span>
+              </div>
+              <div style="height:28px; background:#f5f5f7; border-radius:6px; overflow:hidden;">
+                <div class="funnel-fill" data-width="30%" style="background:#d1d5db; border-radius:6px;"></div>
+              </div>
+            </div>
+            <div style="margin-top:20px; padding:16px; background:#f8f9ff; border-radius:12px; text-align:center;">
+              <div style="font-size:13px; color:#666;">기존 일기 앱의 구조적 한계</div>
+              <div style="font-size:15px; font-weight:700; color:#1a1a1a; margin-top:4px;">저장 중심 → 장기 맥락 분석 불가</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Hypothesis -->
-      <div class="flow-step reveal">
-        <div class="flow-content">
-          <div class="flow-badge hypothesis-badge">
-            <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="7"/></svg>
-            가설 수립 & 검증
-          </div>
-          <h3>직접 관찰한 결과,<br>근본 원인은 도구의 부재였습니다</h3>
-          <p>
-            영업사원들과 함께 직접 영업 현장에 동행하며 일상 업무 흐름을 분석했습니다. <strong>고객 선정 과정에서 구글맵과 내부 프로덕트를 반복적으로 전환하는 데 일일 평균 1시간 이상이 소요</strong>되고 있었습니다. 문제는 영업팀의 역량이 아니라 업무 효율을 떨어뜨리는 도구 구조였습니다.
-          </p>
-        </div>
-      </div>
-
-      <!-- Action -->
+      <!-- Hypothesis & Action -->
       <div class="flow-step reverse reveal">
         <div class="flow-content">
           <div class="flow-badge action-badge">
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 14H1z"/></svg>
-            액션
+            가설 수립 &amp; 액션
           </div>
-          <h3>영업사원이 영업에만 집중할 수 있는<br>환경을 만들었습니다</h3>
+          <h3>다시 열어보게 만들려면,<br>정리해서 보여줘야 합니다</h3>
           <p>
-            구글맵과 내부 시스템 전환에 쓰던 <strong>하루 1시간 이상의 비영업 시간을 제거</strong>하는 것이 목표였습니다.
+            기록을 다시 열어보게 만들려면 <strong>정리해서 보여줘야 한다</strong>는 가설을 세웠습니다. <strong>AI가 기록을 감정·상황 단위로 묶어 회고 시점에 꺼내주는 구조</strong>로 설계했습니다.
           </p>
-          <ul>
-            <li>구글 맵 API를 활용하여 고객 정보 조회 및 영업 활동이 가능한 <strong>통합 프로덕트(Self-Mining)</strong> 개발</li>
-            <li>고객 영업 데이터 분석을 통해 <strong>수익성 높은 지역을 시각화</strong>한 Good Market Marker 대시보드 구축</li>
-          </ul>
+          <p style="margin-top:16px;">
+            <strong>AI 코딩 툴을 활용해 기획부터 개발·배포까지 직접 수행</strong>해 웹 서비스로 출시했습니다.
+          </p>
+          <div class="skill-tags" style="margin-top:24px;">
+            <span class="skill-tag">0→1 제품 빌딩</span>
+            <span class="skill-tag">AI 제품 설계</span>
+            <span class="skill-tag">AI 코딩 툴 활용</span>
+            <span class="skill-tag">직접 개발·배포</span>
+          </div>
         </div>
         <div class="flow-visual">
-          <div style="max-width:520px;">
-            <div style="font-size:13px; color:#999; font-weight:600; margin-bottom:12px; text-align:center;">실제 프로덕트 화면 — Self-Mining & 리드 관리 CRM</div>
-            <img src="haulla_product_03.png" alt="Haulla 리드 관리 CRM — 고객 정보 조회 및 지도 기반 영업 활동 원스톱" style="width:100%; border-radius:16px; box-shadow:0 8px 40px rgba(0,0,0,0.10);">
+          <div class="gyeol-app-mockup">
+            <div class="gyeol-phone">
+              <img src="gyeol_BIN0001.JPEG" alt="결 서비스 화면 — AI 회고 분석">
+            </div>
+            <div class="gyeol-phone">
+              <img src="gyeol_BIN0002.JPEG" alt="결 서비스 화면 — 감정·상황 단위 기록 묶기">
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Action 2: UX Redesign -->
+      <!-- Architecture -->
+      <div class="flow-step reveal">
+        <div class="flow-content" style="grid-column: 1 / -1;">
+          <div class="flow-badge hypothesis-badge">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM6.5 8.5h3v4h-3z"/></svg>
+            설계 구조
+          </div>
+          <h3>유저는 일기만 쓰고,<br>정리는 AI가 백그라운드에서 합니다</h3>
+          <p style="margin-top:8px; color:#666;">
+            매일 → 매월 → 매년으로 자동 요약을 쌓아, 회고 시점에 관련 기록만 꺼내오는 계층적 구조로 설계했습니다.
+          </p>
+          <div style="margin-top:32px; text-align:center;">
+            <img src="gyeol_BIN0005.PNG" alt="에이전틱 AI 기반 계층적 메모리 아키텍처 — 매일/매월/매년 자동 요약 구조" style="width:100%; border-radius:16px; box-shadow:0 4px 30px rgba(0,0,0,0.06); border:1px solid #f0f0f0;">
+          </div>
+        </div>
+      </div>
+
       <!-- Result -->
       <div class="flow-step reveal">
         <div class="flow-content" style="grid-column: 1 / -1;">
@@ -1811,26 +2422,12 @@ footer {
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2.5 5 5.5.8-4 3.9.9 5.3L8 12.5 3.1 15l.9-5.3-4-3.9 5.5-.8z"/></svg>
             성과
           </div>
-          <h3>MRR 200% 성장,<br>영업 성과 2배 향상</h3>
-          <div class="result-metrics">
-            <div class="metric-card">
-              <div class="metric-label">세일즈 성과</div>
-              <div class="metric-value">2x</div>
-              <div class="metric-change"><span class="metric-arrow">↑</span> 4개월 만에 달성</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">영업통화량</div>
-              <div class="metric-value">1.5x</div>
-              <div class="metric-change"><span class="metric-arrow">↑</span> Self-Mining 도입 후</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">월 매출 증가</div>
-              <div class="metric-value">+57%</div>
-              <div class="metric-change"><span class="metric-arrow">↑</span> MoM 기준</div>
-            </div>
-          </div>
+          <h3>혼자 기획 → 개발 → 배포까지 수행해 출시,<br>그리고 종료를 결정했습니다</h3>
+          <p style="margin-top:8px; color:#666; line-height:1.8;">
+            기획 → 개발 → 배포를 혼자 수행해 서비스를 출시했습니다. 이후 <strong>운영 비용 대비 사용량이 따라오지 않아 종료를 결정</strong>했습니다.
+          </p>
           <div class="lessons-learned">
-            <strong>Lessons Learned:</strong> 사람의 행동을 바꾸려 하기 전에, 그 행동을 막고 있는 환경을 먼저 제거할 필요가 있음을 배웠습니다.
+            <strong>Lessons Learned:</strong> 만드는 비용보다 유지하는 비용을 먼저 계산했어야 했다는 것을 배웠습니다.
           </div>
         </div>
       </div>
@@ -1845,36 +2442,36 @@ footer {
     <div class="reveal">
       <div class="section-label">Career</div>
       <h2 class="section-title">스타트업 A to Z를<br>직접 경험하며 성장했습니다</h2>
-      <p class="section-desc">시장조사 → 경쟁사 인터뷰 → 제품 기획 → 런칭 → PMF 탐색 → 영업/오퍼레이션 → 팀 빌딩</p>
+      <p class="section-desc">경력 5년 11개월 · 시장조사 → 경쟁사 인터뷰 → 제품 기획 → 런칭 → PMF 탐색 → 영업/오퍼레이션 → 팀 빌딩</p>
     </div>
     <div class="timeline">
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
-        <div class="timeline-period">2025.09 ~ 재직중</div>
+        <div class="timeline-period">2025.09 ~ 재직중 (1년)</div>
         <div class="timeline-company">주식회사 레브잇 (Alwayz)</div>
-        <div class="timeline-role">Product Owner | Ads Business Owner | Cross-functional 팀 리드 (5인+)</div>
-        <div class="timeline-desc">MAU 100만 규모의 모바일 커머스 앱에서 광고 수익화 스쿼드를 리드. 포트폴리오 다각화 및 광고주 어드민 개발을 통해 운영 안정화와 수익 균형을 동시에 달성. 회사 첫 연간 흑자 달성에 기여.</div>
+        <div class="timeline-role">정규직 · Product Owner · 올애즈 스쿼드 PO</div>
+        <div class="timeline-desc">MAU 100만 규모의 모바일 커머스 앱에서 올애즈(광고) 스쿼드를 리드. 영상광고 하나에 의존하던 수익 구조를 17개 매출원이 도는 포트폴리오로 재설계. DAU 8% 역성장 국면에서도 DAU당 광고 매출을 44% 끌어올려 회사 첫 연간 흑자에 기여.</div>
       </div>
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <div class="timeline-period">2022.04 ~ 2025.08 (3년 5개월)</div>
         <div class="timeline-company">주식회사 이큐브랩 (Haulla)</div>
-        <div class="timeline-role">Business Analyst → 전략팀 Lead (PO Role) | Growth Team Lead | 10인+ 팀 리드</div>
-        <div class="timeline-desc">북미 쓰레기 수거 IT 플랫폼 Haulla의 초기 멤버로 합류. 현지 시장조사 → 경쟁사 인터뷰 → 현장 동행 → 초기 제품 기획 → 런칭 → 영업 시스템 설계 → 파트너 오퍼레이션 구축까지 스타트업 전 과정을 직접 수행. 서비스를 회사 매출의 90% 이상을 책임지는 사업으로 성장시킴.</div>
+        <div class="timeline-role">정규직 · Business Analyst (PO Role) · Growth Team Lead</div>
+        <div class="timeline-desc">북미 쓰레기 수거 IT 플랫폼 Haulla의 초기 멤버로 합류. 현지 시장조사 → 현장 동행 → 초기 제품 기획 → 런칭 → 영업 시스템 설계 → 파트너 오퍼레이션 구축까지 스타트업 전 과정을 직접 수행. 연매출 200억원+ 사업으로 성장시킴.</div>
       </div>
       <div class="timeline-item reveal">
         <div class="timeline-dot" style="background:#94a3b8; box-shadow:0 0 0 2px #94a3b8;"></div>
         <div class="timeline-period">2021.03 ~ 2021.08 (6개월)</div>
         <div class="timeline-company">(주)밑미 (Meetme)</div>
-        <div class="timeline-role">Business Analyst Intern</div>
-        <div class="timeline-desc">커뮤니티 기반 마음성장 플랫폼 스타트업. 온라인 리추얼 프로그램 개발 및 오프라인 공간 구축. 서비스 초기 안정화 달성.</div>
+        <div class="timeline-role">인턴 · Business Analyst Intern</div>
+        <div class="timeline-desc">B2C 상담/명상 플랫폼의 B2B 시장 확장 기획 및 오프라인 공간 운영. 기존 상담 자산을 기업 프로그램으로 리패키징해 신규 채널 확장 기반을 마련하고 초기 사업화 검증을 보조.</div>
       </div>
       <div class="timeline-item reveal">
         <div class="timeline-dot" style="background:#94a3b8; box-shadow:0 0 0 2px #94a3b8;"></div>
         <div class="timeline-period">2017.07 ~ 2018.06 (1년)</div>
         <div class="timeline-company">igloohome</div>
-        <div class="timeline-role">Business Analyst Intern</div>
-        <div class="timeline-desc">싱가포르 IoT 스마트락 전문 스타트업. 투자자 대상 IR Pitching 지원 및 B2B 서비스 전략 수립. K-Startup Grand Challenge 2위 달성 (1.2억 상금) 및 Series A 투자 유치.</div>
+        <div class="timeline-role">인턴 · Business Analyst Intern</div>
+        <div class="timeline-desc">글로벌 스마트 도어락 브랜드의 HOME IoT 제품 한국 시장 진출 지원. B2B 공유 공간 중심 진입 전략을 제안하고 파트너 영업·캠페인을 주도해 공유오피스 2곳 계약으로 국내 첫 매출과 지사 설립까지 연결. $100K 규모 상금 확보.</div>
       </div>
     </div>
   </div>
@@ -1889,18 +2486,66 @@ footer {
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px; margin-top:48px;" class="stagger-children">
       <div class="strength-card reveal">
-        <div style="font-size:13px; color:#999; font-weight:500; margin-bottom:8px;">2014 ~ 2021 · 졸업</div>
+        <div style="font-size:13px; color:#999; font-weight:500; margin-bottom:8px;">2014.04 ~ 2021.09 · 졸업</div>
         <h4>도시샤 대학 (일본)</h4>
-        <p>Liberal Arts 전공</p>
+        <p>Liberal Arts</p>
       </div>
       <div class="strength-card reveal">
-        <div style="font-size:13px; color:#999; font-weight:500; margin-bottom:8px;">2016 ~ 2017 · 수료</div>
-        <h4>캘리포니아 주립대학, 버클리 캠퍼스</h4>
-        <p>Letter and Science</p>
+        <div style="font-size:13px; color:#999; font-weight:500; margin-bottom:8px;">2016.08 ~ 2017.05 · 수료</div>
+        <h4>UC Berkeley</h4>
+        <p>Letters and Science</p>
       </div>
       <div class="strength-card reveal">
-        <div style="font-size:13px; color:#999; font-weight:500; margin-bottom:8px;">2025 ~ 2026 · 졸업</div>
+        <div style="font-size:13px; color:#999; font-weight:500; margin-bottom:8px;">2025.03 ~ 2026.02 · 수료</div>
         <h4>건명원</h4>
+        <p>인문학과</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS / AWARDS / LANGUAGES ===== -->
+<section id="skills" style="background:#fafafa;">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Skills &amp; Awards</div>
+      <h2 class="section-title">스킬 · 수상 · 언어</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px; margin-top:48px;" class="stagger-children">
+      <div class="skill-group reveal">
+        <div class="skill-group-title">스킬</div>
+        <div class="skill-tags" style="margin-top:0;">
+          <span class="skill-tag">Atlassian JIRA</span>
+          <span class="skill-tag">Confluence</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">애자일 프로젝트 관리</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">수상</div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div>
+            <div style="font-size:15px; font-weight:700; color:#1a1a1a;">도시샤 대학 Dean’s List</div>
+            <div style="font-size:13px; color:#999; margin-top:2px;">2015.01</div>
+          </div>
+          <div>
+            <div style="font-size:15px; font-weight:700; color:#1a1a1a;">JASSO Scholarship</div>
+            <div style="font-size:13px; color:#999; margin-top:2px;">2014.04</div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">언어</div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div>
+            <div style="font-size:15px; font-weight:700; color:#1a1a1a;">영어</div>
+            <div style="font-size:13px; color:#999; margin-top:2px;">유창함</div>
+          </div>
+          <div>
+            <div style="font-size:15px; font-weight:700; color:#1a1a1a;">일본어</div>
+            <div style="font-size:13px; color:#999; margin-top:2px;">일상 회화</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1914,6 +2559,10 @@ footer {
       <a href="mailto:hyunwook.kim510@gmail.com" class="contact-link">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         hyunwook.kim510@gmail.com
+      </a>
+      <a href="tel:+821083776808" class="contact-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +82-10-8377-6808
       </a>
     </div>
   </div>
